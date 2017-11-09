@@ -1,0 +1,851 @@
+.page-content .positions {
+  padding: 60px 0;
+}
+
+
+.position-title {
+  margin-bottom: 60px;
+  @include center;
+}
+
+
+.location-name {
+  display: inline-block;
+  @include font-light(42px, 45px);
+}
+
+
+.location {
+  &.dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  .dropdown-toggle {
+    position: relative;
+    @include indents(0 0 0 10px, 0);
+    @include font-light(42px, 45px);
+    color: $blue;
+    background: transparent;
+    border: none;
+    border-bottom: 1px dashed $blue-1;
+    outline: none;
+    cursor: pointer;
+  }
+  .dropdown-togglespan.value {
+    display: block;
+  }
+  .dropdown-toggle:after {
+    content: '\7a';
+    display: inline-block;
+    @include absolute($t: 0, $r: -30px);
+    position: absolute;
+    font-family: 'dr3';
+    @include font-regular(20px, 50px);
+    @include middle;
+  }
+  ul.dropdown-menu {
+    display: none;
+    @include absolute($t: 98%, $l: 41%);
+    position: absolute;
+    @include bc;
+    border-top: 3px solid $blue;
+    @include radius;
+    @include shadow(0 1px 6px 0 $light-d9-grey);
+    @include translate(-50%);
+    z-index: 3;
+
+    li {
+      @include bc;
+      &:first-child {
+        @include radius(3px 3px 0 0);
+      }
+      &:last-child {
+        @include radius(0 0 3px 3px);
+      }
+      a {
+        display: block;
+        position: relative;
+        padding: 0 30px;
+        @include font-regular($lh: 50px);
+        color: $graphite;
+        @include left;
+        white-space: nowrap;
+        @include bc;
+        &:hover {
+          color: $blue-1;
+          background: $white-7;
+        }
+      }
+    }
+  }
+}
+
+
+.open > .dropdown-menu {
+  display: block !important;
+}
+
+
+.careers .departments {
+  width: 100%;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $white-grey;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-radius: 0;
+}
+
+
+.departments {
+  button {
+    display: none;
+  }
+  .sections {
+    @include center;
+    a {
+      display: inline-block;
+      @include relative($t: 1px);
+      height: 45px;
+      @include indents(0, 0 14px);
+      @include font-medium(13px, 45px);
+      color: $blue-grey-f;
+      text-transform: uppercase;
+      border: none;
+      @include box-sizing;
+      &:hover {
+        background: none;
+        border-bottom: 2px solid $blue;
+      }
+      &.act {
+        background: none;
+        border-bottom: 2px solid $blue;
+        color: $blue-3;
+      }
+    }
+  }
+}
+
+.careers {
+  .dept-descriptions {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 45px;
+    padding: 15px;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+    .department-info {
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      &.active {
+        display: flex;
+      }
+      .dept-video {
+        width: 23%;
+        min-width: 300px;
+        float: left;
+        border-radius: 6px;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 1s ease;
+      }
+      .dept-text {
+        width: 77%;
+        padding-left: 30px;
+      }
+    }
+  }
+}
+
+.positions-list {
+  float: none;
+  width: 100%;
+  @include centerBlock;
+  .it {
+    @include dimensions(31.6%, 135px);
+    max-width: 390px;
+    @include indents(0 2.5% 2.5% 0, 20px 30px 20px 25px);
+    line-height: 95px;
+    border-left: 5px solid $blue;
+    .middle-position {
+      display: inline-block;
+      line-height: 0.8;
+      @include middle;
+      .name {
+        margin: 0 0 5px;
+        @include font-regular(20px, 30px);
+        color: $ghost;
+      }
+      .location {
+        display: block;
+        @include font-regular(17px, 20px);
+        color: $blue-grey-e;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 250px;
+      }
+    }
+    &.noMargin {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.careers {
+  .careers-contact {
+    padding: 40px 0 60px;
+    .container {
+      position: relative;
+      max-width: 833px;
+      h3 {
+        font-size: 30px;
+      }
+      p {
+        @include font-light($fs: 20px);
+        color: $blue-grey-e;
+      }
+      .bg-filled-blue {
+        position: relative;
+        min-width: 200px;
+        margin: 25px 0 20px;
+      }
+    }
+  }
+  .robot-wrap {
+    @include relative($b: 255px);
+    max-width: 833px;
+    min-width: 320px;
+    width: 100%;
+    @include indents(0 auto, 0 15px);
+    .robot-img {
+      @include absolute($t: 97px, $r: 0);
+      width: 152px;
+    }
+  }
+}
+
+
+.positions .positions-list .it {
+  display: none;
+  float: left;
+  position: relative;
+  @include dimensions(31.3%, 132px);
+  @include indents(0 1% 2%, 20px);
+  color: $blue-1;
+  @include bc;
+  @include radius;
+  @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.05));
+  &.sh {
+    display: block;
+  }
+  &:hover .name {
+    color: $blue;
+  }
+  .holder {
+    display: none;
+    opacity: 0;
+  }
+  .icon {
+    @include relative($t: 2px);
+  }
+
+
+}
+
+.location i {
+  float: left;
+  margin-right: 10px;
+}
+
+.careers .icon {
+  @include middle;
+}
+
+.vacancy-detail {
+  padding: 60px 0;
+  .container {
+    // width: 970px;
+  }
+  h1 {
+    margin-bottom: 30px;
+    font-size: 54px;
+  }
+  .location {
+    @include font-light(28px, 30px);
+    color: $blue-grey-e;
+    margin-bottom: 45px;
+    i {
+      float: left;
+      margin-right: 10px;
+      @include font-regular(26px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+  .description {
+    width: 60%;
+    @include indents(0 0 30px, 0 0 50px);
+    float: left;
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      @include indents(0 0 15px, 0 0 0 45px);
+      list-style-type: disc;
+      ul {
+        list-style-type: circle;
+      }
+    }
+  }
+  .department-info {
+    width: 30%;
+    padding: 30px;
+    float: right;
+    background: #FFFFFF;
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.05);
+    border-radius: 3px;
+    h3 {
+      @include font-medium(17px, 20px);
+      margin-bottom: 15px;
+    }
+    .dept-video {
+      margin-bottom: 15px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .dept-text {
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+      margin-bottom: 30px;
+    }
+    .dept-perks {
+      i {
+        font-size: 20px;
+        color: #00C96E;
+        float: left;
+      }
+      span {
+        display: block;
+        @include font-regular(15px, 30px);
+        color: $blue-grey-e;
+        margin-left: 35px;
+      }
+    }
+  }
+  h3 {
+    margin: 0 0 30px;
+    @include font-light($fs: 18px);
+    @include left;
+  }
+}
+
+
+.button.view-all {
+  margin-bottom: 40px;
+  @include font-medium;
+  i {
+    float: left;
+    margin-right: 10px;
+    line-height: 41px;
+    color: $ghost;
+    @include middle;
+  }
+}
+
+
+.send-resume {
+  padding: 15px 0 60px;
+  @include center;
+  @include bc;
+  form {
+    width: 480px;
+    @include indents(0 auto, 30px 30px 45px);
+    background-color: $white-8;
+    @include radius(4px);
+  }
+  .it {
+    width: 100%;
+    margin: 0 0 15px;
+    display: block;
+    input {
+      width: 100%;
+    }
+  }
+  input[type="text"] {
+    height: 45px;
+    padding: 0 20px;
+    font-family: inherit;
+    @include font-regular(17px, 45px);
+    @include bc;
+    border: none;
+    border-left: 3px solid transparent;
+    @include radius;
+    @include shadow(0 1px 1px 0 $white-grey);
+    @include ease-transition(.3s);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  button {
+    border: 0;
+  }
+  .it.error input {
+    color: $coral;
+    border-left: 3px solid $coral;
+  }
+}
+
+
+.or {
+  margin: 15px 0;
+  color: $grey-b;
+}
+
+
+.hide {
+  display: none !important;
+}
+
+
+.send-resume div.attach {
+  @include flex(center);
+  margin: 10px 0;
+  color: $blue;
+}
+
+
+.file-list {
+  @include flex(center);
+}
+
+
+.view {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 15px;
+  @include center;
+}
+
+
+.btn {
+  display: inline-block;
+  width: 50%;
+  @include indents(0);
+  @include font-regular($fs: 18px);
+  @include center;
+  white-space: nowrap;
+  @include middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: none;
+  @include radius(5px);
+  outline: none !important;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  i {
+    margin-right: 10px;
+  }
+  &.error {
+    color: $scarlet;
+  }
+}
+
+
+.result-message {
+  padding-bottom: 100px;
+  @include font-regular($fs: 30px);
+  color: $lime;
+  @include center;
+  img {
+    display: block;
+    margin: 0 auto 30px;
+    @include center;
+  }
+}
+
+
+/*CAREERS CONTACT BLOCK*/
+.careers-contact {
+  padding: 0 0 60px 0;
+  @include center;
+  background: url("../images/robot.png");
+  @include background($bs: 164, $bp: 72% 100%);
+  h3 {
+    font-size: 22px;
+  }
+  p {
+    margin-bottom: 30px;
+    line-height: 30px;
+  }
+}
+
+
+.vacancy-detail {
+  padding-bottom: 0;
+  .send-resume {
+    padding: 15px 15px 75px;
+    h3 {
+      margin: 43px 0 16px;
+      @include font-regular($fs: 30px);
+      color: $ghost;
+      text-align: center;
+    }
+    .btngroup {
+      max-width: 480px;
+      @include centerBlock;
+      .bg-filled-blue {
+        width: 100%;
+        @include indents(16px 0 0, 10px 40px 11px);
+        line-height: 20px;
+        .icon-linkedin {
+          @include relative($t: 2px);
+          width: 20px;
+          margin-right: 6px;
+          @include font-regular($fs: 18px);
+          color: $blue;
+          @include bc;
+          @include radius(2px);
+        }
+      }
+      .or {
+        @include dimensions(100%, 20px);
+        margin: 30px 0 45px;
+        @include font-light;
+        @include center;
+        border-bottom: 1px solid $white-grey;
+        span {
+          font-size: 22px;
+          color: $blue-grey-e;
+        }
+      }
+      span {
+        padding: 0 10px;
+        @include bc;
+      }
+    }
+    form {
+      max-width: 480px;
+      width: 100%;
+      padding: 30px;
+      div {
+        &.attach {
+          display: block;
+          float: left;
+          width: 100%;
+          margin: 15px 0 15px;
+          @include left;
+          a {
+            margin-right: 54px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          .btn {
+            float: left;
+            width: auto;
+            margin-bottom: 10px;
+            font-size: 15px;
+            i {
+              margin-right: 4px;
+            }
+          }
+        }
+        &.file-list {
+          display: block;
+          float: left;
+          margin-bottom: 25px;
+          @include left;
+          .view {
+            float: left;
+            width: auto;
+            margin: 0 10px 0 0;
+            span {
+              display: block;
+              @include indents(0 0 10px, 2px 8px 2px 13px);
+              font-size: 15px;
+              border: 3px solid $white-9;
+              @include radius(2px);
+              a {
+                padding-left: 10px;
+                color: $grey-a;
+              }
+            }
+          }
+        }
+      }
+    }
+    button.bg-filled-blue {
+      width: 100%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1023px) {
+  .careers .careers-contact {
+    padding: 0 0 85px;
+    .container {
+      position: relative;
+      max-width: 692px;
+    }
+  }
+  .vacancy-detail {
+    .container {
+      width: 100%;
+    }
+    .description {
+      width: 100%;
+      float: none;
+      margin: 0;
+    }
+    .department-info {
+      width: 100%;
+      float: none;
+      margin-bottom: 30px;
+      .dept-video {
+        max-width: 300px;
+      }
+    }
+  }
+  .positions-list .it .middle-position .name {
+    @include font-regular(18px, 24px);
+  }
+  .positions-list .it .middle-position .location {
+    max-width: 200px;
+  }
+}
+
+
+@media only screen and (max-width: 860px) {
+  .positions-list .it .middle-position {
+    .name {
+      @include font-regular(16px, 24px);
+    }
+    .location{
+      font-size: 15px;
+      max-width: 160px;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 719px) {
+  .position-title {
+    margin-bottom: 30px;
+    @include center;
+  }
+  .location-name {
+    display: inline-block;
+    font-size: 20px;
+  }
+  .location {
+    .dropdown-toggle {
+      margin-left: 0;
+      padding: 0;
+      @include font-light(20px, 30px);
+      &:after {
+        right: -15px;
+        @include font-regular(14px, 35px);
+      }
+    }
+    ul.dropdown-menu {
+      display: none;
+      @include absolute($t: 120%);
+      li a {
+        padding: 0 20px;
+        line-height: 40px;
+      }
+    }
+  }
+  .careers .departments {
+    float: none;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .positions-list {
+    @include centerBlock;
+  }
+  .positions .positions-list .it {
+    width: 100%;
+  }
+  .careers-contact {
+    padding: 30px 0;
+  }
+  .positions {
+    .position-title {
+      .location-name {
+        font-size: 30px;
+      }
+      .location {
+        .value {
+          display: block;
+          font-size: 30px;
+        }
+        .dropdown-toggle {
+          border-bottom: 1px dashed $blue;
+        }
+      }
+    }
+    .departments {
+      display: inline-block;
+      position: relative;
+      margin-bottom: 46px;
+      border: none;
+      .shadow-box {
+        @include radius;
+        @include shadow(0 5px 10px 0 rgba(28, 39, 57, 0.11));
+        overflow: hidden;
+        .dropbtn-mobile {
+          display: block;
+          position: relative;
+          min-width: 300px;
+          width: 100%;
+          padding: 13px 15px 14px;
+          font-size: 18px;
+          color: $text-color;
+          @include left;
+          @include bc;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          z-index: 2;
+          &:after {
+            content: "";
+            display: block;
+            @include absolute($r:15px, $t:19px);
+            @include dimensions(6px);
+            border: 2px solid $blue-grey;
+            border-left: none;
+            border-top: none;
+            @include rotate(45deg);
+          }
+        }
+        .sections {
+          display: none;
+          position: absolute;
+          width: 100%;
+          min-width: 300px;
+          padding: 10px 0;
+          @include bc;
+          border-top: 1px solid $pale-grey0;
+          @include shadow(0 5px 10px 0 rgba(28, 39, 57, 0.11));
+          overflow: auto;
+          z-index: 2;
+          a {
+            width: 100%;
+            margin: 0;
+            @include font-light($fs:17px);
+            @include left;
+            text-transform: capitalize;
+            &:hover, &.act {
+              border: none;
+            }
+          }
+        }
+        .show {
+          display: block;
+        }
+      }
+    }
+    .positions-list .it {
+      max-width: 100%;
+      @include dimensions(98%, 105px);
+      line-height: 65px;
+      .middle-position {
+        .name {
+          margin-bottom: 12px;
+          @include font-regular(20px, 20px);
+        }
+        .location {
+          font-size: 15px;
+          max-width: 480px;
+        }
+      }
+    }
+  }
+  .careers {
+    .dept-descriptions {
+      .department-info {
+        flex-wrap: wrap;
+        .dept-video {
+          width: 100%;
+          min-width: auto;
+          max-width: 300px;
+          float: none;
+          margin: 0 auto 30px;
+        }
+        .dept-text {
+          width: 100%;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .careers {
+    .careers-contact .container {
+      min-width: 320px;
+      h3 {
+        margin-bottom: 5px;
+        @include font-regular(22px, 30px);
+      }
+      p {
+        margin-bottom: 0;
+        @include font-regular(17px, 20px);
+      }
+      .bg-filled-blue {
+        margin-top: 15px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 480px) {
+  .careers {
+    .dept-descriptions {
+      .department-info {
+        .dept-video {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .vacancy-detail {
+    h1 {
+      font-size: 36px;
+    }
+    .department-info {
+      padding: 30px 10px;
+    }
+    .send-resume {
+      h3 {
+        font-size: 28px;
+      }
+      form {
+        padding: 15px 15px 20px;
+      }
+    }
+  }
+  .positions .positions-list .it .middle-position .location {
+    max-width: 240px;
+  }
+}
+
+
+@media only screen and (max-width: 340px) {
+  .vacancy-detail .send-resume {
+    min-width: 320px;
+    .btngroup .bg-filled-blue, form .form-data button.bg-filled-blue {
+      font-size: 13px;
+    }
+  }
+}

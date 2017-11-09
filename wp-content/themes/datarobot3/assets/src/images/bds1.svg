@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="50px" height="62px" viewBox="0 0 50 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M17.6693597,20.0720689 L18,20.0716846 L18,9.1995221 L9,5 L0,9.1995221 L0,20.0926039 L0.188041545,20.0923854 L8.94683347,24.3956052 L17.6693597,20.0720689 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="18" height="19.3956052" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="2.67543109 3.00647832 12.133989 6.19548856 15.325235 15.502375 5.33776137 12.8266146"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12.649804" height="12.4958967" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+        <path d="M21.2495764,59.4484403 L21.2495764,49.7225954 C21.2495764,48.1904718 22.4928605,46.9484403 24.0195764,46.9484403 L24.0195764,46.9484403 C25.5494051,46.9484403 26.7895764,48.1927012 26.7895764,49.7226265 L26.7895764,59.4485806" id="path-5"></path>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="5.53999996" height="12.5001403" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+    </defs>
+    <g id="Ready" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Education-page" transform="translate(-321.000000, -1988.000000)" stroke="#35A2EB">
+            <g id="benefits" transform="translate(210.000000, 1813.000000)">
+                <g id="Group-10-Copy" transform="translate(112.000000, 173.000000)">
+                    <path d="M16,63 L16,43 C16,43 3.56260887e-16,38 0,22 C2.04065721e-16,12.8352233 9.12639308,4.81373084 9.12639308,4.81373084 L9,23 L24,31 L39,23 L39.1983798,5.13491201 C39.1983798,5.13491201 48.572312,13.4153196 48,22 C47,37 32,43 32,43 L32,63" id="Path-4" stroke-width="2"></path>
+                    <g id="Group" transform="translate(15.000000, 0.000000)">
+                        <use id="Combined-Shape" mask="url(#mask-2)" stroke-width="4" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        <use id="Rectangle-2" mask="url(#mask-4)" stroke-width="4" fill="#FFFFFF" transform="translate(9.000333, 9.254427) rotate(-45.000000) translate(-9.000333, -9.254427) " xlink:href="#path-3"></use>
+                        <path d="M9,13.7992832 L9,23.0309237" id="Line" stroke-width="2"></path>
+                    </g>
+                    <use id="Line" mask="url(#mask-6)" stroke-width="4" xlink:href="#path-5"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

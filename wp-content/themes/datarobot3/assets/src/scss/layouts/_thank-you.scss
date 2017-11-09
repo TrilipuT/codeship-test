@@ -1,0 +1,41 @@
+section.thank-you {
+  @include linear-gradient(225deg, 225deg, ($text-color 0%, $black-blue 100%));
+  .container {
+    padding: 150px 15px;
+    background: url("../images/ty-bg-robot.png");
+    @include background($bs: 276px,$bp: right bottom);
+  }
+}
+
+.ty-message {
+  display: block;
+  width: 500px;
+  @include indents(0 auto, 60px 30px);
+  @include center;
+  @include bc;
+  @include radius(8px);
+  @include shadow((0 20px 50px 0 rgba(0, 0, 0, 0.18), 0 10px 24px 0 rgba(0, 0, 0, 0.22)));
+  h1 {
+    font-size: 36px;
+  }
+  p {
+    margin-bottom: 30px;
+    @include font-light(20px, 30px);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.thank-you .container {
+    padding: 75px 15px 200px;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .ty-message {
+    width: 100%;
+    padding: 45px 15px;
+  }
+  section.thank-you .container {
+    @include background($br:null, $bs:160px, $bp: center bottom);
+  }
+}

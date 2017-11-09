@@ -1,0 +1,248 @@
+section.enterprise {
+  @include bc;
+  .top-wrapper {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .top-banner {
+    display: flex;
+    align-items: center;
+    min-height: 570px;
+    padding: 100px 0;
+    .b-left {
+      float: left;
+      width: 50%;
+    }
+    .b-right {
+      float: right;
+      width: 550px;
+      margin-left: 50px;
+      img {
+        display: block;
+      }
+    }
+    h1 {
+      position: relative;
+      margin-bottom: 10px;
+      color: $white;
+    }
+    p {
+      margin-bottom: 40px;
+      @include font-light(20px, 30px);
+      color: $white;
+      opacity: 0.7;
+    }
+    .button {
+      width: 230px;
+      @include center
+    }
+  }
+  .page-content {
+    padding: 60px 0 0;
+  }
+}
+
+.enterprise article.feature img {
+  max-width: 100%;
+}
+
+.b-ent-descr {
+  @include indents(0 0 90px, 0 100px);
+  p {
+    margin-bottom: 50px;
+    font-size: 20px;
+    @include center;
+  }
+}
+
+p.features-desc {
+  @include indents(0 0 90px, 30px);
+  font-weight: $font-weight-regular;
+  background-color: $main-white-bg;
+  @include radius(4px);
+}
+
+.b-ent-features {
+  padding-bottom: 60px;
+  border-bottom: 1px solid $white-3;
+}
+
+.b-ent-feature {
+  display: inline-block;
+  float: left;
+  width: 33%;
+  @include center;
+  @include top;
+}
+
+.e-img-wrap {
+  @include dimensions(180px, 190px);
+  @include centerBlock;
+  img {
+    display: block;
+    @include dimensions(100%, auto);
+  }
+}
+
+.b-ent-feature {
+  h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  p {
+    padding: 0 20px;
+    @include font-regular(14px, 24px);
+    color: $grey-b;
+    > a {
+      color: $blue;
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.enterprise article.feature p {
+  @include font-regular(16px, 28px);
+}
+
+.b-form-button {
+  padding-top: 60px;
+  @include center;
+  p {
+    @include font-regular($fs:30px);
+  }
+  a {
+    width: 230px;
+    @include center;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  section.enterprise .top-banner {
+    .b-left {
+      width: 50%;
+      padding-top: 0;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .b-right {
+      width: 40%;
+      margin-left: 9%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.enterprise {
+    .page-content {
+      padding: 60px 0 0;
+    }
+    .top-banner {
+      padding-top: 60px;
+      .b-left {
+        float: none;
+        width: 100%;
+        margin-bottom: 45px;
+        padding-top: 0;
+        @include center;
+      }
+      .b-right {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        @include center;
+        img {
+          display: block;
+          width: 75%;
+          @include centerBlock;
+        }
+      }
+    }
+    .b-ent-descr {
+      @include indents(0 0 90px, 0);
+    }
+    .b-ent-features {
+      padding-bottom: 0;
+      border-bottom: 1px solid $white-3;
+    }
+    .b-ent-feature {
+      display: block;
+      float: none;
+      width: 80%;
+      margin: 0 auto 30px;
+      @include center;
+      @include top;
+    }
+    .enterprise {
+      article.feature {
+        @include center;
+        .b-left, .b-right {
+          width: 100%;
+          margin: 30px 0;
+        }
+        img {
+          max-width: 425px;
+          margin: 0 auto 30px;
+        }
+      }
+    }
+  }
+  .b-ent-feature {
+    h2 {
+      margin-bottom: 15px;
+      margin-left: 210px;
+      font-size: 24px;
+      @include left;
+    }
+    p {
+      margin-left: 210px;
+      padding: 0;
+      font-size: 16px;
+      @include justify;
+    }
+  }
+  .e-img-wrap {
+    float: left;
+    @include dimensions(180px, 190px);
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section.enterprise .top-banner {
+    h1 {
+      margin-bottom: 15px;
+      font-size: 42px;
+    }
+    .b-right img {
+      display: block;
+      width: 100%;
+      @include centerBlock;
+    }
+  }
+  .e-img-wrap {
+    float: none;
+    @include dimensions(180px, 190px);
+    @include centerBlock;
+  }
+  .b-ent-feature {
+    h2 {
+      margin-bottom: 15px;
+      margin-left: 0;
+      font-size: 24px;
+      @include center;
+    }
+    p {
+      margin-left: 0;
+      font-size: 16px;
+      @include center;
+    }
+  }
+  .enterprise article.feature img {
+    @include dimensions(auto);
+    max-width: 75%;
+    max-height: 380px;
+  }
+}

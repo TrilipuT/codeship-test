@@ -1,0 +1,485 @@
+.education {
+  .top-block {
+    padding: 60px 0;
+    h1 {
+      margin-bottom: 90px;
+      @include center;
+      a {
+        display: block;
+        width: 276px;
+        @include centerBlock;
+        img {
+          display: block;
+          width: 276px;
+        }
+      }
+    }
+  }
+  .programs {
+    @include flex(space-between);
+  }
+}
+
+.upcoming-classes-link {
+  margin-top: 60px;
+  @include center;
+}
+
+.programs .item {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 24%;
+  margin: 0 15px;
+  @include bc;
+  @include background($bp: 100% 90%);
+  @include radius;
+  @include shadow(0 10px 24px 0 rgba(0, 0, 0, 0.22));
+  overflow: hidden;
+  &:before {
+    content: '';
+    @include absolute($t:0, $l: 0);
+    @include dimensions(100%, 4px);
+  }
+  &.p1 {
+    background-image: url("../images/p1-ds.png");
+    background-size: 70px;
+    &:before {
+      @include linear-gradient(to right, left, ($blue 0%, $pale-blue 100%));
+    }
+  }
+  &.p2 {
+    background-image: url("../images/p2-ba.png");
+    background-size: 64px;
+    &:before {
+      @include linear-gradient(to right, left, ($pale-blue-1 0%, $pale-coral 100%));
+    }
+  }
+  &.p3 {
+    background-image: url("../images/p3-ex.png");
+    background-size: 54px;
+    &:before {
+      @include linear-gradient(to right, left, ($pale-coral-1 0%, $coral-2 100%));
+    }
+  }
+  &.p4 {
+    background-image: url("../images/p4-fa.png");
+    background-size: 66px;
+    &:before {
+      @include linear-gradient(to right, left, ($red 0%, $ruby 100%));
+    }
+  }
+  a {
+    display: block;
+    padding: 40px 30px;
+  }
+  h2 {
+    @include font-regular(22px, 30px);
+    color: $ghost;
+  }
+  p {
+    min-height: 120px;
+    margin-bottom: 30px;
+    @include font-regular(15px, 30px);
+    color: $blue-grey-e;
+  }
+  span {
+    display: block;
+    @include font-medium(15px, 20px);
+    color: $blue;
+    text-transform: uppercase;
+    i {
+      float: left;
+      margin-right: 10px;
+      @include font-regular(20px, 20px);
+    }
+  }
+}
+
+.education {
+  .page-content {
+    padding-top: 60px;
+    @include bc;
+    .features h2 {
+      margin: 0 0 15px;
+      @include font-light(42px, 60px);
+      @include center;
+    }
+  }
+  .features {
+    @include indents(0 0 90px, 0 0 45px);
+    border-bottom: 1px solid $pale-grey0;
+    .item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.features .item {
+  &.right-image {
+    .b-left {
+      display: inline-block;
+      width: 600px;
+      @include middle;
+    }
+    .b-right {
+      display: inline-block;
+      width: 570px;
+      margin-left: 60px;
+      @include middle;
+    }
+  }
+  &.left-image {
+    .b-left {
+      float: right;
+      width: 600px;
+      @include indents(0 0 0 60px, 60px 0);
+    }
+    .b-right {
+      float: left;
+      display: inline-block;
+      width: 570px;
+      @include middle;
+    }
+  }
+}
+
+.education .features .item {
+  h3 {
+    @include font-regular(30px, 60px);
+  }
+  p {
+    @include font-regular(17px, 30px);
+    color: $blue-grey-e;
+  }
+}
+
+.features .item img {
+  display: block;
+  @include centerBlock;
+}
+
+.education .bds {
+  padding-bottom: 90px;
+  @include center;
+}
+
+.bds {
+  h3 {
+    width: 500px;
+    margin: 0 auto 90px;
+    @include font-light(28px, 45px);
+    @include center;
+  }
+  .item {
+    display: inline-block;
+    float: left;
+    width: 285px;
+    margin: 0 62px;
+    @include center;
+    img {
+      display: block;
+      height: 64px;
+      margin: 0 auto 15px;
+    }
+    p {
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+}
+
+.education .quotes {
+  padding: 60px 0 45px;
+  @include bc($main-white-bg);
+}
+
+.quote-slider {
+  blockquote {
+    display: block;
+    width: 810px;
+    @include indents(0 auto, 0 90px);
+    @include center;
+    @include box-sizing(content-box);
+    p {
+      position: relative;
+      @include indents(0 0 30px, 15px 0);
+      @include font-light(20px, 30px);
+      font-style: normal;
+      @include center;
+      &:before {
+        content: '';
+        display: block;
+        @include absolute($t:0, $l: -90px);
+        @include dimensions(58px, 41px);
+        background: url("../images/quote2bg.png");
+        @include background($bs: 116px, $bp: 0 0);
+      }
+      &:after {
+        content: '';
+        display: block;
+        @include absolute($r: -90px, $b: 0);
+        @include dimensions(58px, 41px);
+        background: url("../images/quote2bg.png");
+        @include background($bs: 116px, $bp: -58px 0);
+      }
+    }
+    footer {
+      display: block;
+      padding: 0;
+      font-style: normal;
+      @include bc(transparent);
+      span {
+        display: block;
+      }
+    }
+  }
+  span {
+    &.name {
+      margin-bottom: 10px;
+      @include font-regular(22px, 30px);
+      color: $blue-grey-e;
+    }
+    &.title {
+      @include font-regular(15px, 20px);
+      color: $pale-grey;
+    }
+  }
+  .bullets {
+    margin-top: 60px;
+    .bx-pager {
+      @include center;
+    }
+    .bx-pager-item {
+      display: inline-block;
+      @include dimensions(12px);
+      margin: 0 10px;
+      line-height: 12px;
+      a {
+        display: block;
+        font-size: 10px;
+        color: $white-grey;
+        text-indent: -9999px;
+        @include bc($white-grey);
+        @include radius(50%);
+        @include linear-transition(.1s);
+        &.active, &:hover {
+          @include bc($blue);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .programs .item {
+    margin: 0;
+    a {
+      display: block;
+      padding: 30px 15px;
+    }
+  }
+  .bds .item {
+    display: inline-block;
+    width: 285px;
+    vertical-align: top;
+    float: none;
+    text-align: center;
+    margin: 0 2%;
+  }
+  .features .item {
+    &.right-image .b-left, &.left-image .b-right {
+      width: 45%;
+    }
+    &.right-image .b-right {
+      width: 45%;
+      margin-left: 9%;
+    }
+    &.left-image .b-left {
+      width: 45%;
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .education .top-block {
+    padding: 60px 0 60px;
+  }
+  .programs .item {
+    a {
+      display: block;
+      padding: 30px 15px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      min-height: 80px;
+      @include font-regular(14px, 21px);
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .education {
+    .top-block h1 {
+      margin-bottom: 45px;
+    }
+    .programs {
+      @include flex(center);
+      flex-wrap: wrap;
+    }
+  }
+  .features .item {
+    &.right-image .b-left, &.left-image .b-right {
+      width: 100%;
+      @include center;
+    }
+    &.right-image .b-right {
+      width: 100%;
+      margin-left: 0;
+      @include center;
+    }
+    &.left-image .b-left {
+      width: 100%;
+      margin-right: 0;
+      @include center;
+    }
+    img {
+      display: block;
+      @include centerBlock;
+    }
+  }
+  .programs .item {
+    display: inline-block;
+    float: none;
+    width: 285px;
+    margin: 15px;
+  }
+  .education .page-content .features h2 {
+    margin: 0 0 30px;
+  }
+  .bds .item {
+    display: inline-block;
+    float: left;
+    width: 29.3%;
+    margin: 0 2%;
+    @include center;
+    @include top;
+  }
+  .education .quotes {
+    padding: 60px 0 45px;
+    @include bc($main-white-bg);
+  }
+  .quote-slider blockquote {
+    display: block;
+    width: 100%;
+    @include box-sizing;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .education .top-block {
+    padding: 30px 0 45px;
+  }
+  .upcoming-classes-link {
+    margin-top: 45px;
+  }
+  .education {
+    .top-block h1 {
+      margin-bottom: 30px;
+    }
+    .page-content .features h2 {
+      @include font-light(30px, 45px);
+    }
+    .features {
+      padding-bottom: 0;
+      margin-bottom: 30px;
+      .item {
+        p{
+          @include font-regular(15px, 30px);
+        }
+        .b-left h3{
+          @include font-regular(22px, 60px);
+        }
+        &.right-image, &.left-image{
+          .b-left {
+            @include left;
+          }
+        }
+      }
+    }
+  }
+  .bds {
+    h3 {
+      width: 100%;
+      margin: 0 auto 30px;
+      @include font-light(22px, 30px);
+    }
+    .item {
+      display: block;
+      float: none;
+      width: 100%;
+      margin: 0 0 30px;
+      @include left;
+      @include top;
+      img {
+        display: block;
+        float: left;
+        height: 64px;
+        margin: 0;
+      }
+      p {
+        margin-left: 75px;
+        @include font-regular(15px, 30px);
+        color: $blue-grey-e;
+      }
+    }
+  }
+  .education {
+    .bds {
+      padding-bottom: 30px;
+      @include center;
+    }
+    .quotes {
+      padding: 20px 0;
+      background-color: $main-white-bg;
+    }
+  }
+
+  .quote-slider {
+    blockquote {
+      padding: 0;
+      @include centerBlock;
+      span {
+        &.name {
+        @include font-regular(18px, 30px);
+        color: $text-color;
+      }
+        &.title{
+          @include font-regular(13px, 20px);
+          color: $blue-grey-e;
+        }
+    }
+      p {
+        @include indents(0 0 15px, 45px 0);
+        @include font-light(18px, 30px);
+        @include center;
+        &:before {
+          left: 0;
+          @include dimensions(39px, 28px);
+          background-size: cover;
+        }
+        &:after {
+          right: 0;
+          @include dimensions(39px, 28px);
+          @include background($bs:cover, $br:null, $bp:-40px 0);
+        }
+      }
+    }
+    .bullets {
+      margin-top: 30px;
+    }
+  }
+}

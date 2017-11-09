@@ -1,0 +1,71 @@
+.ba-slider {
+    position: relative;
+    overflow: hidden;
+    cursor: ew-resize
+}
+
+.ba-slider .handle, .ba-slider .handle:after {
+    position: absolute;
+    background: #FFF;
+    border-radius: 2px
+}
+
+.ba-slider img {
+    width: 100%;
+    display: block;
+    max-width: none
+}
+
+.ba-slider .resize {
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    float: left
+}
+
+.ba-slider .resize img {
+    float: left
+}
+
+.ba-slider .resize2 {
+    height: 100%;
+    width: 60%;
+    overflow: hidden;
+    float: right
+}
+
+.ba-slider .resize2 img {
+    float: right
+}
+
+.ba-slider .handle {
+    left: 40%;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    margin-left: -2px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+}
+
+.ba-slider .handle:after {
+    top: 50%;
+    width: 15px;
+    height: 20px;
+    margin: -10px 0 0 -5px;
+    content: '|||';
+    color: #DCE2E5;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+    transition: all .3s ease
+}
+
+.ba-slider .handle.draggable:after {
+    width: 25px;
+    height: 30px;
+    margin: -15px 0 0 -10px;
+    line-height: 30px;
+    font-size: 20px
+}

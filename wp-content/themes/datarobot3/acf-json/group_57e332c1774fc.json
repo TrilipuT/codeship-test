@@ -1,0 +1,1060 @@
+{
+    "key": "group_57e332c1774fc",
+    "title": "Landing Pages",
+    "fields": [
+        {
+            "key": "field_57e340372f6cd",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_580f437712598",
+            "label": "Background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Select a background image. The default one is dark. Leave empty to use the default image.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_580f43db12599",
+            "label": "Text color",
+            "name": "text_color",
+            "type": "select",
+            "instructions": "Select the text color based on the background image. For light background select dark text color. Light is default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "#fff": "Light",
+                "#465275": "Dark"
+            },
+            "default_value": [
+                "#fff"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_57e332ee97b9a",
+            "label": "Headline",
+            "name": "headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58a5b5e0d3240",
+            "label": "Description type",
+            "name": "description_type",
+            "type": "select",
+            "instructions": "Choose the description type: it's only the text or team names with logos",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "text": "Text",
+                "team": "Team names and logos"
+            },
+            "default_value": [
+                "text"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_57e334fa3c1ee",
+            "label": "Text only",
+            "name": "description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58a5b5e0d3240",
+                        "operator": "==",
+                        "value": "text"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58a5b650d3241",
+            "label": "Team name with logo",
+            "name": "with_logo",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_58a5b5e0d3240",
+                        "operator": "==",
+                        "value": "team"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_58a5b662d3242",
+                    "label": "Team name",
+                    "name": "team_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_58a5b66fd3243",
+                    "label": "Team logo",
+                    "name": "team_logo",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_580f42f012597",
+            "label": "Choose type of page: LP or Webinar",
+            "name": "lp_type",
+            "type": "select",
+            "instructions": "LP - is two column on it's left side and Webinar - is one column",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "wbnr": "Webinar",
+                "lpg": "LP"
+            },
+            "default_value": [
+                "lpg"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_583dce8a30a63",
+            "label": "Webinar headline",
+            "name": "webinar_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "wbnr"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_583dceb530a64",
+            "label": "Webinar list",
+            "name": "webinar_list",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "wbnr"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_583dd07730a65",
+                    "label": "Webinar spot",
+                    "name": "webinar_spot",
+                    "type": "text",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_580f42f012597",
+                                "operator": "==",
+                                "value": "wbnr"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_583dd09330a66",
+            "label": "Event details for Webinar",
+            "name": "event_details_wbnr",
+            "type": "text",
+            "instructions": "The event details will be displayed in one string, add please a commas in content where it's need to. If  field is empty there will be default text \"Webinar recording available for viewing\"",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "wbnr"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Webinar recording available for viewing",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_583dd0c430a68",
+            "label": "Webinar video\/stream",
+            "name": "wbnr_videostream",
+            "type": "textarea",
+            "instructions": "Add video code",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "wbnr"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_583dd0e130a69",
+            "label": "Content type left box",
+            "name": "content_type_left",
+            "type": "select",
+            "instructions": "Select what is going to be used in \"benefits\" left block - an image, a video or event detail",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "img": "Image",
+                "vid": "Video",
+                "event": "Event"
+            },
+            "default_value": [
+                "img"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_580f422912595",
+            "label": "Benefits image",
+            "name": "benefits_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd0e130a69",
+                        "operator": "==",
+                        "value": "img"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_580f427812596",
+            "label": "Benefits video",
+            "name": "benefits_video",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd0e130a69",
+                        "operator": "==",
+                        "value": "vid"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5891dba38b4f2",
+            "label": "Event details image",
+            "name": "event_details_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd0e130a69",
+                        "operator": "==",
+                        "value": "event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_583dd13d30a6c",
+            "label": "Event details list for LP",
+            "name": "event_details_lp",
+            "type": "repeater",
+            "instructions": "Event details will be displayed each on a new line, do not add a comma at the end of lines.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd0e130a69",
+                        "operator": "==",
+                        "value": "event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_583dd15530a6d",
+                    "label": "Add details",
+                    "name": "details-list-lp",
+                    "type": "text",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_580f42f012597",
+                                "operator": "==",
+                                "value": "lpg"
+                            },
+                            {
+                                "field": "field_583dd0e130a69",
+                                "operator": "==",
+                                "value": "event"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_58a5b6bed3244",
+            "label": "Game event details",
+            "name": "game_event_details",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd0e130a69",
+                        "operator": "==",
+                        "value": "event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_58a5b6e2d3246",
+                    "label": "Date",
+                    "name": "datetime",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "Mjl",
+                    "return_format": "Mjl",
+                    "first_day": 1
+                },
+                {
+                    "key": "field_58a5b6f2d3247",
+                    "label": "Place",
+                    "name": "place",
+                    "type": "text",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_58a5b700d3248",
+                    "label": "Time",
+                    "name": "time",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a"
+                },
+                {
+                    "key": "field_58a5b71cd3249",
+                    "label": "Short description",
+                    "name": "short_description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": "",
+                    "conditional_logic": "",
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_5891dbbe8b4f4",
+            "label": "Event additional info",
+            "name": "event_details_extra",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd0e130a69",
+                        "operator": "==",
+                        "value": "event"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_583dd18430a6f",
+            "label": "Content type  right box",
+            "name": "content_type_right",
+            "type": "select",
+            "instructions": "Select what is going to be used in \"benefits\" right block - a benefits list or text",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bl": "Benefits List",
+                "text": "Text"
+            },
+            "default_value": [
+                "bl"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_583dd1ac30a71",
+            "label": "Benefits text",
+            "name": "benefits_text",
+            "type": "textarea",
+            "instructions": "Add double 'enter' if you wish to have space between paragraphs",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd18430a6f",
+                        "operator": "==",
+                        "value": "text"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "wpautop",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_57e336a03dbde",
+            "label": "Benefits headline",
+            "name": "benefits_headline",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd18430a6f",
+                        "operator": "==",
+                        "value": "bl"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Why DataRobot?",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_57e336c53dbdf",
+            "label": "Benefits list",
+            "name": "benefits_list",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_580f42f012597",
+                        "operator": "==",
+                        "value": "lpg"
+                    },
+                    {
+                        "field": "field_583dd18430a6f",
+                        "operator": "==",
+                        "value": "bl"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_57e33a0c3dbe0",
+                    "label": "Benefit",
+                    "name": "benefit",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
+        },
+        {
+            "key": "field_59564c3e69322",
+            "label": "Page ID",
+            "name": "page_styling_id",
+            "type": "text",
+            "instructions": "This field is used to store a unique ID which helps adding custom styles. Leave empty by default.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_57e340572f6ce",
+            "label": "Campaign Settings",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_580de0c34a1fc",
+            "label": "Form name",
+            "name": "form_name",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Datarobot-main",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_57e340922f6cf",
+            "label": "Eloqua Campaign Id",
+            "name": "eloqua_campaign_id",
+            "type": "text",
+            "instructions": "This is the id number in the URL for the Eloqua campaign that should be associated with this landing page",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 10,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_580f4aad6e300",
+            "label": "Form button text",
+            "name": "form_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Sign up today!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_58593bee0d231",
+            "label": "Redirect URL",
+            "name": "redirect_url",
+            "type": "text",
+            "instructions": "Default redirection leads to <i>https:\/\/www.datarobot.com\/lp-thank-you\/<\/i>.<br>\r\nChange this to to <i>https:\/\/www.datarobot.com\/dru-thank-you\/<\/i> for DRU landing pages or anything other for other pages.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "https:\/\/www.datarobot.com\/lp-thank-you\/",
+            "placeholder": "https:\/\/www.datarobot.com\/lp-thank-you\/",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-landing.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "custom_fields",
+        "discussion",
+        "comments"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1509114710
+}

@@ -1,0 +1,67 @@
+section.error404 {
+  padding: 150px 0;
+  @include center;
+}
+
+.error-image, .error-text {
+  display: inline-block;
+  width: 390px;
+  margin: 0 45px;
+  @include middle;
+}
+
+.error-image {
+  figure {
+    display: block;
+    @include center;
+    @include bc;
+    @include radius(5px);
+    @include shadow(0 0 8px 0 rgba(152, 182, 204, 0.23));
+    overflow: hidden;
+  }
+  figcaption {
+    display: block;
+    @include font-regular(22px, 45px);
+    color: $white;
+    @include linear-gradient(101deg, 101deg, ($text-color 0%, $black-blue 93%));
+  }
+  figure img {
+    display: block;
+    width: 195px;
+    margin: 45px auto 0;
+  }
+}
+
+.error-text {
+  @include left;
+  h1 {
+    font-size: 42px;
+  }
+  p {
+    margin-bottom: 30px;
+    @include font-regular(17px, 30px);
+    color: $blue-grey-e;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.error404 {
+    padding: 60px 0 90px;
+    @include center;
+  }
+  .error-image {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    @include centerBlock;
+    @include middle;
+  }
+  .error-text {
+    display: block;
+    width: 100%;
+    max-width: 390px;
+    margin: 60px auto 0;
+    @include center;
+    @include middle;
+  }
+}

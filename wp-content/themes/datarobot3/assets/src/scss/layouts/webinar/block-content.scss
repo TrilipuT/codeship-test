@@ -1,0 +1,19 @@
+.block-content {
+  @include flex(space-between);
+  @include max(1023){
+    display: block;
+  }
+  .text, .image {
+    flex: 1 0 50%
+  }
+  .text {
+    color: $blue-grey-e;
+  }
+  .image {
+    padding-left: 30px;
+    @include max(1023){
+      padding-left: 0;
+      margin-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,812 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-08 18:43+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: 404.php:12
+msgid "Uh oh..."
+msgstr ""
+
+#: 404.php:14
+msgid "We couldn't find the page you're looking for."
+msgstr ""
+
+#: 404.php:16
+msgid "Try starting with the home page."
+msgstr ""
+
+#: 404.php:18 page-thank-you.php:14
+msgid "Go to the homepage"
+msgstr ""
+
+#: archive-webinar.php:8
+msgid "Upcoming webinars"
+msgstr ""
+
+#: archive-webinar.php:27
+msgid "On-Demand Webinars"
+msgstr ""
+
+#: archive-webinar.php:29
+msgid ""
+"Don't have time to catch a live webinar? Don't worry! Our webinars archive "
+"lets you access and view all our old webinars whenever it's convenient for "
+"you."
+msgstr ""
+
+#: archive-webinar.php:40
+msgid "Show more recordings"
+msgstr ""
+
+#: archive.php:7 category.php:7
+#, php-format
+msgid "Posts by %s"
+msgstr ""
+
+#: footer.php:5 footer.php:7
+msgid "Site map"
+msgstr ""
+
+#: footer.php:12
+msgid "Back to top"
+msgstr ""
+
+#: header-jp.php:116 header-jp.php:136 header.php:103 header.php:125
+#: page-enterprise-ai.php:124 page-partners.php:141 page-zg-lp.php:73
+#: page-zg-lp.php:86
+msgid "Contact Us"
+msgstr ""
+
+#: header.php:102 page-zg-lp.php:72
+msgid "We're hiring!"
+msgstr ""
+
+#. Name of the template
+msgid "About us"
+msgstr ""
+
+#: page-about.php:19
+msgid "DataRobot's world-class Data Scientists"
+msgstr ""
+
+#: page-about.php:35
+msgid "What our customers are saying"
+msgstr ""
+
+#: page-about.php:95
+msgid "Real world experience and expertise from:"
+msgstr ""
+
+#. Name of the template
+msgid "DR Academic"
+msgstr ""
+
+#. Name of the template
+msgid "AI experience"
+msgstr ""
+
+#: page-ai-exp.php:104
+msgid "November 9th, 2017"
+msgstr ""
+
+#: page-ai-exp.php:111
+msgid "Toranomon Hills, Tokyo, Jp"
+msgstr ""
+
+#: page-ai-exp.php:113 page-ai-exp.php:113 page-ai-exp.php:142
+#: page-ai-exp.php:142
+msgid "See on a map"
+msgstr ""
+
+#: page-ai-exp.php:164 page-ai-exp.php:330
+msgid "Keynote speakers"
+msgstr ""
+
+#: page-ai-exp.php:167
+msgid "Conference agenda"
+msgstr ""
+
+#: page-ai-exp.php:171 page-ai-exp.php:364
+msgid "Frequent questions"
+msgstr ""
+
+#: page-ai-exp.php:175
+msgid "Register"
+msgstr ""
+
+#: page-ai-exp.php:352
+msgid "Conference Agenda"
+msgstr ""
+
+#: page-ai-exp.php:386
+msgid "Registration"
+msgstr ""
+
+#: page-ai-exp.php:400 page-contact.php:100 page-enterprise-ai.php:196
+#: page-homepage.php:215 page-landing.php:174 page-product.php:396
+#: single-usecase.php:270 parts/forms/contact-us.php:37
+#: parts/forms/webinar-material.php:34
+msgid "Last Name"
+msgstr ""
+
+#: page-ai-exp.php:404 page-contact.php:98 page-enterprise-ai.php:194
+#: page-homepage.php:213 page-landing.php:175 page-product.php:394
+#: single-usecase.php:269 parts/forms/contact-us.php:35
+#: parts/forms/webinar-material.php:29
+msgid "First Name"
+msgstr ""
+
+#: page-ai-exp.php:408 page-contact.php:102 page-enterprise-ai.php:198
+#: page-homepage.php:217 page-landing.php:176 page-product.php:398
+#: single-usecase.php:271 parts/forms/contact-us.php:39
+#: parts/forms/webinar-material.php:39
+msgid "Business email"
+msgstr ""
+
+#: page-ai-exp.php:412 page-contact.php:104 page-enterprise-ai.php:200
+#: page-homepage.php:219 page-landing.php:177 page-product.php:400
+#: single-usecase.php:272 parts/forms/contact-us.php:41
+#: parts/forms/webinar-material.php:45
+msgid "Phone"
+msgstr ""
+
+#: page-ai-exp.php:416 page-contact.php:106 page-enterprise-ai.php:202
+#: page-homepage.php:221 page-landing.php:178 page-product.php:402
+#: single-usecase.php:273 parts/forms/contact-us.php:43
+#: parts/forms/webinar-material.php:51
+msgid "Company"
+msgstr ""
+
+#: page-ai-exp.php:420 page-contact.php:109 page-contact.php:110
+#: page-enterprise-ai.php:206 page-homepage.php:224 page-homepage.php:225
+#: page-landing.php:181 page-product.php:406 page-test-drive.php:110
+#: single-usecase.php:277 parts/forms/contact-us.php:47
+#: parts/forms/webinar-material.php:55
+msgid "Role"
+msgstr ""
+
+#: page-ai-exp.php:421 page-contact.php:111 page-enterprise-ai.php:207
+#: page-homepage.php:226 page-landing.php:182 page-product.php:407
+#: page-test-drive.php:111 single-usecase.php:278 parts/forms/contact-us.php:48
+#: parts/forms/webinar-material.php:56
+msgid "Actuary"
+msgstr ""
+
+#: page-ai-exp.php:422 page-contact.php:112 page-enterprise-ai.php:208
+#: page-homepage.php:227 page-landing.php:183 page-product.php:408
+#: page-test-drive.php:112 single-usecase.php:279 parts/forms/contact-us.php:49
+#: parts/forms/webinar-material.php:57
+msgid "Business Analyst"
+msgstr ""
+
+#: page-ai-exp.php:423 page-contact.php:113 page-enterprise-ai.php:209
+#: page-homepage.php:228 page-landing.php:184 page-product.php:409
+#: page-test-drive.php:113 single-usecase.php:280 parts/forms/contact-us.php:50
+#: parts/forms/webinar-material.php:58
+msgid "Executive"
+msgstr ""
+
+#: page-ai-exp.php:424 page-contact.php:114 page-enterprise-ai.php:210
+#: page-homepage.php:229 page-landing.php:185 page-product.php:410
+#: page-test-drive.php:114 single-usecase.php:281 parts/forms/contact-us.php:51
+#: parts/forms/webinar-material.php:59
+msgid "Data scientist - Beginner"
+msgstr ""
+
+#: page-ai-exp.php:425 page-contact.php:115 page-enterprise-ai.php:211
+#: page-homepage.php:230 page-landing.php:186 page-product.php:411
+#: page-test-drive.php:115 single-usecase.php:282 parts/forms/contact-us.php:52
+#: parts/forms/webinar-material.php:60
+msgid "Data scientist - Expert"
+msgstr ""
+
+#: page-ai-exp.php:426 page-contact.php:116 page-enterprise-ai.php:212
+#: page-homepage.php:231 page-landing.php:187 page-product.php:412
+#: page-test-drive.php:116 single-usecase.php:283 parts/forms/contact-us.php:53
+#: parts/forms/webinar-material.php:61
+msgid "Data scientist - Management"
+msgstr ""
+
+#: page-ai-exp.php:427 page-contact.php:117 page-enterprise-ai.php:213
+#: page-homepage.php:232 page-landing.php:188 page-product.php:413
+#: page-test-drive.php:117 single-usecase.php:284 parts/forms/contact-us.php:54
+#: parts/forms/webinar-material.php:62
+msgid "IT professional"
+msgstr ""
+
+#: page-ai-exp.php:428 page-contact.php:118 page-enterprise-ai.php:214
+#: page-homepage.php:233 page-landing.php:189 page-product.php:414
+#: page-test-drive.php:118 single-usecase.php:285 parts/forms/contact-us.php:55
+#: parts/forms/webinar-material.php:63
+msgid "Software Engineer"
+msgstr ""
+
+#: page-ai-exp.php:429 page-contact.php:119 page-contact.php:483
+#: page-enterprise-ai.php:215 page-homepage.php:234 page-homepage.php:598
+#: page-landing.php:190 page-product.php:415 page-test-drive.php:119
+#: single-usecase.php:286 single-usecase.php:643 parts/forms/contact-us.php:56
+#: parts/forms/contact-us.php:419 parts/forms/webinar-material.php:64
+msgid "Other"
+msgstr ""
+
+#: page-ai-exp.php:435 page-landing.php:195
+msgid "How did you hear about us?"
+msgstr ""
+
+#. Author of the theme
+#: page-ai-exp.php:436 page-landing.php:196
+msgid "DataRobot"
+msgstr ""
+
+#: page-ai-exp.php:437 page-landing.php:197
+msgid "NSSOL"
+msgstr ""
+
+#: page-ai-exp.php:438 page-landing.php:198
+msgid "Transcosmos"
+msgstr ""
+
+#: page-ai-exp.php:439 page-landing.php:199
+msgid "NTT Data"
+msgstr ""
+
+#: page-ai-exp.php:440 page-landing.php:200
+msgid "Advertisement"
+msgstr ""
+
+#: page-ai-exp.php:441 page-landing.php:201
+msgid "Other Sponsor"
+msgstr ""
+
+#: page-ai-exp.php:447 page-landing.php:206
+msgid "Are there ML projects are your company?"
+msgstr ""
+
+#: page-ai-exp.php:448 page-landing.php:207
+msgid "Have a plan to start machine learning"
+msgstr ""
+
+#: page-ai-exp.php:449 page-landing.php:208
+msgid "Already executing machine learning projects"
+msgstr ""
+
+#: page-ai-exp.php:450 page-landing.php:209
+msgid "No plan for machine learning"
+msgstr ""
+
+#: page-ai-exp.php:456 page-landing.php:214
+msgid "Budget for machine learning projects?"
+msgstr ""
+
+#: page-ai-exp.php:457 page-landing.php:215
+msgid "Under $44.5k"
+msgstr ""
+
+#: page-ai-exp.php:458 page-landing.php:216
+msgid "$44.5k ~ $89k"
+msgstr ""
+
+#: page-ai-exp.php:459 page-landing.php:217
+msgid "$89k ~ $444.3k"
+msgstr ""
+
+#: page-ai-exp.php:460 page-landing.php:218
+msgid "no plan or budget"
+msgstr ""
+
+#: page-ai-exp.php:466 page-landing.php:223
+msgid "Data science experience?"
+msgstr ""
+
+#: page-ai-exp.php:467 page-landing.php:224
+msgid "I have experience with data science"
+msgstr ""
+
+#: page-ai-exp.php:468 page-landing.php:225
+msgid "I don't have experience but we have a data scientist"
+msgstr ""
+
+#: page-ai-exp.php:469 page-landing.php:226
+msgid "No data science experience"
+msgstr ""
+
+#: page-ai-exp.php:522
+msgid "Partner Sponsors"
+msgstr ""
+
+#: page-ai-exp.php:540
+msgid "Media Sponsors"
+msgstr ""
+
+#: page-ai-exp.php:930 page-landing.php:817
+msgid "Please fill in all required fields"
+msgstr ""
+
+#. Name of the template
+msgid "All courses"
+msgstr ""
+
+#. Name of the template
+msgid "Board and investors"
+msgstr ""
+
+#. Name of the template
+msgid "Careers"
+msgstr ""
+
+#. Name of the template
+msgid "Cloud page"
+msgstr ""
+
+#: page-cloud.php:31 page-homepage.php:13
+msgid "See DataRobot in Action!"
+msgstr ""
+
+#: page-cloud.php:98
+msgid "Sign up"
+msgstr ""
+
+#. Name of the template
+#: single-usecase.php:87 single-usecase.php:112 single-usecase.php:233
+#: parts/get-in-touch.php:13
+msgid "Contact us"
+msgstr ""
+
+#: page-contact.php:42
+msgid "Want to reach a local office?"
+msgstr ""
+
+#: page-contact.php:44
+msgid "Contact the headquarters (Boston, MA)"
+msgstr ""
+
+#: page-contact.php:124 page-contact.php:125 page-enterprise-ai.php:221
+#: page-homepage.php:240 page-product.php:421 page-test-drive.php:123
+#: page-test-drive.php:124 parts/forms/contact-us.php:62
+#: parts/forms/webinar-material.php:70
+msgid "Country"
+msgstr ""
+
+#: page-contact.php:394 page-enterprise-ai.php:490 page-homepage.php:509
+#: page-product.php:690 page-test-drive.php:406 parts/forms/contact-us.php:331
+#: parts/forms/webinar-material.php:352
+msgid "State/Province"
+msgstr ""
+
+#: page-contact.php:473 page-homepage.php:588 parts/forms/contact-us.php:409
+msgid "Type of inquiry"
+msgstr ""
+
+#: page-contact.php:474 page-enterprise-ai.php:22 page-enterprise-ai.php:568
+#: page-homepage.php:13 page-homepage.php:184 page-homepage.php:589
+#: page-product.php:217 page-product.php:361 page-product.php:768
+#: page-uc-banking-landing.php:16 page-uc-banking-landing.php:223
+#: parts/forms/contact-us.php:410 parts/industry/top-banner.php:19
+msgid "Request a demo"
+msgstr ""
+
+#: page-contact.php:475 page-enterprise-ai.php:569 page-homepage.php:590
+#: page-product.php:769 single-usecase.php:642 parts/forms/contact-us.php:411
+msgid "Contact Sales"
+msgstr ""
+
+#: page-contact.php:476 page-homepage.php:591 parts/forms/contact-us.php:412
+msgid "General inquiry"
+msgstr ""
+
+#: page-contact.php:477 page-homepage.php:592 parts/forms/contact-us.php:413
+msgid "Press/Media inquiry"
+msgstr ""
+
+#: page-contact.php:478 page-homepage.php:593 parts/forms/contact-us.php:414
+msgid "Partnership opportunities"
+msgstr ""
+
+#: page-contact.php:479 page-homepage.php:594 parts/forms/contact-us.php:415
+msgid ""
+"Learn more about DataRobot\n"
+"                                    University"
+msgstr ""
+
+#: page-contact.php:482 page-homepage.php:597 parts/forms/contact-us.php:418
+msgid "Investment opportunities"
+msgstr ""
+
+#: page-contact.php:490 page-enterprise-ai.php:577 page-homepage.php:605
+#: page-product.php:777 single-usecase.php:650 parts/forms/contact-us.php:426
+msgid "Tell us about your interest"
+msgstr ""
+
+#: page-contact.php:522 page-homepage.php:637 parts/forms/contact-us.php:458
+msgid "Submit"
+msgstr ""
+
+#. Name of the template
+msgid "Courses"
+msgstr ""
+
+#. Name of the template
+msgid "Culture"
+msgstr ""
+
+#. Name of the template
+msgid "DRU LP"
+msgstr ""
+
+#. Name of the template
+msgid "Education"
+msgstr ""
+
+#. Name of the template
+msgid "Enterprise AI"
+msgstr ""
+
+#: page-enterprise-ai.php:123
+msgid "Want to learn about the keys to AI success?"
+msgstr ""
+
+#: page-enterprise-ai.php:570 page-product.php:770
+msgid "General inquiries"
+msgstr ""
+
+#. Name of the template
+msgid "Enterprise"
+msgstr ""
+
+#: page-enterprise.php:14 page-partners.php:40 page-partners.php:47
+#: page-partners.php:73 parts/top-banner.php:13
+msgid "Learn more"
+msgstr ""
+
+#. Name of the template
+#: page-product.php:297
+msgid "Features"
+msgstr ""
+
+#. Name of the template
+msgid "Form test page"
+msgstr ""
+
+#. Name of the template
+msgid "Fraud LP"
+msgstr ""
+
+#. Name of the template
+msgid "Automated Machine Learning"
+msgstr ""
+
+#. Name of the template
+msgid "Practical Guide DSC"
+msgstr ""
+
+#. Name of the template
+msgid "ASTROS invite"
+msgstr ""
+
+#. Name of the template
+msgid "Practical Guide"
+msgstr ""
+
+#. Name of the template
+msgid "Homepage JP"
+msgstr ""
+
+#: page-homepage-jp.php:14
+msgid "See how"
+msgstr ""
+
+#. Name of the template
+msgid "Homepage"
+msgstr ""
+
+#: page-homepage.php:26
+msgid "DR technologies"
+msgstr ""
+
+#: page-homepage.php:36
+msgid "DataRobot works for..."
+msgstr ""
+
+#: page-homepage.php:54
+msgid "View"
+msgstr ""
+
+#: page-homepage.php:68
+msgid "Check out the story of two real life Data Science Superheroes!"
+msgstr ""
+
+#: page-homepage.php:84 page-uc-banking-landing.php:192
+msgid "Announcement"
+msgstr ""
+
+#: page-homepage.php:108
+msgid "READ MORE"
+msgstr ""
+
+#: page-homepage.php:119
+msgid "What’s new"
+msgstr ""
+
+#: page-homepage.php:156 page-homepage.php:166
+msgid "With DataRobot"
+msgstr ""
+
+#: page-homepage.php:159 page-homepage.php:169
+msgid "Old way"
+msgstr ""
+
+#. Name of the template
+msgid "Landing page template"
+msgstr ""
+
+#. Name of the template
+msgid "Partner page"
+msgstr ""
+
+#. Name of the template
+msgid "Partners page"
+msgstr ""
+
+#: page-partners.php:12
+msgid "Become a partner"
+msgstr ""
+
+#: page-partners.php:109 page-uc-banking-landing.php:208
+msgid "Read more"
+msgstr ""
+
+#: page-partners.php:140
+msgid "Want to become a DataRobot partner?"
+msgstr ""
+
+#. Name of the template
+msgid "Payment page"
+msgstr ""
+
+#. Name of the template
+msgid "Persona"
+msgstr ""
+
+#. Name of the template
+msgid "Product"
+msgstr ""
+
+#: page-product.php:17
+msgid "Get Started with a Free Demo"
+msgstr ""
+
+#: page-product.php:59
+msgid "How DataRobot works"
+msgstr ""
+
+#: page-product.php:226
+msgid "Machine Learning Automation"
+msgstr ""
+
+#: page-product.php:240
+msgid "Advantages"
+msgstr ""
+
+#: page-product.php:279
+msgid "Enterprise-Grade"
+msgstr ""
+
+#: page-product.php:284
+msgid "Features that make DataRobot truly enterprise grade are:"
+msgstr ""
+
+#: page-product.php:360
+msgid "Want to see DataRobot in action?"
+msgstr ""
+
+#. Name of the template
+msgid "Superhero LP"
+msgstr ""
+
+#. Name of the template
+msgid "Superhero 2 LP"
+msgstr ""
+
+#. Name of the template
+msgid "Leadership team"
+msgstr ""
+
+#. Name of the template
+msgid "Test Drive"
+msgstr ""
+
+msgid "Thank you"
+msgstr ""
+
+#: page-thank-you.php:12
+msgid "Thank you!"
+msgstr ""
+
+#: page-thank-you.php:13
+msgid "We will contact you shortly."
+msgstr ""
+
+#. Name of the template
+msgid "Industries LP Banking"
+msgstr ""
+
+#: page-uc-banking-landing.php:25
+msgid "DataRobot can help you with:"
+msgstr ""
+
+#: page-uc-banking-landing.php:175
+msgid "Where you can find us"
+msgstr ""
+
+#: page-uc-banking-landing.php:222
+msgid "Want to use DataRobot for your project?"
+msgstr ""
+
+#. Name of the template
+msgid "Industries Fintech-LP"
+msgstr ""
+
+#. Name of the template
+msgid "Industry: Healthcare"
+msgstr ""
+
+#. Name of the template
+#: page-uc-healthcare.php:224
+msgid "Use cases"
+msgstr ""
+
+#: page-uc-healthcare.php:238
+msgid "See all use cases"
+msgstr ""
+
+#. Name of the template
+msgid "Industries LP"
+msgstr ""
+
+#. Name of the template
+msgid "Industries Public Sector-LP"
+msgstr ""
+
+#: page-usecases.php:18 page-usecases.php:41
+msgid "All industries"
+msgstr ""
+
+#: page-usecases.php:114
+msgid "Open use case"
+msgstr ""
+
+#. Name of the template
+msgid "Webinar LP"
+msgstr ""
+
+#. Name of the template
+msgid "ZG LP"
+msgstr ""
+
+#: single-usecase.php:59 single-usecase.php:136
+msgid "Industry"
+msgstr ""
+
+#: single-usecase.php:64 single-usecase.php:141
+msgid "Why DataRobot"
+msgstr ""
+
+#: single-usecase.php:68 single-usecase.php:145
+msgid "Highlights"
+msgstr ""
+
+#: single-usecase.php:73 single-usecase.php:166
+msgid "Results"
+msgstr ""
+
+#: single-usecase.php:86 single-usecase.php:171
+msgid "Want to know more about this use case?"
+msgstr ""
+
+#: single-usecase.php:90 single-usecase.php:172
+msgid "Download pdf"
+msgstr ""
+
+#: single-usecase.php:111
+msgid "Do you want to find out what solution is the best in your case?"
+msgstr ""
+
+#: single-usecase.php:151
+msgid "Challenge"
+msgstr ""
+
+#: single-usecase.php:155
+msgid "Solution"
+msgstr ""
+
+#: single-usecase.php:215
+msgid "Said about DataRobot:"
+msgstr ""
+
+#: single-usecase.php:231
+msgid "Do you have a similar case?"
+msgstr ""
+
+#: single-usecase.php:232
+msgid ""
+"Want to see this specific use case in action? Contact us to find out how we "
+"can solve your problems."
+msgstr ""
+
+#: single-usecase.php:639
+msgid "Type of Inquiry"
+msgstr ""
+
+#: single-usecase.php:640
+msgid "Request a Demo"
+msgstr ""
+
+#: single-usecase.php:641
+msgid "General Inquiry"
+msgstr ""
+
+#: single-webinar.php:18
+msgctxt "Webinar date format"
+msgid "l, F d, Y"
+msgstr ""
+
+#: single-webinar.php:45
+msgid "Sign up now for Free"
+msgstr ""
+
+#. Name of the template
+msgid "LP - Crest Superheroes"
+msgstr ""
+
+#. Name of the template
+msgid "LP - Practical ML program"
+msgstr ""
+
+#: parts/newsletter-form.php:29
+msgid "Subscribe"
+msgstr ""
+
+#. Name of the template
+msgid "Industry: Manufactirung"
+msgstr ""
+
+#: parts/homepage/service-info.php:47
+msgid "AI Services"
+msgstr ""
+
+#: parts/homepage/service-info.php:48
+msgid "Request more information"
+msgstr ""
+
+#: parts/persona/top-banner-image-bottom.php:15
+#: parts/persona/top-banner-image-center.php:18
+msgid "Contact us to learn more"
+msgstr ""
+
+#: parts/webinar/upcoming-item.php:15 parts/webinar/upcoming-item.php:16
+msgctxt "Upcoming webinar date-time format"
+msgid "l, M d \\a\\t g:i a"
+msgstr ""
+
+#. Name of the theme
+msgid "DataRobot 3"
+msgstr ""
+
+#. URI of the theme
+msgid "https://datarobot.com"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://DataRobot"
+msgstr ""

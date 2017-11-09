@@ -1,0 +1,142 @@
+.single-event {
+  .top-banner {
+    padding: 60px 0;
+    &.no-photo {
+      @include linear-gradient(225deg, 225deg, ($text-color 0%, $black-blue 100%));
+    }
+    &.bg-photo {
+      @include background($bs: cover);
+    }
+    .b-left {
+      float: left;
+      width: 50%;
+    }
+  }
+  .no-photo .b-left {
+    float: none;
+    width: auto;
+  }
+  .top-banner {
+    .b-left {
+      p span {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+      }
+      > a {
+        float: left;
+        margin-right: 60px;
+      }
+      a.of-page {
+        margin-right: 0;
+        position: relative;
+        @include font-medium(15px, 45px);
+        text-transform: uppercase;
+        i {
+          float: left;
+          margin-right: 15px;
+          font-size: 20px;
+        }
+      }
+    }
+    .b-right {
+      float: right;
+      width: 50%;
+    }
+  }
+  .no-photo .b-right {
+    float: none;
+    width: auto;
+    @include centerBlock;
+    @include center;
+  }
+  .top-banner .b-right img {
+    display: block;
+    max-width: 300px;
+    max-height: 300px;
+    @include dimensions(auto);
+    @include centerBlock;
+  }
+  h1 {
+    color: $white;
+    margin-bottom: 30px;
+  }
+  .top-banner p {
+    margin-bottom: 30px;
+    @include font-regular(17px, 30px);
+    color: $blue-grey-e;
+    i {
+      @include absolute($t: 0, $l: 0);
+      width: 20px;
+      @include font-regular(20px, 30px);
+      @include center;
+    }
+  }
+  .place a {
+    color: $white;
+  }
+}
+
+section.single-event > .container {
+  padding: 60px 15px 0;
+}
+
+.single-event {
+  h2 {
+    margin-bottom: 30px;
+  }
+  .post-text {
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.sessions {
+  margin-bottom: 45px;
+  border: 2px solid $white-grey;
+  @include radius;
+  .item {
+    padding: 30px;
+    border-top: 1px solid $white-grey;
+    &:first-child {
+      border-top: none;
+    }
+  }
+  .item-meta {
+    margin-bottom: 15px;
+  }
+}
+
+.item-meta p {
+  display: inline-block;
+  float: left;
+  @include font-regular(15px, 22px);
+  color: $blue-grey-e;
+  margin-right: 45px;
+  i {
+    float: left;
+    margin-right: 10px;
+    font-size: 20px;
+    @include middle;
+  }
+}
+
+.sessions .item-descr h3 {
+  @include font-medium($fs: 17px);
+}
+
+.item-descr {
+  @include font-regular(15px, 30px);
+  color: $blue-grey-e;
+}
+
+.media-contacts {
+  margin-bottom: 45px;
+}
+
+@media only screen and (max-width: 1023px) {
+  .single-event h1 {
+    @include font-regular(30px, 45px);
+  }
+}

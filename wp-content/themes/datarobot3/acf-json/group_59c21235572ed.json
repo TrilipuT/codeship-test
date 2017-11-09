@@ -1,0 +1,45 @@
+{
+    "key": "group_59c21235572ed",
+    "title": "Persona",
+    "fields": [
+        {
+            "key": "field_59c21268a3a64",
+            "label": "Page id",
+            "name": "page_id",
+            "type": "text",
+            "instructions": "enter page id to use custom styles for this id",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-persona.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1506522550
+}

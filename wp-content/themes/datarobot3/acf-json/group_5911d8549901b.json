@@ -1,0 +1,51 @@
+{
+    "key": "group_5911d8549901b",
+    "title": "Latests posts on Homepage",
+    "fields": [
+        {
+            "key": "field_5911d85ff9e32",
+            "label": "Latest posts",
+            "name": "latest_posts",
+            "type": "post_object",
+            "instructions": "Choose three main posts you wish to display in 'latest posts' block. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-homepage.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-homepage-jp.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1506522544
+}

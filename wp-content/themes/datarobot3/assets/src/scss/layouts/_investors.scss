@@ -1,0 +1,183 @@
+.board {
+  .page-content {
+    padding: 45px 0 60px;
+    .container {
+      padding-bottom: 60px;
+    }
+  }
+  h1 {
+    margin-bottom: 60px;
+    @include font-light(42px, 45px);
+    @include center;
+  }
+  .grid {
+    @include flex(space-between);
+    position: relative;
+    margin: 0 auto 20px;
+    .item {
+      display: inline-block;
+      @include center;
+      @include center;
+      cursor: pointer;
+      .img-wrap {
+        position: relative;
+        margin-bottom: 25px;
+        @include radius;
+        overflow: hidden;
+        cursor: pointer;
+      }
+    }
+  }
+  figure img {
+    display: block;
+    width: 100%;
+  }
+  .grid {
+    .item h2 {
+      margin-bottom: 0;
+      @include font-regular(22px, 30px);
+      color: $text-color;
+    }
+    .active h2 {
+      color: $blue;
+    }
+    .item p {
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+  .grid-bio {
+    display: none;
+  }
+  .bio-wrap {
+    position: relative;
+    @include bc;
+    .item {
+      display: none;
+      position: relative;
+      &.active {
+        display: block;
+      }
+    }
+    .scroller {
+      content: '';
+      display: block;
+      @include absolute($t:0, $l:0);
+      height: 3px;
+      @include bc($blue);
+    }
+    .item .bio {
+      padding: 30px;
+      @include font-regular(15px, 30px);
+      color: $dark-blue;
+    }
+  }
+  .investors {
+    padding: 60px 0 0;
+    @include bc;
+    h2 {
+      margin-bottom: 45px;
+      @include font-regular(30px, 30px);
+      @include center;
+    }
+  }
+  ul.logos {
+    @include flex(space-between);
+    li {
+      line-height: 70px;
+      img {
+        @include middle;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .board .page-content .container {
+    padding-bottom: 45px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .board {
+    .page-content .container {
+      padding-bottom: 0;
+    }
+    h1 {
+      margin-bottom: 45px;
+    }
+    .grid {
+      display: block;
+      .item {
+        display: block;
+        width: 100% !important;
+        @include indents(0 0 15px, 30px);
+        @include center;
+        @include bc;
+        @include radius;
+        cursor: default;
+        figure {
+          width: 100%;
+          margin-bottom: 30px;
+          line-height: 155px;
+          @include left;
+        }
+        .img-wrap {
+          display: inline-block;
+          position: relative;
+          width: 210px;
+          margin: 0 30px 0 0;
+          @include middle;
+          @include radius;
+          overflow: hidden;
+          cursor: default;
+        }
+        figcaption {
+          display: inline-block;
+          @include middle;
+        }
+        h2 {
+          color: $text-color;
+        }
+      }
+    }
+    .grid-bio {
+      display: block;
+    }
+    .item .grid-bio p {
+      @include font-regular(15px, 30px);
+      color: $dark-blue;
+      @include left;
+    }
+    .bio-wrap {
+      display: none;
+    }
+    ul.logos {
+      @include flex(center);
+      flex-flow: row wrap;
+      li {
+        margin: 15px;
+        line-height: 70px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .board {
+    .grid .item figcaption, .grid-bio {
+      display: block;
+    }
+    .grid .item {
+      .img-wrap {
+        display: block;
+        width: 100%;
+        margin-bottom: 30px;
+        margin-right: 0;
+      }
+      figure {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

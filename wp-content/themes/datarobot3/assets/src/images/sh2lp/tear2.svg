@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="370px" viewBox="0 0 1920 370" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1920" height="370"></rect>
+        <path d="M0,6.8339522e-13 L1920,4.54747351e-13 L1920,476.730469 L0,757.508749 L0,6.8339522e-13 Z M1920,480.075195 L1920,491.023438 L0,792.66712 L0,764.194838 L1920,480.075195 Z M1920,500.123047 L1920,515.387695 L0,802.712369 L0,795.911704 L1920,500.123047 Z M1920,533.129883 L1920,535.530273 L0,821.965763 L0,804.910781 L1920,533.129883 Z M1860.06451,562.4635 L0,843.730469 L0,829.090368 L1860.06451,562.4635 Z M1243.87727,663.750923 C1243.87727,663.750923 1469.25151,631.396774 1920,566.688477 L1920,571.040039 C1556.21132,622.520642 1330.83708,653.42427 1243.87727,663.750923 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Combined-Shape">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g id="Group" mask="url(#mask-2)">
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#061D3B" transform="translate(960.000000, 421.865234) rotate(-180.000000) translate(-960.000000, -421.865234) " xlink:href="#path-3"></use>
+            </g>
+        </g>
+    </g>
+</svg>

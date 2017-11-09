@@ -1,0 +1,78 @@
+{
+    "key": "group_59bfe6f64e388",
+    "title": "Get in Touch",
+    "fields": [
+        {
+            "key": "field_59bfe6ff15072",
+            "label": "Text",
+            "name": "git_text",
+            "type": "text",
+            "value": null,
+            "instructions": "Text will be appeared before button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Want to see DataRobot in action?",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59bfe7d9c494f",
+            "label": "Button text",
+            "name": "git_button_text",
+            "type": "text",
+            "value": null,
+            "instructions": "If not filled - text \"CONTACT US\" will be used",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Contact us",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-enterprise.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-persona.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/industry-manufacturing.php"
+            }
+        ]
+    ],
+    "menu_order": 10,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1509543238
+}

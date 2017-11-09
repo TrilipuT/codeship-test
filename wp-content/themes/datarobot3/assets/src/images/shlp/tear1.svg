@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920px" height="461px" viewBox="0 0 1920 461" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1921" height="462"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Superhero-LP-Copy" transform="translate(0.000000, -1920.000000)">
+            <g id="Group-7" transform="translate(-1.000000, 1920.000000)">
+                <g id="Page-1">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g id="Rectangle-3"></g>
+                    <path d="M0,0 L1921.11638,0 L0,338.99963 L0,0 Z M1965.86309,0 L2031.8474,0 L0,380.999584 L0,346.986787 L1965.86309,0 Z M2091.69428,0 L2201.27919,0 L0,392.999571 L0,384.875543 L2091.69428,0 Z M2203.94741,22.9999749 L0,415.999546 L0,395.625779 L2203.94741,22.9999749 Z M1861.0815,105.999884 L0,441.999518 L0,424.510552 L1861.0815,105.999884 Z M0.000426139469,461 C0.000426139469,461 1171.81577,255.743085 1505.50641,208.80211 C1505.50641,208.80211 337.575326,413.13748 0.000426139469,461 Z M1793.49593,182.60659 C1793.49593,182.60659 882.026234,342.07289 618.571902,379.425017 C618.571902,379.425017 1533.07572,219.242099 1793.49593,182.60659 Z M2440,26.7414824 C2440,26.7414824 1512.60547,188.992534 1244.55735,226.99716 C1244.55735,226.99716 2175.02861,64.0144042 2440,26.7414824 Z" id="Combined-Shape" fill="#000000" mask="url(#mask-2)"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

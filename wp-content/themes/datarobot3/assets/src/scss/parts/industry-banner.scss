@@ -1,0 +1,56 @@
+.industry-banner {
+  background-color: $black-blue;
+  background-position: center;
+  .top-banner {
+    display: flex;
+    align-items: center;
+    min-height: 570px;
+    padding: 100px 0;
+    @include max(1023) {
+      @include flex(flex-end);
+      flex-direction: column;
+      padding: 270px 0 60px;
+    }
+    .b-left {
+      float: left;
+      width: 49%;
+      @include max(1023) {
+        float: left;
+        width: 100%;
+      }
+    }
+    .b-bottom {
+      @include flex(flex-start);
+      align-items: baseline;
+      flex-wrap: wrap;
+      float: left;
+      width: 100%;
+      .button {
+        @include max(768) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .button, .link {
+      float: left;
+    }
+    .link {
+      @include font-medium(17px, 15px);
+    }
+    h1 {
+      position: relative;
+      margin-bottom: 10px;
+      color: $white;
+    }
+    p {
+      margin-bottom: 40px;
+      @include font-regular(15px, 30px);
+      color: $white;
+    }
+    .button {
+      width: 230px;
+      margin-right: 45px;
+      @include center;
+    }
+  }
+}

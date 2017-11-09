@@ -1,0 +1,64 @@
+.quotes-slider {
+  margin-top: 75px;
+  position: relative;
+  background-color: #EEF7FF;
+  padding: 40px 30px 20px;
+  font-size: 15px;
+  line-height: 25px;
+  color: $black-blue;
+  &.hidden{
+    visibility: hidden;
+  }
+  @include max(1024){
+    display: none;
+  }
+  .controls--dots .bx-pager-link {
+    margin-top: 30px;
+    background-color: #E1E8F0;
+    opacity: 1;
+    &.active {
+      background-color: $blue;
+    }
+  }
+  .item {
+    &:not(:first-child) {
+      display: none;
+    }
+  }
+  .quote {
+    &-content {
+      margin-bottom: 25px;
+    }
+    &-icon {
+      position: absolute;
+      top: -10px;
+    }
+    &-info {
+      @include flex(flex-start);
+      img {
+        max-width: 60px;
+        height: 100%;
+        display: block;
+        border-radius: 50%;
+        margin-right: 15px;
+      }
+      .text-holder {
+        flex-basis: 100%;
+      }
+    }
+    &-text {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    &-name {
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    &-title {
+      color: $blue-grey-e;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.page-template-page-uc-landing {
+  .top-wrapper {
+    background-color: $black-blue;
+    overflow: hidden;
+    .container {
+      @include flex(space-between);
+      @include max(1024) {
+        flex-direction: column;
+      }
+    }
+  }
+  .insurance-slider {
+    //width: (1230px - 420px) / 1230px * 100%;
+    width: 100%;
+    min-height: 540px;
+    padding: 100px 0 50px;
+  }
+  .slide-content {
+    @include flex(flex-start);
+    align-items: center;
+    @include max(600) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .slide {
+    display: none;
+    &-content{
+      min-height: 340px;
+    }
+    &-image {
+      @include max(1024) {
+        flex-basis: 50%;
+        text-align: center;
+      }
+    }
+    &-text {
+      @include max(1024) {
+        flex-basis: 50%;
+      }
+      @include max(600) {
+        text-align: center;
+      }
+    }
+    img {
+      max-width: 250px;
+      height: 100%;
+      margin-right: 60px;
+      @include max(600) {
+        margin-right: 0;
+        max-width: 50%;
+      }
+    }
+    span {
+      color: #7E91A2;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 30px;
+    }
+    h4 {
+      color: #FFFFFF;
+      font-size: 42px;
+      font-weight: 300;
+      line-height: 45px;
+      margin-bottom: 50px;
+      @include max(720) {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  @import "../parts/slider-dots-controls";
+  .bx-controls {
+    margin-top: 50px;
+    @include max(600) {
+      margin-top: 30px;
+    }
+  }
+  .quote-wrap {
+    background-color: #E1E8F0;
+    width: 100%;
+    max-width: 420px;
+    padding: 115px 0 75px 60px;
+    min-height: 540px;
+    font-size: 17px;
+    line-height: 30px;
+    @include max(1024) {
+      max-width: 100%;
+      padding: 100px 35px 60px 50px;
+      margin: 0 -15px;
+      min-height: 0;
+    }
+    @include max(600) {
+      padding-left: 15px;
+      padding-right: 0;
+    }
+    &:after, &:before {
+      top: 0;
+      left: 100%;
+      height: 100%;
+      width: 800px;
+      background: #E1E8F0;
+      content: "";
+      position: absolute;
+    }
+    &:before{
+      top: 100%;
+      left: 0;
+    }
+    .quote {
+      @include max(1024) {
+        padding: 0;
+      }
+      @include max(720) {
+        > p {
+          text-align: center;
+          font-size: 15px;
+          line-height: 30px;
+        }
+      }
+    }
+    .quote-icon {
+      position: absolute;
+      top: 0;
+      width: 120px;
+      @include max(1024) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .author- {
+    &holder {
+      @include flex(flex-start);
+      margin-top: 30px;
+      @include max(1024) {
+        justify-content: center;
+      }
+    }
+    &info {
+
+    }
+    &image {
+      max-width: 79px;
+      height: 100%;
+      margin-right: 15px;
+    }
+    &name {
+      color: $black-blue;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    &position {
+      color: $blue-grey-e;
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}

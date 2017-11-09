@@ -1,0 +1,305 @@
+.uc-by-industry {
+  margin-bottom: 100px;
+  h1 {
+    display: block;
+    @include centerBlock(60px);
+    @include font-light(54px, 60px);
+    @include center;
+  }
+}
+
+.uc-filters {
+  width: 285px;
+  &.default {
+    float: left;
+  }
+  &.fixed {
+    @include fixed($t: 106px);
+  }
+  &.absolute {
+    @include absolute($t: auto, $b: 0);
+  }
+}
+
+.ucf-mobile {
+  display: none;
+}
+
+.uc-filter {
+  margin-bottom: 30px;
+  border: 1px solid $white-grey;
+  @include radius;
+  @include box-sizing;
+  overflow: hidden;
+  li {
+    display: block;
+    position: relative;
+    border-top: 1px solid $white-grey;
+    &:first-child {
+      border-top: none;
+    }
+    a {
+      display: block;
+      padding-left: 26px;
+      @include font-medium(13px, 60px);
+      color: $blue-grey-f;
+      text-transform: uppercase;
+      border-left: 4px solid transparent;
+      &:hover {
+        @include bc;
+        color: $blue;
+      }
+      &.active {
+        @include bc;
+        padding-left: 26px;
+        color: $blue;
+        border-left: 4px solid $blue;
+      }
+    }
+    span {
+      @include absolute($t: 0, $r: 30px);
+      @include font-medium(13px, 60px);
+      color: $pale-grey;
+    }
+  }
+}
+
+.uc-content {
+  position: relative;
+  margin-left: 315px;
+}
+
+.uc-description {
+  @include indents(0 0 60px, 30px);
+  @include radius;
+  @include linear-gradient(225deg, 225deg, ($text-color 0%, $black-blue 100%));
+  h3 {
+    margin-bottom: 20px;
+    @include font-regular(30px, 35px);
+    color: $white;
+  }
+  p {
+    @include font-regular(17px, 30px);
+    color: $pale-grey;
+  }
+}
+
+.uc-examples h2 {
+  margin-bottom: 30px;
+  @include font-light(42px, 1em);
+  color: $text-color;
+}
+
+.uc-item {
+  position: relative;
+  margin-bottom: 30px;
+  @include bc;
+  @include radius;
+  @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.05));
+  > a {
+    display: block;
+    padding: 30px;
+  }
+  .tags {
+    @include absolute($t: 0);
+    a {
+      display: inline-block;
+      float: left;
+      @include indents(10px, 0 20px);
+      @include font-medium(13px, 30px);
+      color: $light-ghost;
+      text-transform: uppercase;
+      @include bc($white-bg);
+      @include radius(0 0 3px 3px);
+    }
+  }
+  h3 {
+    margin-bottom: 20px;
+    @include font-regular(30px, 30px);
+    color: $text-color;
+  }
+  p {
+    margin-bottom: 20px;
+    @include font-regular(17px, 30px);
+    color: $blue-grey-e;
+  }
+  span.read-more {
+    display: inline-block;
+    padding-left: 30px;
+    @include font-medium(15px, 20px);
+    color: $blue;
+    text-transform: uppercase;
+    background: url("../images/check-circle-outline-blank.svg") no-repeat;
+  }
+}
+
+.use-cases .preloader {
+  width: 100%;
+  padding: 60px 0;
+  @include center;
+  @include bc($main-white-bg);
+  z-index: 2;
+  img {
+    width: 32px;
+  }
+}
+
+.uc-testimonials {
+  height: 1536px;
+  //background: url("../images/testimonials.png");
+  @include background($bs: 100%);
+}
+
+@media only screen and (max-width: 1366px) {
+  .uc-by-industry h1 {
+    @include centerBlock(30px);
+    font-size: 42px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .uc-by-industry h1 {
+    margin: 45px auto 30px;
+    font-size: 42px;
+  }
+  .uc-filters {
+    &.default {
+      float: none;
+      width: 100%;
+      margin: 0 auto 30px;
+      @include center;
+    }
+    &.fixed {
+      float: none;
+      @include relative($t:auto);
+      width: 100%;
+      margin: 0 auto 30px;
+      @include center;
+    }
+  }
+  .ucf-mobile {
+    display: block;
+  }
+  .ucf-desktop {
+    display: none;
+  }
+  .uc-content{
+    margin-left: 0;
+  }
+  .uc-filter {
+    display: inline-block;
+    position: relative;
+    width: 285px;
+    margin: 15px;
+    @include left;
+    @include top;
+    @include bc;
+    border: none;
+    @include radius;
+    @include box-sizing;
+    @include shadow(0 1px 1px 0 $white-grey);
+    overflow: hidden;
+    &.mobile .current-item {
+      display: block;
+      @include dimensions(100%, 45px);
+      padding-left: 15px;
+      line-height: 45px;
+      border: none;
+      &:after {
+        content: "\6d";
+        display: inline-block;
+        @include absolute($t:0, $r:15px);
+        font-family: "dr3" !important;
+        @include font-regular(20px, 45px);
+        color: $blue-grey;
+        @include middle;
+      }
+    }
+  }
+  .ucf-mobile {
+    ul {
+      display: none;
+    }
+    li {
+      &:first-child {
+        border-top: 1px solid $white-grey;
+      }
+      a {
+        display: block;
+        padding-left: 15px;
+        @include font-medium(13px, 45px);
+        color: $text-color;
+        text-transform: none;
+        border-left: none;
+        &.active {
+          padding-left: 15px;
+          color: $text-color;
+          @include bc;
+          border-left: none;
+        }
+      }
+      span {
+        line-height: 45px;
+        color: $text-color;
+      }
+    }
+  }
+  .uc-top-banner-wrap {
+    h3 {
+      display: block;
+      margin-bottom: 25px;
+      @include font-light(30px, 60px);
+      color: $white;
+    }
+    p {
+      width: 100%;
+      @include centerBlock;
+      @include font-light(20px, 30px);
+      color: $white;
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .current-item {
+    display: block;
+    @include dimensions(100%, 45px);
+    padding-left: 15px;
+    line-height: 45px;
+    border: none;
+    &:after {
+      content: "\6d";
+      display: inline-block;
+      @include absolute($t:0, $r:15px);
+      font-family: "dr3" !important;
+      @include font-regular(20px, 45px);
+      color: $blue-grey;
+      @include middle;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .uc-item h3 {
+    font-size: 22px;
+  }
+  .uc-by-industry {
+    margin-bottom: 0;
+    h1 {
+      @include centerBlock(30px);
+      font-size: 30px;
+    }
+  }
+  .uc-filters {
+    display: block;
+    justify-content: space-around;
+  }
+  .uc-filter {
+    display: block;
+    width: 285px;
+    margin: 0 auto 30px;
+  }
+  .uc-pdf .button {
+    margin-bottom: 20px;
+  }
+}

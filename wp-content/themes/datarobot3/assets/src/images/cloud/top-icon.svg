@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="32px" viewBox="0 0 56 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#A6D7FE" offset="0%"></stop>
+            <stop stop-color="#2D8FE2" stop-opacity="0.5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-2">
+            <stop stop-color="#2D8FE2" stop-opacity="0" offset="0%"></stop>
+            <stop stop-color="#2D8FE2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cloud-3" transform="translate(-315.000000, -178.000000)">
+            <g id="Group-3" transform="translate(311.000000, 178.000000)">
+                <g id="Group-2" transform="translate(4.000000, 0.000000)">
+                    <g id="Group-Copy-6">
+                        <path d="M1.25,0 L28.75,0 L28.75,0 C29.4403559,-1.96629406e-15 30,0.559644063 30,1.25 L30,8.75 L30,8.75 C30,9.44035594 29.4403559,10 28.75,10 L1.25,10 L1.25,10 C0.559644063,10 8.45442189e-17,9.44035594 0,8.75 L0,1.25 L0,1.25 C-8.45442189e-17,0.559644063 0.559644063,1.26816328e-16 1.25,0 Z" id="Combined-Shape" fill-opacity="0.5" fill="url(#linearGradient-1)" opacity="0.599999964"></path>
+                        <g id="Group" transform="translate(10.000000, -0.000000)">
+                            <path d="M28.1374306,5.16403417 C27.7769059,5.05729633 27.3951441,5 27,5 C24.790861,5 23,6.790861 23,9 C23,11.209139 24.790861,13 27,13 L41,13 C43.7614237,13 46,10.7614237 46,8 C46,5.23857625 43.7614237,3 41,3 C40.6704029,3 40.3482544,3.03189133 40.0364719,3.09275656 C38.8919391,1.2369457 36.8404216,0 34.5,0 C31.3680743,0 28.7535033,2.21505921 28.1374306,5.16403417 Z" id="Combined-Shape" fill-opacity="0.5" fill="#ACD6FA" opacity="0.599999964"></path>
+                            <rect id="Rectangle-2-Copy-10" fill="#2D8FE2" x="15" y="3" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-9" fill="#2D8FE2" x="12" y="3" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-7" fill="#2D8FE2" x="9" y="3" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-5" fill="#2D8FE2" x="6" y="3" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-3" fill="#2D8FE2" x="3" y="3" width="1" height="4"></rect>
+                            <rect id="Rectangle-2" fill="#2D8FE2" x="-1.53876911e-12" y="3" width="1" height="4"></rect>
+                        </g>
+                        <circle id="Oval-272" fill="#2D8FE2" cx="5" cy="5" r="1"></circle>
+                    </g>
+                    <g id="Group-Copy-6" transform="translate(0.000000, 11.000000)">
+                        <path d="M1.25,0 L28.75,0 L28.75,0 C29.4403559,-1.96629406e-15 30,0.559644063 30,1.25 L30,8.75 L30,8.75 C30,9.44035594 29.4403559,10 28.75,10 L1.25,10 L1.25,10 C0.559644063,10 8.45442189e-17,9.44035594 0,8.75 L0,1.25 L0,1.25 C-8.45442189e-17,0.559644063 0.559644063,1.26816328e-16 1.25,0 Z" id="Rectangle-1174" fill-opacity="0.5" fill="url(#linearGradient-1)" opacity="0.599999964"></path>
+                        <g id="Group" transform="translate(10.000000, 3.000000)" fill="#2D8FE2">
+                            <rect id="Rectangle-2-Copy-10" x="16" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-9" x="13" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-7" x="10" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-5" x="7" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-3" x="3" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2" x="-1.53876911e-12" y="0" width="1" height="4"></rect>
+                        </g>
+                        <circle id="Oval-272" fill="#2D8FE2" cx="5" cy="5" r="1"></circle>
+                    </g>
+                    <g id="Group-Copy-6" transform="translate(0.000000, 22.000000)">
+                        <path d="M1.25,0 L28.75,0 L28.75,0 C29.4403559,-1.96629406e-15 30,0.559644063 30,1.25 L30,8.75 L30,8.75 C30,9.44035594 29.4403559,10 28.75,10 L1.25,10 L1.25,10 C0.559644063,10 8.45442189e-17,9.44035594 0,8.75 L0,1.25 L0,1.25 C-8.45442189e-17,0.559644063 0.559644063,1.26816328e-16 1.25,0 Z" id="Rectangle-1174" fill-opacity="0.5" fill="url(#linearGradient-1)" opacity="0.599999964"></path>
+                        <g id="Group" transform="translate(10.000000, 3.000000)">
+                            <rect id="Rectangle-2-Copy-10" fill="url(#linearGradient-2)" x="16" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-9" fill="url(#linearGradient-2)" x="13" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-7" fill="url(#linearGradient-2)" x="10" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-5" fill="url(#linearGradient-2)" x="7" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2-Copy-3" fill="#2D8FE2" x="3" y="0" width="1" height="4"></rect>
+                            <rect id="Rectangle-2" fill="#2D8FE2" x="-1.53876911e-12" y="0" width="1" height="4"></rect>
+                        </g>
+                        <circle id="Oval-272" fill="#2D8FE2" cx="5" cy="5" r="1"></circle>
+                    </g>
+                    <g id="Group-31" transform="translate(13.000000, 10.000000)">
+                        <path d="M4,0 L32,0 L32,0 C32.5522847,-1.01453063e-16 33,0.44771525 33,1 L33,20 L33,20 C33,20.5522847 32.5522847,21 32,21 L4,21 L4,21 C3.44771525,21 3,20.5522847 3,20 L3,1 L3,1 C3,0.44771525 3.44771525,1.01453063e-16 4,0 Z" id="Rectangle-783" fill="#F1F8FF"></path>
+                        <path d="M4,1.90819582e-16 L32,1.90819582e-16 L32,2.22044605e-16 C32.5522847,1.20591542e-16 33,0.44771525 33,1 L33,22 L3,22 L3,1 L3,1 C3,0.44771525 3.44771525,1.01453063e-16 4,0 L4,1.90819582e-16 Z M4,1 L4,21 L32,21 L32,1 L4,1 Z" id="Combined-Shape" fill="#2D8FE2"></path>
+                        <g id="Group-8" transform="translate(9.000000, 5.000000)" stroke="#2D8FE2">
+                            <path d="M6.32383035e-13,0 L2.82842712,2.82842712" id="Line"></path>
+                            <path d="M6.32383035e-13,5 L2.82842712,2.17157288" id="Line"></path>
+                            <path d="M4,5 L8,5" id="Line" stroke-linecap="square"></path>
+                        </g>
+                        <path d="M-3.2596148e-14,20 L36,20 L36,21.5864582 L36,21.5864582 C36,21.814851 35.814851,22 35.5864582,22 L0.41354176,22 L0.41354176,22 C0.185148953,22 -4.42144175e-14,21.814851 -4.42423875e-14,21.5864582 L-3.2596148e-14,20 Z" id="Rectangle-784" fill="#2D8FE2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

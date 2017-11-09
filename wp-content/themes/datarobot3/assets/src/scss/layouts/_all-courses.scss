@@ -1,0 +1,454 @@
+.all-courses {
+  .top-banner {
+    min-height: 300px;
+    padding: 30px 20px;
+    @include center;
+    background-size: cover;
+    background-position-x: center;
+  }
+  .banner-content {
+    position: relative;
+    margin-bottom: 30px;
+    a.logo {
+      display: block;
+      max-width: 200px;
+      @include indents(0 auto, 30px 0 50px);
+      img {
+        display: block;
+        width: 200px;
+        @include centerBlock;
+      }
+    }
+    .title {
+      @include font-light(42px, 45px);
+      color: $white;
+    }
+    .dd-wrap {
+      position: relative;
+      .dd-btn {
+        background: none;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        span {
+          margin-right: 5px;
+          @include font-light(45px, 45px);
+          color: $blue;
+          border-bottom: 1px dashed $blue;
+        }
+        &:hover {
+          color: $skiey-3;
+        }
+      }
+      ul.dd-list {
+        display: none;
+        @include indents(0);
+        @include left;
+        z-index: 3;
+        li {
+          display: block;
+          padding: 30px 30px 0 30px;
+          @include font-regular(17px, 20px);
+          color: $ghost;
+          list-style: none;
+          @include bc;
+          cursor: pointer;
+          &:hover {
+            color: $blue;
+          }
+          &:nth-last-child(1) {
+            padding-bottom: 30px;
+            @include radius(0 0 3px 3px);
+          }
+          &:first-child {
+            border-top: 3px solid $blue;
+            @include radius(3px 3px 0 0);
+          }
+        }
+        &.list {
+          width: 330px;
+        }
+        &.show {
+          display: block;
+          @include absolute($l:0, $t:21px);
+          @include shadow(0 5px 15px 0 rgba(161, 180, 204, 0.1));
+          z-index: 2;
+        }
+      }
+    }
+  }
+  .main-content .titles {
+    @include dimensions(100%, 45px);
+    margin: 45px 0 30px;
+    @include font-medium(15px, 45px);
+    color: $ghost;
+    text-transform: uppercase;
+    border-bottom: 2px solid $white-grey;
+  }
+}
+
+.one-training {
+  display: none;
+}
+
+.all-courses .main-content {
+  .col {
+    display: inline-block;
+    float: left;
+    position: relative;
+    width: 19%;
+    padding-left: 30px;
+    @include box-sizing;
+    &.left {
+      width: 44%;
+    }
+    &.right {
+      width: 18%;
+    }
+  }
+  .training-schedule .one-training {
+    &:nth-last-child(1) .training-header {
+      border: none;
+    }
+    .training-header {
+      position: relative;
+      @include dimensions(100%, 75px);
+      border-bottom: 1px solid $white-grey;
+      line-height: 75px;
+      cursor: pointer;
+      &:hover {
+        @include bc;
+        @include radius(6px);
+        @include shadow(0 1px 1px 0 $white-grey);
+      }
+      &.active {
+        @include bc;
+        border: none;
+        @include radius(6px);
+        @include shadow(0 1px 1px 0 $white-grey);
+        img {
+          @include rotate(180deg);
+          @include ease-transition(.5s);
+        }
+      }
+      span {
+        @include font-regular(17px, 75px);
+        color: $blue-grey-e;
+        @include top;
+      }
+      i {
+        @include absolute($r:30px, $t:0);
+        @include font-regular(22px, 75px);
+        color: $blue;
+        @include middle;
+        @include ease-transition(.5s);
+        cursor: pointer;
+      }
+      &.active i {
+        @include rotate(180deg);
+      }
+      span.training-name {
+        font-size: 22px;
+        color: $ghost;
+      }
+    }
+    .training-content {
+      width: 100%;
+      max-height: 0;
+      padding: 0 30px;
+      @include bc($white-4);
+      @include radius(0 0 6px 6px);
+      @include ease-transition(.3s, ease-in-out);
+      overflow: hidden;
+      opacity: 0;
+      &.show {
+        max-height: 1000px;
+        padding: 30px;
+        opacity: 1;
+      }
+      .left-box {
+        float: left;
+        width: 28%;
+        margin-right: 8%;
+        .duration {
+          display: block;
+          margin-bottom: 20px;
+          @include font-medium(13px, 20px);
+          color: $ruby;
+          text-transform: uppercase;
+          clear: right;
+        }
+        .description {
+          display: block;
+          float: none;
+          margin-bottom: 20px;
+          @include font-regular(15px, 30px);
+          color: $blue-grey-e;
+        }
+        .bottom-box {
+          width: 100%;
+          min-width: 320px;
+          margin-bottom: 15px;
+          .left-bottom-box {
+            float: left;
+            width: 40%;
+            margin-right: 5%;
+            line-height: 45px;
+            @include middle;
+            .button{
+              max-width: 120px;
+              padding: 15px 32px;
+            }
+          }
+          .right-bottom-box{
+            float: left;
+            width: 45%;
+            line-height: 45px;
+            @include middle;
+
+          }
+        }
+        .action-wrap a{
+          @include font-regular(16px, 30px);
+          color: $blue;
+          text-transform: uppercase;
+          &:hover{
+            color:$skiey;
+          }
+        }
+      }
+    }
+  }
+}
+
+.right-bottom-box i {
+  display: inline-block;
+  margin-right: 10px;
+  @include font-regular(22px, 45px);
+  @include middle;
+}
+
+.all-courses {
+  .main-content .training-schedule .one-training .training-content {
+    .left-box .bottom-box {
+      .left-bottom-box a, .right-bottom-box a {
+        cursor: pointer;
+      }
+      .left-bottom-box a span, .right-bottom-box a span {
+        @include font-medium(13px, 15px);
+        color: $blue;
+        text-transform: uppercase;
+      }
+      .left-bottom-box a span img, .right-bottom-box a span img {
+        @include relative($t:3px);
+        margin-right: 10px;
+      }
+      .bg-filled-blue {
+        max-width: 120px;
+        padding: 15px 30px;
+      }
+    }
+    .right-box {
+      position: relative;
+      width: 64%;
+      margin-left: 36%;
+      .tabs {
+        @include dimensions(100%, 45px);
+        margin-bottom: 30px;
+        border-bottom: 1px solid $white-grey;
+        .tab {
+          display: inline-block;
+          float: left;
+          padding: 0 30px 28px;
+          @include font-medium(13px, 15px);
+          color: $blue-grey-e;
+          border-bottom: 2px solid transparent;
+          @include ease-transition(.3s);
+          text-transform: uppercase;
+          cursor: pointer;
+          &:hover {
+            border-bottom: 2px solid $blue;
+          }
+          &.selected {
+            color: $text-color;
+            border-bottom: 2px solid $blue;
+          }
+        }
+      }
+      .tabfield {
+        display: none;
+        @include font-regular(15px, 30px);
+        color: $ghost;
+        &.selected {
+          display: block;
+        }
+      }
+    }
+  }
+  .tabfield {
+    &.outline {
+      overflow-x: scroll;
+    }
+    .row_wrap {
+      @include dimensions(810px, 200px);
+      white-space: nowrap;
+    }
+  }
+  .get-in-touch {
+    padding: 90px 0;
+    @include bc($main-white-bg);
+    .button-wrap {
+      background-position-x: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .all-courses .main-content {
+    .titles {
+      display: none;
+    }
+    .col {
+      width: 20%;
+      padding-left: 15px;
+    }
+    .training-schedule .one-training .training-header span {
+      font-size: 15px;
+      &.training-name {
+        font-size: 18px;
+      }
+    }
+    .col {
+      width: 20%;
+      white-space: nowrap;
+      &.left {
+        width: 44%;
+      }
+      &.right {
+        width: 16%;
+      }
+    }
+    .training-schedule .one-training {
+      .training-header i {
+        @include absolute($r:15px, $t:50%);
+        height: auto !important;
+        margin-top: -12px;
+        line-height: initial;
+      }
+      .training-content {
+        .left-box {
+          float: none;
+          width: 100%;
+          margin-bottom: 45px;
+          margin-right: 0;
+          .duration {
+            width: 100%;
+          }
+          .bottom-box {
+            width: 35%;
+          }
+        }
+        .right-box {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .all-courses {
+    .get-in-touch {
+      @include bc($main-white-bg);
+      padding: 60px 0;
+    }
+    .banner-content {
+      margin: 10px;
+      .title, .dd-wrap .dd-btn span {
+        font-size: 30px;
+      }
+    }
+    .main-content .training-schedule .one-training .training-header {
+      height: auto;
+      padding: 15px 0;
+      line-height: 30px;
+      span {
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .all-courses {
+    min-width: 320px;
+    .main-content .training-schedule .one-training {
+      .training-header {
+        padding: 20px 0;
+        .col {
+          width: 35%;
+          padding-left: 15px;
+          &.left {
+            width: 90%;
+          }
+          &.right {
+            width: 30%;
+          }
+          &:nth-last-of-type(2){
+            min-width: 145px;
+          }
+        }
+        img {
+          right: 15px;
+        }
+        &.active{
+          @include bc;
+          &:hover{
+            @include bc;
+          }
+        }
+        &:hover{
+          background: inherit;
+          @include shadow(none);
+          @include radius(0);
+        }
+      }
+      .training-content {
+        padding: 0 15px;
+        &.show {
+          padding: 30px 15px;
+        }
+        .left-box {
+          width: 100%;
+          margin-bottom: 50px;
+          margin-right: 0;
+          .duration {
+            width: 100%;
+          }
+          .bottom-box {
+            width: 35%;
+            .left-bottom-box {
+              width: 35%;
+            }
+            .right-bottom-box{
+              width: 42%;
+            }
+          }
+        }
+        .right-box {
+          width: 100%;
+          .tabs .tab {
+            padding: 0 22px 28px;
+          }
+        }
+      }
+    }
+    .get-in-touch .container {
+      padding: 0;
+      .button-wrap {
+        border-radius: 0;
+      }
+    }
+  }
+}

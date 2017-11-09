@@ -1,0 +1,200 @@
+.right-sidebar, .left-sidebar {
+  float: right;
+  width: 390px;
+}
+
+.search_widget {
+  margin-bottom: 75px;
+  label {
+    display: block;
+    position: relative;
+    i {
+      @include absolute($l: 20px);
+      @include font-regular(24px, 41px);
+      color: $pale-grey-1;
+    }
+  }
+  input {
+    display: block;
+    @include dimensions(100%, 41px);
+    padding: 0 0 0 50px;
+    @include font-regular(17px, 30px);
+    color: $ghost;
+    @include bc($white-4);
+    border: 2px solid transparent;
+    &:focus {
+      @include bc;
+      border: 2px solid $blue;
+    }
+  }
+}
+
+.widget {
+  @include bc;
+  @include radius;
+  @include shadow(0 0 6px 0 rgba(0, 0, 0, 0.05));
+}
+
+.widgettitle {
+  display: block;
+  margin-bottom: 20px;
+  color: $text-color;
+}
+
+#dr_widget-2 {
+  background: transparent;
+  box-shadow: none;
+}
+
+.slider {
+  display: block;
+  position: relative;
+  @include dimensions(100%, 330px);
+  max-width: 390px;
+  @include indents(0 0 30px, 0);
+  @include radius(6px);
+  overflow: hidden;
+  .slider-wrapper{
+    @include dimensions(100%, 330px);
+    max-width: 390px;
+    line-height: 330px;
+  }
+  .slide-content {
+    @include absolute($t:0, $l:0);
+    @include dimensions(100%, 330px);
+    max-width: 390px;
+    @include indents(0);
+    z-index: 0;
+    .img {
+      display: table;
+      @include dimensions(100%);
+    }
+  }
+  .nav-dots {
+    @include absolute($t: 20px, $r: 30px);
+    @include dimensions(100%, 11px);
+    @include right;
+    z-index: 4;
+    .nav-dot {
+      display: inline-block;
+      @include relative($t: -5px);
+      @include dimensions(9px);
+      margin-left: 10px;
+      background-color: rgba(255, 255, 255, .3);
+      z-index: 1;
+      @include radius(100%);
+      &:hover {
+        cursor: pointer;
+        @include bc;
+        @include shadow(0 0 5px 0 rgba(225, 225, 225, 0.5));
+      }
+      &.selected {
+        @include bc;
+        @include shadow(0 0 5px 0 rgba(225, 225, 225, 0.5));
+      }
+    }
+  }
+  .content-block {
+    @include relative($l:390px);
+    display: table-cell;
+    @include middle;
+    padding: 0 30px;
+    @include ease-transition(.5s);
+    p {
+      @include font-regular(15px, 20px);
+      margin-bottom: 15px;
+      color: $white;
+      opacity: .7;
+      &.slide-title {
+        @include font-regular(22px, 30px);
+        margin-bottom: 35px;
+        opacity: 1;
+      }
+    }
+    a {
+      @include font-medium(15px, 15px);
+      color: $blue;
+      text-transform: uppercase;
+      i.icon-circle-right {
+        @include relative($t: 4px);
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      &:hover{
+        color: $skiey;
+      }
+    }
+  }
+  .slide-content{
+    &.selected{
+      z-index: 2;
+      .content-block {
+        left: 0;
+        z-index: 1;
+        //-webkit-animation: mymove 6s infinite;
+        //animation: mymove 6s infinite;
+      }
+    }
+  }
+}
+
+//
+//@-webkit-keyframes mymove {
+//  from {left: 390px;}
+//  to {left: 0;}
+//}
+//
+//@keyframes mymove {
+//  from {left: 390px;}
+//  to {left: 0;}
+//}
+
+.widget_recent_entries {
+  padding: 20px 30px;
+  .widgettitle {
+    @include font-regular(22px, 30px);
+    @include left;
+  }
+  ul li {
+    margin-bottom: 20px;
+    a {
+      @include font-regular(17px, 30px);
+      color: $blue;
+      &:hover{
+        color: $skiey;
+      }
+    }
+  }
+  .post-date {
+    display: block;
+    @include font-regular(15px, 30px);
+    color: $blue-grey-e;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .left-sidebar {
+    width: 35%;
+    margin-right: 2%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .right-sidebar {
+    width: 38%;
+  }
+  .left-sidebar {
+    float: none;
+    width: 100%;
+  }
+  .left-sidebar .search_widget, .news-roll > .search_widget {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .right-sidebar {
+    float: left;
+    width: 100%;
+  }
+}

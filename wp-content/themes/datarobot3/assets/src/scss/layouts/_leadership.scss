@@ -1,0 +1,319 @@
+.page-template-page-team .wrapper {
+  width: 100%;
+  position: relative;
+  @include indents(0 auto, 76px 0 0 0);
+}
+
+
+.team {
+  .top-block {
+    padding: 60px 0 90px;
+    @include center;
+    h1 {
+      margin-bottom: 30px;
+      @include font-light(42px, 45px);
+      color: $white;
+    }
+    p {
+      width: 80%;
+      @include centerBlock;
+      @include font-regular(17px, 30px);
+      color: $white;
+    }
+  }
+  .page-content {
+    padding: 90px 0 120px;
+  }
+  .grid {
+    margin: 0 -15px;
+    .item {
+      display: inline-block;
+      float: left;
+      width: 25%;
+      @include indents(0 0 10px, 15px);
+      @include center;
+      @include radius;
+      cursor: pointer;
+      &:hover {
+        @include bc;
+        @include shadow(0 0 6px 0 rgba(0, 0, 0, 0.05));
+      }
+    }
+  }
+  .img-wrap {
+    position: relative;
+    margin-bottom: 25px;
+    @include linear-gradient(to bottom left, top right, ($text-color 0%, $black-blue 100%));
+    @include radius;
+    overflow: hidden;
+    cursor: pointer;
+    .more {
+      display: block;
+      font-size: 18px;
+      @include absolute($t:50%, $l:0);
+      width: 100%;
+      margin-top: -15px;
+      opacity: 0;
+      i {
+        display: inline-block;
+        margin-right: 10px;
+        @include font-regular(24px, 30px);
+        color: $white;
+        @include middle;
+      }
+      span {
+        display: inline-block;
+        @include font-medium(15px, 30px);
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .grid .item:hover .img-wrap {
+    .more {
+      opacity: 1;
+    }
+    img {
+      opacity: 0.3;
+    }
+  }
+  figure img {
+    display: block;
+    width: 100%;
+  }
+  figcaption {
+    margin-bottom: 5px;
+  }
+  .grid .item {
+    h2 {
+      margin-bottom: 0;
+      @include font-regular(22px, 30px);
+      color: $text-color;
+    }
+    p {
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+}
+
+.bio-slider-wrap {
+  width: 810px;
+  @include absolute($t:50%, $l:50%);
+  @include centerBlock;
+  @include bc;
+  @include radius(6px);
+  @include shadow((0 0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
+  @include translate((-50%, -50%));
+  overflow: hidden;
+  .bx-wrapper {
+    padding: 45px 45px 30px;
+  }
+  .top {
+    margin-bottom: 30px;
+  }
+  .name-position {
+    @include indents(0 0 0 135px, 22px 0);
+    h2 {
+      margin-bottom: 0;
+      @include font-regular(22px, 30px);
+      color: $ghost;
+    }
+    p {
+      @include font-regular(17px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+  .photo {
+    float: left;
+    @include dimensions(105px);
+    @include radius(50%);
+    overflow: hidden;
+    img {
+      height: 105px;
+      max-width: inherit;
+      margin-left: -18.5px;
+    }
+  }
+  .bio {
+    @include font-regular(15px, 30px);
+    color: $text-color;
+  }
+  .controls {
+    position: relative;
+    padding: 45px;
+    @include bc($main-white-bg);
+  }
+  .bullets {
+    @include center;
+    line-height: 15px;
+  }
+  .bx-pager-item {
+    display: inline-block;
+    @include dimensions(12px);
+    margin: 0 10px;
+    line-height: 12px;
+    @include middle;
+    a {
+      display: block;
+      font-size: 10px;
+      color: $white-grey;
+      text-indent: -9999px;
+      @include bc($white-grey);
+      @include radius(50%);
+      @include linear-transition(.1s);
+      &.active, &:hover {
+        @include bc($blue);
+      }
+    }
+  }
+  .controls > a {
+    display: block;
+    @include absolute($t:30px);
+    @include font-medium(13px, 25px);
+    color: $blue-grey-f;
+    text-transform: uppercase;
+  }
+}
+
+
+.calendar-slider .controls a.disabled {
+  display: none;
+}
+
+
+.bio-slider-wrap .controls {
+  > a {
+    &:hover {
+      color: $blue;
+    }
+    i {
+      @include absolute($t:0);
+      font-size: 12px;
+    }
+  }
+  a {
+    &.bx-prev {
+      left: 45px;
+      @include left;
+      span {
+        padding-left: 20px;
+      }
+      i {
+        left: 0;
+      }
+    }
+    &.bx-next {
+      right: 45px;
+      @include right;
+      span {
+        padding-right: 20px;
+      }
+      i {
+        right: 0;
+      }
+    }
+  }
+  > a {
+    span {
+      display: block;
+      @include middle;
+    }
+    p {
+      @include font-regular(17px, 20px);
+      color: $ghost;
+      text-transform: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1366px) {
+  .bio-slider-wrap {
+    width: 900px;
+    .bx-wrapper {
+      padding: 20px 30px;
+    }
+    .controls {
+      padding: 30px;
+      > a {
+        top: 15px;
+      }
+      a {
+        &.bx-prev {
+          left: 30px;
+        }
+        &.bx-next {
+          right: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .team {
+    .top-block {
+      padding: 45px 0;
+      @include center;
+    }
+    .page-content {
+      padding: 45px 0;
+    }
+    .grid {
+      @include flex(center);
+      flex-flow: row wrap;
+      margin: 0;
+      .item {
+        width: 285px;
+      }
+    }
+  }
+  .bio-slider-wrap {
+    width: 660px;
+    .bx-wrapper {
+      padding: 30px;
+    }
+    .controls {
+      padding: 10px 30px 90px;
+      > a {
+        top: 45px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .bio-slider-wrap {
+    @include relative($t:auto, $l:auto);
+    width: 100%;
+    padding-top: 30px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: scroll;
+    transform: none;
+    .bx-wrapper {
+      padding: 0 15px;
+    }
+    .controls {
+      padding: 90px 30px 10px;
+    }
+    .bx-pager-item {
+      margin: 0 5px;
+    }
+    .controls {
+      > a {
+        top: 20px;
+      }
+      a {
+        &.bx-prev {
+          left: 15px;
+          @include left;
+        }
+        &.bx-next {
+          right: 15px;
+          @include right;
+        }
+      }
+    }
+  }
+}

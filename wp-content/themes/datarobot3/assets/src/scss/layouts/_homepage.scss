@@ -1,0 +1,637 @@
+.home .wrapper {
+  padding-top: 76px;
+}
+
+.top-block {
+  width: 100%;
+  padding-bottom: 60px;
+  @include linear-gradient(to top left, bottom right, ($text-color 0%, $dark-blue-2 32%, $black-blue 100%));
+}
+
+.home .top-block {
+  padding: 120px 0 60px;
+  @include background($bs: cover);
+  .video {
+    position: relative;
+    margin-bottom: 60px;
+  }
+}
+
+.video-text {
+  width: 600px;
+  h1 {
+    margin-bottom: 30px;
+    @include font-light(42px, 60px);
+    color: $white;
+  }
+}
+
+.watch-v {
+  display: inline-block;
+  height: 45px;
+  margin-left: 30px;
+  @include font-medium(15px, 45px);
+  color: $blue;
+  text-transform: uppercase;
+  cursor: pointer;
+  &.block {
+    display: block;
+    width: 160px;
+    @include centerBlock(15px);
+    @include center;
+  }
+  &:hover {
+    color: $skiey;
+  }
+  i {
+    display: inline-block;
+    margin-right: 7px;
+    font-size: 20px;
+    @include middle;
+  }
+  span {
+    @include middle;
+  }
+}
+
+.video-button {
+  margin-left: 630px;
+  @include radius(6px);
+  overflow: hidden;
+}
+
+.video-mobile {
+  display: none;
+}
+
+.top-block .logos {
+  display: block;
+  width: 100%;
+  @include centerBlock;
+  @include center;
+}
+
+.logos-row {
+  line-height: 60px;
+}
+
+.top-block .logos {
+  img {
+    display: inline-block;
+    margin: 0 30px;
+    @include middle;
+  }
+  p {
+    margin: 30px auto 0;
+    font-size: 22px;
+    color: $blue-grey-d;
+  }
+}
+
+.roles {
+  padding: 75px 0 100px;
+  @include bc($main-white-bg);
+  h2 {
+    margin-bottom: 35px;
+    @include font-light(42px, 60px);
+    color: $text-color;
+    @include center;
+  }
+  .role-buttons {
+    @include flex(space-between);
+    .item {
+      display: inline-block;
+      @include dimensions(200px, 210px);
+      @include center;
+      @include top;
+      @include bc;
+      @include radius;
+      @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.05));
+      cursor: pointer;
+      &:first-child {
+        margin-left: 0;
+      }
+      > a {
+        display: block;
+        @include dimensions(100%);
+      }
+      .title {
+        height: 40px;
+        line-height: 40px;
+        span {
+          display: inline-block;
+          padding: 0 20px;
+          @include font-regular(17px, 20px);
+          color: $text-color;
+        }
+      }
+    }
+    .role-image {
+      line-height: 120px;
+      img {
+        @include bottom;
+        max-width: 80px;
+        width: auto;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.persona-more {
+  display: block;
+  max-width: 60px;
+  margin: 15px auto 20px;
+  @include left;
+  line-height: 15px;
+  i {
+    float: left;
+    margin-right: 7px;
+  }
+  span {
+    display: block;
+    @include font-medium(13px, 15px);
+    text-transform: uppercase;
+  }
+}
+
+.mbp {
+  padding: 90px 0 60px;
+  @include linear-gradient(to top, bottom, ($dark-blue-1 0%, $black-blue-1 100%));
+  h2 {
+    margin-bottom: 5px;
+    @include font-light(42px, 60px);
+    color: $white;
+    @include center;
+  }
+  p {
+    margin-bottom: 60px;
+    @include font-light(20px, 30px);
+    color: $white;
+    @include center;
+    opacity: 0.7;
+  }
+}
+
+.ba-mobile {
+  display: none;
+  position: relative;
+  max-width: 719px;
+  height: 250px;
+  margin: 0 -15px;
+  overflow: hidden;
+  ul.tab {
+    display: block;
+    max-width: 240px;
+    list-style-type: none;
+    overflow: hidden;
+    @include indents(0 auto 15px, 0);
+    li {
+      float: left;
+      a {
+        display: inline-block;
+        padding: 5px 0;
+        @include font-medium($fs: 17px);
+        color: $blue-grey-e;
+        @include center;
+        text-decoration: none;
+        border-bottom: 2px solid;
+        &.old.active {
+          @include border-img((linear, 100% 0, 0 0, from($blue-2), to($skiey-1)), (right, $blue-2, $skiey-1), 100% 1);
+        }
+        &.new.active {
+          @include border-img((linear, 100% 0, 0 0, from($ruby), to($blue)), (right, $ruby, $blue), 100% 1);
+        }
+      }
+      &:last-child {
+        float: right;
+      }
+    }
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.container .ba-mobile ul.tab .active {
+  color: $white;
+}
+
+.gif {
+  @include absolute($l: 0, $t: 52px);
+  @include indents(10px, 75px 15px);
+  img {
+    display: block;
+    position: relative;
+    @include dimensions(40px);
+  }
+}
+
+.tabcontent {
+  display: block;
+  @include dimensions(auto, 250px);
+  overflow: auto;
+  img {
+    max-width: none;
+    @include dimensions(auto, 190px);
+    margin-left: 71px;
+  }
+}
+
+.mbp .ba-slider {
+  .resize, .resize2 {
+    width: 50%;
+  }
+  .handle {
+    left: 50%;
+  }
+}
+
+.mbp.hover-shake {
+  .handle {
+    animation: wiggle 5s;
+  }
+  .resize {
+    animation: width-r 5s;
+  }
+  .resize2 {
+    animation: width-r2 5s;
+  }
+  .off {
+    animation: none;
+    -webkit-animation: none;
+  }
+}
+
+.draggable, .resizable, .resizable2 {
+  transition: none !important;
+  -webkit-transition: none !important;
+}
+
+.announcement {
+  min-width: 300px;
+  padding: 100px 0;
+  @include bc;
+  .b-left {
+    position: relative;
+    float: left;
+    width: 60%;
+    max-width: 705px;
+    margin-right: 10%;
+    .ann-img {
+      position: relative;
+      float: left;
+      @include dimensions(100%);
+      max-height: 300px;
+      img {
+        float: left;
+        @include dimensions(100%);
+        @include radius(6px 6px 0 0);
+      }
+    }
+    .ann-label {
+      @include absolute($b: -1px);
+      @include dimensions(180px, 0);
+      @include center;
+      border-bottom: 30px solid $main-white-bg;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      span {
+        @include relative($b: -8px);
+        @include font-medium(13px, 15px);
+        color: $btn-color-o;
+        text-transform: uppercase;
+        @include bottom;
+      }
+    }
+    .ann-title {
+      float: left;
+      width: 100%;
+      padding: 20px 30px 40px;
+      @include bc($main-white-bg);
+      @include radius(0 0 6px 6px);
+      h3 {
+        @include font-medium(22px, 30px);
+        margin: 0 0 10px;
+      }
+    }
+    .button-wrap{
+      float: left;
+      width: 30%;
+      margin-left: 5%;
+    }
+    .sm-filled-blue {
+      float: right;
+      min-width: 127px;
+      margin-top: 5px;
+      span {
+        margin-right: 15px;
+      }
+      i {
+        float: right;
+        font-size: 10px;
+      }
+    }
+    .meta {
+      float: left;
+      width: 100%;
+      .meta-info{
+        float: left;
+        width: 65%;
+      }
+      .date, .cat {
+        display: inline;
+        float: none;
+      }
+    }
+  }
+
+  .b-right {
+    float: left;
+    width: 30%;
+    h2 {
+      margin-bottom: 30px;
+      @include font-light(42px, 45px);
+    }
+    .latest-posts {
+      float: left;
+      @include indents(0);
+      .single-post {
+        float: left;
+        width: 100%;
+        margin-bottom: 25px;
+      }
+    }
+    .post-title {
+      float: left;
+      width: 100%;
+      @include font-regular(17px, 30px);
+    }
+    .meta {
+      float: left;
+      @include font-regular(15px, 30px);
+      .date, .cat {
+        float: left;
+      }
+    }
+  }
+  .meta {
+    color: $blue-grey-e;
+
+  }
+}
+
+@keyframes wiggle {
+  10% {
+    left: 45%;
+  }
+  20% {
+    left: 55%;
+  }
+  30% {
+    left: 45%;
+  }
+  40% {
+    left: 55%;
+  }
+  50% {
+    left: 50%;
+  }
+}
+
+@keyframes width-r {
+  10% {
+    width: 45%;
+  }
+  20% {
+    width: 55%;
+  }
+  30% {
+    width: 45%;
+  }
+  40% {
+    width: 55%;
+  }
+  50% {
+    width: 50%;
+  }
+}
+
+@keyframes width-r2 {
+  10% {
+    width: 55%;
+  }
+  20% {
+    width: 45%;
+  }
+  30% {
+    width: 55%;
+  }
+  40% {
+    width: 45%;
+  }
+  50% {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .ba-slider {
+    display: none;
+  }
+  .ba-mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ba-mobile ul.tab {
+    max-width: 235px;
+    li {
+      margin: 0 14px;
+    }
+  }
+}
+
+.contact-b {
+  @include center;
+  margin-top: 120px;
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1366px) {
+  .roles .role-buttons .item {
+    width: 170px;
+    .title span {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .home .top-block {
+    padding: 90px 0 30px;
+  }
+  .roles {
+    padding: 45px 0 75px;
+  }
+  .roles .role-buttons .item {
+    width: 160px;
+    .title span {
+      min-height: 42px;
+      @include font-regular(14px, 21px);
+    }
+  }
+  .mbp {
+    padding: 75px 0 60px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .home .top-block {
+    padding: 45px 0 60px;
+    @include center;
+    @include linear-gradient(to top right, bottom left, ($primary-color 0%, $dark-blue-2 32%, $black-blue 100%));
+    .video {
+      position: relative;
+      margin-bottom: 0;
+    }
+  }
+  .video-text {
+    width: 100%;
+    .watch-v {
+      display: block;
+      max-width: 200px;
+      @include centerBlock(30px);
+    }
+  }
+  .video-mobile {
+    display: block;
+    width: 600px;
+    @include centerBlock;
+  }
+  .roles .role-buttons {
+    display: inline-flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    width: 100%;
+    .item {
+      width: 200px;
+      margin-bottom: 15px;
+      @include bc;
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .home .top-block {
+    max-height: 450px;
+    background-image: url("/wp-content/uploads/2016/10/mbgj.jpg") !important;
+    @include background($bs: 400%, $bp: 48% 0);
+    .video {
+      .video-text h1 {
+        @include font-light(32px, 45px);
+      }
+    }
+  }
+  .video-mobile {
+    display: block;
+    width: 100%;
+    @include centerBlock;
+  }
+  .top-block .logos {
+    img {
+      display: inline;
+      margin: 0 10px 0 0;
+      @include initial;
+    }
+    p {
+      font-size: 17px;
+    }
+  }
+  .contact-b {
+    margin-top: 60px;
+    @include center;
+  }
+  .announcement {
+    padding: 60px 0;
+    .b-left, .b-right {
+      width: 100%;
+      margin: 0;
+    }
+    .b-left {
+      margin-bottom: 60px;
+      .ann-title {
+        h3 {
+          @include font-medium(17px, 30px);
+          margin: 0;
+        }
+      }
+      .meta {
+        @include font-regular(15px, 30px);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 519px) {
+  .roles h2 {
+      font-size: 28px;
+  }
+  .announcement {
+    .b-left{
+      .meta .meta-info{
+        width: 100%;
+      }
+      .ann-title{
+        padding: 20px 30px;
+      }
+      .button-wrap {
+        float: left;
+        width: 100%;
+        margin: 0;
+      }
+      .sm-filled-blue{
+        float: left;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 460px) {
+  .roles {
+    .role-buttons {
+      .item {
+        width: 100%;
+        height: auto;
+        a{
+          padding: 30px;
+          @include flex(space-between);
+        }
+        .role-image{
+          line-height: initial;
+          max-width: 60px;
+          width: 100%;
+          img{
+            margin-bottom: 0;
+          }
+        }
+        .title{
+          width: 100%;
+          margin-left: 25px;
+          text-align: left;
+          line-height: 60px;
+          span{
+            font-size: 17px;
+            line-height: 20px;
+            padding: 0;
+          }
+        }
+      }
+      .persona-more{
+        display: none;
+      }
+    }
+  }
+}
+@import "homepage/superhero";
+@import "homepage/service-info";
+@import "before-after";

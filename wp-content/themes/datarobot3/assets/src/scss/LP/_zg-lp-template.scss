@@ -1,0 +1,180 @@
+.bpf {
+  float: right;
+  height: 75px;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 75px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 1023px) {
+  .bpf {
+    display: none; }
+}
+
+.zg .uc-link {
+    display: flex;
+    justify-content: flex-start;
+    line-height: 20px;
+    i {
+      font-size: 20px;
+      color: #2D8FE2;
+      float: left;
+      margin-right: 10px;
+    }
+    a {
+      line-height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+  .zg .uc-link {
+      justify-content: center;
+  }
+}
+
+.zg .single-col {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 690px;
+  margin: 0 auto;
+  .uc-link {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    margin-top: 45px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .zg .single-col {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 60px auto;
+    max-width: none;
+  }
+}
+
+@media only screen and (max-width: 1023px){
+  section.persona.zg .top-banner .b-left {
+    display: block;
+    margin: 0 auto 60px;
+    max-width: 480px;
+  }
+}
+
+@media only screen and (max-width: 1366px){
+  section.persona.zg .top-banner p {
+      font-size: 36px;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  section.persona.zg .top-banner p {
+      font-size: 26px;
+  }
+}
+
+section.persona.zg .top-banner .b-right {
+    width: 40%;
+    margin: 60px 0;
+}
+
+@media only screen and (max-width: 1023px){
+  section.persona.zg .top-banner .b-right {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
+.dr-form.form-orange {
+  width: 100%;
+  padding: 30px;
+  @include bc($white-6);
+  @include radius(6px);
+  @include shadow((0 0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
+  .first {
+    display: inline-block;
+    float: left;
+    width: 49%;
+  }
+  .last {
+    display: inline-block;
+    width: 49%;
+    margin-left: 2%;
+  }
+}
+
+@media only screen and (max-width: 1366px){
+  .dr-form.form-orange {
+      width: 100%;
+      padding: 30px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .dr-form.form-orange {
+    min-width: 300px;
+    max-width: 600px;
+    @include centerBlock;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section.persona.zg .top-banner {
+    padding: 60px 0;
+  }
+  .dr-form.form-orange {
+    @include relative($t:auto, $l:auto);
+    width: 100%;
+    @include indents(0 auto, 30px 15px 30px);
+    transform: none;
+    @include bc($main-white-bg);
+    @include radius(6px);
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .form-orange input {
+    &.first {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+    &.last {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}
+
+article.feature p i.icon-check {
+    float: left;
+    font-size: 22px;
+    color: #00C96E;
+    margin-right: 10px;
+}
+
+article.feature p span.feature-text {
+    display: block;
+    margin-left: 35px;
+}
+
+.popup-mobile {
+    display: none;
+}
+
+.page-template-page-zg-lp .autocomplete-suggestions {
+  position: absolute;
+}

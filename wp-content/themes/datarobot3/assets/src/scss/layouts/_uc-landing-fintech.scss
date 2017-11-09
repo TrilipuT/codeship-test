@@ -1,0 +1,534 @@
+section.uc-landing-fintech {
+  min-width: 320px;
+  .page-content{
+    @include bc($blue-grey-0);
+  }
+  .mask {
+    &.banner {
+      background-image: none;
+    }
+    &.quotebox {
+      background-image: none;
+    }
+  }
+  .top-banner {
+    .link {
+      cursor: pointer;
+    }
+    i {
+      @include relative($t: 2px);
+      margin-right: 10px;
+    }
+  }
+  .eml {
+    @include indents(0, 80px 0 100px);
+    .b-left {
+      width: 47%;
+      .video-box {
+        display: block;
+        max-width: 495px;
+        margin: 0;
+        @include radius(6px);
+        @include shadow(0 20px 30px 0 rgba(6, 29, 59, .21));
+        overflow: hidden;
+      }
+    }
+    .b-right {
+      width: 45%;
+      margin-left: 5%;
+      margin-bottom: 0;
+      p{
+        @include font-regular(17px, 30px);
+        color: $ghost;
+      }
+    }
+    .link{
+      @include font-medium(17px, 15px);
+    }
+    i {
+      @include relative($t: 2px);
+      margin-right: 10px;
+    }
+  }
+  .quote-wrap{
+    margin-bottom: 60px;
+  }
+  .fintech-sections{
+    .sections-switcher{
+      @include flex(space-between);
+      @include dimensions(100%, 60px);
+      padding: 2px;
+      @include bc($white-4);
+      @include radius;
+      .section{
+        @include dimensions(25%, 56px);
+        @include indents(0 2px 0 0, 16px 0);
+        @include font-medium(15px, 28px);
+        @include center;
+        &:nth-last-of-type(1){
+          margin-right: 0;
+        }
+        &:hover, &.active{
+          @include bc;
+          @include radius;
+          cursor: pointer;
+          @include ease-transition(.5s);
+        }
+      }
+    }
+    .single-section{
+      @include flex(space-between);
+      align-items: center;
+      margin: 85px 0 0;
+      .b-left{
+        width: 50%;
+        margin-right: 5%;
+        .b-top{
+          margin-bottom: 30px;
+          p{
+            @include font-regular(15px, 30px);
+            color: $blue-grey-e;
+          }
+          i{
+            display: none;
+          }
+        }
+        .b-bottom{
+          a {
+            @include flex(flex-start);
+            float: left;
+            width: 100%;
+            padding: 5px 0;
+            @include font-regular(17px, 20px);
+            color: $blue;
+            cursor: pointer;
+            &:hover {
+              color: $skiey;
+            }
+          }
+          i {
+            font-size: 20px;
+            margin-right: 10px;
+          }
+          .use-cases{
+            float: left;
+            margin-bottom: 50px;
+          }
+          .logos{
+            float: left;
+            display: inline-block;
+            width: 100%;
+            .logo{
+              float: left;
+              width: 20%;
+              min-width: 120px;
+              max-height: 30px;
+              margin-right: 5%;
+              margin-bottom: 30px;
+              &:nth-last-of-type(1){
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+      .b-right{
+        width: 45%;
+        .quote-box{
+          float: right;
+          position: relative;
+          width: 100%;
+          max-width: 370px;
+          padding: 45px;
+          @include bc;
+          @include radius;
+          @include shadow(0 0 4px 0 rgba(0,0,0,0.05));
+           >img{
+          @include absolute($l:15px, $t:15px);
+          }
+          .quote-content{
+            position: relative;
+            p{
+              padding: 10px 0 20px;
+              @include font-regular(15px, 30px);
+            }
+            .video{
+              max-width: 150px;
+              margin-bottom: 20px;
+            }
+            .author-info{
+              @include flex(space-between);
+              align-items: center;
+              .author-photo{
+                @include dimensions(60px);
+                margin-right: 15px;
+                @include radius(50%);
+              }
+              >div{
+                flex-grow: 1;
+              }
+              .author-name{
+                padding: 0;
+                @include font-medium(17px, 30px);
+              }
+              .author-position{
+                padding: 0;
+                @include font-regular(15px, 20px);
+                color: $blue-grey-e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .events-announcement {
+    min-width: 300px;
+    padding: 90px 0 10px;
+    @include bc($blue-grey-0);
+    .b-left {
+      float: left;
+      width: 30%;
+      margin-right: 10%;
+      max-height: 460px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        width: 5px;
+        @include radius;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $white;
+        @include shadow(0 0 4px 0 rgba(0,0,0,0.05));
+      }
+      &::-webkit-scrollbar-thumb:window-inactive {
+        background: none;
+      }
+      h2{
+        margin-bottom: 40px;
+      }
+      .single-event {
+        float: left;
+        width: 100%;
+        margin-bottom: 25px;
+      }
+      .post-title {
+        float: left;
+        width: 100%;
+        @include font-regular(17px, 30px);
+      }
+      .date{
+        @include font-regular(15px, 20px);
+        color: $blue-grey-e;
+        i{
+          float: left;
+          margin-right: 10px;
+          font-size: 18px;
+        }
+      }
+    }
+    .b-right {
+      position: relative;
+      float: right;
+      width: 58%;
+      max-width: 705px;
+      .ann-img {
+        position: relative;
+        float: left;
+        @include dimensions(100%);
+        height: 300px;
+        .img-wrap{
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          @include radius(6px 6px 0 0);
+        }
+        img {
+          float: left;
+          @include dimensions(100%);
+          @include radius(6px 6px 0 0);
+        }
+      }
+      .ann-label {
+        @include absolute($b: -1px);
+        @include dimensions(180px, 0);
+        @include center;
+        border-bottom: 30px solid $white;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        span {
+          display: block;
+          @include relative($b: 2px, $l:-4px);
+          @include dimensions(128px, 30px);
+          padding: 10px;
+          @include font-medium(13px, 15px);
+          color: $blue;
+          text-transform: uppercase;
+          @include bc;
+          @include radius(10px 10px 0 0);
+        }
+      }
+      .ann-title {
+        float: left;
+        width: 100%;
+        padding: 30px 30px 10px;
+        @include bc;
+        @include shadow(0 0 6px 0 rgba(0,0,0,0.05));
+        @include radius(0 0 6px 6px);
+        h3 {
+          @include font-regular(22px, 30px);
+          margin: 0 0 10px;
+          cursor: pointer;
+        }
+      }
+      .sm-filled-blue {
+        min-width: 127px;
+        span {
+          margin-right: 15px;
+        }
+        i {
+          float: right;
+          font-size: 10px;
+        }
+      }
+      .meta {
+        float: left;
+        width: 100%;
+        .meta-info{
+          float: left;
+          width: 65%;
+          min-width: 250px;
+          margin: 0 5% 3% 0;
+          @include font-regular(15px, 30px);
+        }
+        .button-wrap{
+          float: left;
+          width: 30%;
+          @include right;
+        }
+        .date, .author, .author span {
+          display: inline;
+          float: none;
+          color: $blue-grey-e;
+        }
+        .author{
+          color: $blue;
+        }
+      }
+    }
+  }
+  .get-in-touch{
+    @include bc($blue-grey-0);
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.uc-landing-fintech {
+    .top-wrapper {
+      background-position: 50% 10%;
+    }
+    .mask {
+      @include dimensions(100%);
+      &.banner {
+        @include linear-gradient(179deg, 179deg, (rgba(5, 29, 59, 0.00) 26%, rgba(27, 61, 106, 0.80) 75%, #020F20 100%));
+      }
+      &.quotebox {
+        @include linear-gradient(180deg, 180deg, (rgba(92,100,109,0.00) 39%, #222A33 84%));
+      }
+    }
+    .top-banner {
+      @include flex(flex-end);
+      flex-direction: column;
+      padding: 270px 0 60px;
+      h1 {
+        @include font-light(40px, 45px);
+      }
+      .b-left {
+        float: left;
+        width: 100%;
+      }
+    }
+    .eml {
+      padding-bottom: 60px;
+      .b-left, .b-right {
+        width: 100%;
+        margin: 0;
+      }
+      .b-left{
+        .video-box{
+          margin: 0 auto 60px;
+        }
+      }
+      .b-right p{
+        margin-bottom: 30px;
+      }
+    }
+    .quote-wrap {
+      min-height: 720px;
+      background-position: 100% 0;
+    }
+    .quote {
+      @include flex(flex-end);
+      flex-direction: column;
+      padding: 375px 0 55px;
+      .b-left {
+        float: left;
+        width: 100%;
+      }
+    }
+
+    .fintech-sections{
+      .single-section{
+        flex-direction: column;
+        margin: 60px 0 0;
+        .b-left, .b-right{
+          width: 100%;
+          margin: 0;
+        }
+        .b-left{
+          .b-bottom {
+            @include flex(space-between);
+            align-items: center;
+            .uc-wrap, .logos {
+              width: 48%;
+            }
+            .uc-wrap{
+              margin-right: 4%;
+            }
+          }
+        }
+        .b-right .quote-box{
+          max-width: 100%;
+        }
+      }
+    }
+    .events-announcement {
+      padding: 90px 0 15px;
+      .b-left, .b-right{
+        width: 100%;
+        margin: 0;
+      }
+      .b-left{
+        margin-bottom: 50px;
+      }
+      .b-right {
+        float: none;
+        margin: 0 auto;
+        .ann-img{
+          height: 285px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section.uc-landing-fintech {
+    .quote-wrap {
+      background-position: 45%;
+    }
+    .top-banner {
+      .b-bottom {
+        .button {
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .mask.banner {
+      @include linear-gradient(179deg, 179deg, (rgba(5, 29, 59, 0.00) 26%, rgba(27, 61, 106, 0.80) 75%, #020F20 100%));
+    }
+    .p{
+      font-size: 17px;
+    }
+    .b-info .author{
+      @include font-medium(17px, 20px);
+    }
+    .quote {
+      .b-left{
+        >p{
+          font-size: 17px;
+        }
+      }
+    }
+    .fintech-sections{
+      .sections-switcher{
+        display: none;
+      }
+      .single-section{
+        max-height: 50px;
+        margin: 15px 0;
+        overflow: hidden;
+        cursor: pointer;
+        @include ease-transition(.2s);
+        &.open{
+          -webkit-transition: max-height 0.5s ease-in-out;
+          -moz-transition: max-height 0.5s ease-in-out;
+          -o-transition: max-height 0.5s ease-in-out;
+          -ms-transition: max-height 0.5s ease-in-out;
+          transition: max-height 0.5s ease-in-out;
+          max-height: 1500px;
+        }
+        .b-left{
+          margin-bottom: 50px;
+          .b-bottom {
+            @include flex(space-between);
+            flex-direction: column;
+            align-items: center;
+            .uc-wrap, .logos {
+              width: 100%;
+              margin: 0;
+            }
+          }
+          .b-top{
+            .title-wrap{
+              @include flex(space-between);
+              align-items: center;
+            }
+            i.icon-chevron-down {
+              display: block;
+              font-size: 30px;
+              color: $blue;
+              @include ease-transition(.2s);
+              cursor: pointer;
+              &.active {
+                @include rotate(180deg);
+                @include ease-transition(.5s);
+              }
+            }
+          }
+        }
+        .b-right{
+          .quote-box{
+            padding: 30px;
+          }
+        }
+      }
+    }
+    .events-announcement {
+      padding: 60px 0 0;
+      .b-left {
+        h2{
+          margin-bottom: 25px;
+        }
+      }
+      .b-right {
+        .ann-img{
+          height: 195px;
+        }
+        .ann-title {
+          padding-bottom: 30px;
+          h3{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+    .get-in-touch {
+      padding: 90px 0;
+    }
+  }
+}

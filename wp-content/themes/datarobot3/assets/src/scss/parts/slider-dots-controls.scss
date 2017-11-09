@@ -1,0 +1,23 @@
+.controls--dots {
+  .bx-controls {
+    line-height: 8px;
+    text-align: center;
+  }
+  .bx-pager-item {
+    display: inline-block;
+  }
+  .bx-pager-link {
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background-color: #ffffff;
+    opacity: 0.15;
+    font-size: 0;
+    display: block;
+    border-radius: 50%;
+    transition: opacity .5s;
+    &.active {
+      opacity: 1;
+    }
+  }
+}

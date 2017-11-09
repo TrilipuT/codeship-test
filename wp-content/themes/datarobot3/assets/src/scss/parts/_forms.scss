@@ -1,0 +1,305 @@
+.form-wrap {
+  @include absolute($t: 50%, $l: 50%);
+  width: 600px;
+  @include indents(0 auto, 30px 45px);
+  @include bc($main-white-bg);
+  @include radius(6px);
+  @include shadow((0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
+  @include translate((-50%, -50%));
+}
+
+.form-title h3 {
+  margin-bottom: 20px;
+  @include font-regular(30px, 35px);
+  color: $ghost;
+  @include center;
+}
+
+.form-section {
+  width: 100%;
+  overflow: hidden;
+}
+
+.dr-form {
+  input.text, select, textarea {
+    height: 45px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+    font-family: inherit;
+    @include font-regular(17px, 45px);
+    @include bc;
+    border: none;
+    border-left: 3px solid transparent;
+    @include radius;
+    @include shadow(0 1px 1px 0 $white-grey);
+    @include ease-transition(.3s);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  input.text:focus, select:focus, textarea:focus {
+    border-left-color: $blue;
+  }
+  .validation_error {
+    border-left-color: $coral !important;
+  }
+}
+
+.validation_error_message {
+  display: none;
+}
+
+.expired-message {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #465268;
+    text-align: center;
+}
+
+.dr-form {
+  select {
+    @include dimensions(100%, 45px);
+    padding: 0 20px;
+    @include font-regular(17px, 45px);
+    color: $blue-grey;
+    @include bc;
+    @include radius;
+    @include shadow(0 1px 1px 0 $white-grey);
+    &:disabled {
+      opacity: 0.7;
+    }
+  }
+  label {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      @include absolute($t: 20px, $r: 15px);
+      @include dimensions(12px, 8px);
+      background-image: url("../images/select-tick.png");
+      @include background($bs: cover);
+      pointer-events: none;
+    }
+    &.field-wrap:after {
+      display: none;
+    }
+  }
+  textarea {
+    height: 105px;
+    padding: 10px 20px;
+    line-height: 30px;
+    resize: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  input.submit {
+    display: block;
+    width: 100%;
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .fullrow {
+    display: block;
+    width: 100%;
+  }
+  .first {
+    display: inline-block;
+    float: left;
+    width: 250px;
+  }
+  .last {
+    display: inline-block;
+    width: 250px;
+    margin-left: 10px;
+  }
+  .preloader {
+    display: none;
+    text-align: center;
+  }
+}
+
+.form-extra-button {
+  display: none;
+}
+
+label.checkbox {
+  display: flex !important;
+  margin-bottom: 15px;
+  &:after {
+    display: none !important;
+  }
+  input {
+    height: 22px;
+    line-height: 22px;
+    padding: 0;
+    margin: 0;
+  }
+  span {
+    padding-left: 15px;
+    line-height: 22px;
+    color: #424242;
+  }
+}
+
+.dr-form .checkboxes {
+  margin-bottom: 15px;
+}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 100px white inset !important;
+  -webkit-text-fill-color: #465275 !important;
+}
+
+.autocomplete-suggestions {
+  display: none;
+  text-align: left;
+  @include absolute;
+  @include indents(-4px 0 0, 10px 0 20px);
+  @include bc;
+  border: none;
+  border-top: 0;
+  @include radius(0 0 4px 4px);
+  @include box-sizing;
+  @include shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+  z-index: 9999;
+  cursor: pointer;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.autocomplete-suggestion {
+  position: relative;
+  @include indents(0 0 10px, 4px 10px);
+  @include font-regular(14px, 20px);
+  color: $graphite-1;
+  text-indent: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  b {
+    font-weight: normal;
+    color: $blue-4;
+  }
+  &.selected {
+    background: $white-2;
+  }
+  .icon {
+    display: block;
+    float: left;
+    width: 30px;
+    @include middle;
+    img {
+      display: block;
+      max-width: 100%;
+      @include dimensions(100%, auto);
+    }
+  }
+  span.domain {
+    display: block;
+    padding-left: 30px;
+    @include font-regular(10px, 10px);
+    color: $grey-9;
+    @include left;
+  }
+}
+
+section.contacts {
+  @include linear-gradient(to top, bottom, ($dark-blue-1 0%, $black-blue-1 100%));
+  padding: 60px 0;
+  .form-wrapper {
+    @include relative($t: 50%, $l: 50%);
+    width: 600px;
+    @include indents(0 0 0 -300px, 30px 45px);
+    @include bc($main-white-bg);
+    @include radius(6px);
+    @include shadow(none);
+  }
+}
+
+#error-wrap {
+  margin-bottom: 15px;
+}
+#form-errors {
+  color: #E55653;
+  text-align: center;
+  line-height: 30px;
+}
+
+.shake {
+  animation-name:shake;
+  animation-duration:4s;
+  animation-fill-mode:both;
+  animation-delay: 1s;
+  animation-iteration-count:infinite;
+}
+
+@keyframes shake{
+  0%{transform:translateZ(0)}
+  2.5%,7.5%,12.5%,17.5%{transform:translate3d(-5px,0,0)}
+  5%,10%,15%,20%{transform:translate3d(5px,0,0)}
+  25%{transform:translateZ(0)}
+  100%{transform:translateZ(0)}
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1366px) {
+  .form-wrap, section.contacts .form-wrapper {
+    padding: 30px;
+  }
+  .form-title h3, section.contacts .form-title h3 {
+    margin-bottom: 10px;
+    @include font-regular(24px, 30px);
+  }
+  .dr-form, section.contacts .dr-form {
+    input.text, select {
+      padding: 0 20px;
+      line-height: 36px;
+    }
+    .first, .last {
+      max-width: 265px;
+      width: 265px;
+    }
+    label:after {
+      content: '';
+      display: block;
+      @include absolute($t: 14px, $r: 15px);
+      @include dimensions(12px, 8px);
+      background-image: url("../images/select-tick.png");
+      @include background($bs: cover);
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .form-wrap, section.contacts .form-wrapper {
+    @include relative($t: auto, $l: auto);
+    width: 100%;
+    @include indents(0 auto, 0 15px 30px);
+    @include bc($main-white-bg);
+    @include radius(6px);
+    box-shadow: none;
+    transform: none;
+  }
+  section.contacts .form-wrapper {
+    padding: 30px;
+  }
+  .dr-form, section.contacts .dr-form {
+    .first {
+      display: inline-block;
+      float: none;
+      width: 100%;
+    }
+    .last {
+      display: inline-block;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  .autocomplete-suggestions, section.contacts .autocomplete-suggestions {
+    position: absolute;
+    margin-top: -17px;
+    box-shadow: none;
+  }
+}

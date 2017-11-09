@@ -1,0 +1,24 @@
+.share {
+  @include flex(center);
+  padding-top: 7px;
+  flex-flow: row wrap;
+  @media only screen and (max-width: 1023px) {
+    order: 1;
+    margin: 0 auto 20px;
+  }
+  .item {
+    padding: 0 15px;
+    @media only screen and (max-width: 719px) {
+      margin-bottom: 15px;
+      margin-right: 0;
+      width: 50%;
+      text-align: right;
+      &:nth-child(2n) {
+        text-align: left;
+      }
+    }
+  }
+  .fb-share-button {
+    top: -4px;
+  }
+}

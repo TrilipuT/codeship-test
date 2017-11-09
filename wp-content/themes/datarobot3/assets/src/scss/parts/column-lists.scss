@@ -1,0 +1,50 @@
+.list-4-columns {
+  @include flex(flex-start);
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  .item {
+    margin: 0 15px 30px;
+    flex: 0 1 calc((100% / 4) - 30px);
+    @include breakpoint-max(1024) {
+      flex-basis: calc((100% / 3) - 30px);
+    }
+    @include breakpoint-max(600) {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.list-3-columns {
+  @include flex(flex-start);
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  .item {
+    margin: 0 15px 30px;
+    flex: 0 1 calc((100% / 3) - 30px);
+    @include breakpoint-max(1024) {
+      flex-basis: calc((100% / 2) - 30px);
+    }
+    @include breakpoint-max(480) {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.list-2-columns {
+  @include flex(flex-start);
+  flex-wrap: wrap;
+  margin: 0 -30px;
+  .item {
+    margin: 0 30px 60px;
+    flex: 0 1 calc((100% / 2) - 60px);
+    @include breakpoint-max(720) {
+      margin: 0 15px 30px;
+    }
+    @include breakpoint-max(600) {
+      flex-basis: 100%;
+    }
+  }
+  @include breakpoint-max(720) {
+    margin: 0 -15px;
+  }
+}

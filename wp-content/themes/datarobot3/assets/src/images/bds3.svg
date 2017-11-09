@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="65px" viewBox="0 0 53 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 34</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="8.07185374 42.943662 20.7749957 42.943662 20.7749957 62.1690141 14.4234247 55.7605634 8.07185374 62.1690141"></polygon>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12.7031419" height="19.2253521" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="29.8486685 42.943662 42.5518104 42.943662 42.5518104 62.1690141 36.2002394 55.7605634 29.8486685 62.1690141"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="12.7031419" height="19.2253521" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Ready" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Education-page" transform="translate(-1061.000000, -1985.000000)" stroke="#35A2EB" fill="#FFFFFF">
+            <g id="benefits" transform="translate(210.000000, 1813.000000)">
+                <g id="Group-34" transform="translate(853.000000, 173.000000)">
+                    <use id="Rectangle-1216" mask="url(#mask-2)" stroke-width="3.88000011" transform="translate(14.423425, 52.556338) rotate(19.000000) translate(-14.423425, -52.556338) " xlink:href="#path-1"></use>
+                    <use id="Rectangle-1216" mask="url(#mask-4)" stroke-width="3.88000011" transform="translate(36.200239, 52.556338) scale(-1, 1) rotate(19.000000) translate(-36.200239, -52.556338) " xlink:href="#path-3"></use>
+                    <polygon id="Star-9" stroke-width="1.94000006" points="24.9526002 47.4566337 17.2418227 48.1199088 11.3900756 43.0104391 4.76552259 38.974171 3.00797446 31.3701504 0 24.1760563 3.00797446 16.9819623 4.76552259 9.37794171 11.3900756 5.34167362 17.2418227 0.232203903 24.9526002 0.895478985 32.6633777 0.232203903 38.5151248 5.34167362 45.1396778 9.37794171 46.897226 16.9819623 49.9052004 24.1760563 46.897226 31.3701504 45.1396778 38.974171 38.5151248 43.0104391 32.6633777 48.1199088"></polygon>
+                    <ellipse id="Oval-423" stroke-width="2" cx="24.9526002" cy="24.1760563" rx="15.8789274" ry="16.0211268"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

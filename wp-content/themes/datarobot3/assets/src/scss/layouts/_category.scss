@@ -1,0 +1,408 @@
+section.category {
+  padding: 60px 0;
+}
+.category h1 {
+  margin-bottom: 60px;
+}
+.category h4 {
+  @include font-medium(15px, 30px);
+  color: $blue-grey-e;
+  margin-bottom: 0;
+}
+.category aside ul a {
+  @include font-regular(15px, 30px);
+}
+
+.category .b-main-wrap {
+    position: relative;
+    padding: 0 285px 0 180px;
+}
+.category aside.sidebar-left {
+    width: 180px;
+    float: left;
+    margin-left: -180px;
+    div {
+      margin-bottom: 30px;
+    }
+}
+.social-follow {
+  li {
+    display: inline-block;
+    float: left;
+    margin-right: 15px;
+    a {
+      display: block;
+      width: 30px;
+      line-height: 30px;
+      text-align: center;
+      vertical-align: middle;
+      border-radius: 3px;
+      color: #fff !important;
+      &:hover {
+        opacity: 0.7;
+      }
+      i {
+        display: block;
+      }
+    }
+  }
+}
+.gplus {
+  background-color: #DC4E40;
+}
+.linkedin {
+  background-color: #007FB1;
+}
+.facebook {
+  background-color: #3A5998;
+}
+.twitter {
+  background-color: #39A9E0;
+}
+.category .main {
+  width: 100%;
+  padding: 0 30px;
+  float: left;
+  .top-box {
+    margin-bottom: 45px;
+  }
+  .top-featured {
+    .thumbnail a {
+      display: block;
+      height: 300px;
+      position: relative;
+      img {
+        height: 300px;
+      }
+    }
+    .meta a {
+      float: right;
+      line-height: 16px;
+      span {
+        float: left;
+        margin-right: 10px;
+      }
+      i {
+        float: right;
+      }
+    }
+  }
+  .blog-roll {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    .post-item {
+      width: 49%;
+      margin-bottom: 15px;
+      h2 {
+        @include font-medium(17px, 30px);
+        color: $primary-color;
+      }
+    }
+  }
+}
+.post-item {
+  background: #FFFFFF;
+  box-shadow: 0 0 6px 0 rgba(0,0,0,0.05);
+  border-radius: 6px;
+  overflow: hidden;
+  .thumbnail {
+    background: $black-blue;
+    a {
+      display: block;
+      height: 195px;
+      position: relative;
+      img {
+        display: block;
+        width: auto;
+        max-width: none;
+        height: 195px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .post-cover {
+    position: relative;
+    padding: 20px 30px 30px;
+    h2 {
+      @include font-regular(22px, 30px);
+      color: $primary-color;
+      min-height: 60px;
+      margin-bottom: 10px;
+      a {
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        transition: all 0.3s linear;
+      }
+    }
+    .meta {
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+      margin-bottom: 0;
+      span {
+        vertical-align: middle;
+      }
+    }
+  }
+  .category-label {
+    height: 25px;
+    position: absolute;
+    top: -25px;
+    left: 0;
+    padding: 0 16px 0;
+    overflow: hidden;
+    .label-bg {
+      width: 100%;
+      height: 25px;
+      border-radius: 10px 10px 0 0;
+      background: #fff;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 0px;
+        left: -16px;
+        border-bottom: 21px solid #fff;
+        border-left: 18px solid transparent;
+      }
+      &:after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        bottom: 0;
+        right: -16px;
+        border-bottom: 21px solid white;
+        border-right: 18px solid transparent;
+      }
+    }
+    .post-categories li {
+      display: none;
+    }
+    .post-categories li:last-child {
+      display: block;
+    }
+    a {
+      display: block;
+      padding: 15px 10px 0;
+      position: relative;
+      top: -25px;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      vertical-align: bottom;
+    }
+  }
+}
+.category aside.sidebar-right {
+    width: 285px;
+    float: right;
+    margin-right: -285px;
+    .widgettitle {
+      display: none;
+    }
+}
+.popular-posts {
+  margin-bottom: 60px;
+  .post {
+    margin-bottom: 20px;
+    > a {
+      display: block;
+      @include font-medium(17px, 30px);
+      color: $primary-color;
+      margin-bottom: 5px;
+      &:hover {
+       color: $blue;
+      }
+    }
+    span {
+      @include font-regular(15px, 20px);
+      color: $blue-grey-e;
+      a {
+        color: $blue;
+      }
+    }
+  }
+}
+.twitter-widget {
+    margin-bottom: 60px;
+}
+.downloadable {
+    margin-bottom: 60px;
+}
+.featured-download {
+    margin-bottom: 30px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    a {
+      display: block;
+      padding: 30px;
+      background-image: linear-gradient(-180deg, rgba(32,67,113,0.38) 0%, #15273F 100%);
+    }
+    .label {
+      @include font-medium(15px, 30px);
+      color: $white;
+      opacity: 0.7;
+      margin-bottom: 15px;
+    }
+    h5 {
+      @include font-medium(17px, 30px);
+      color: $white;
+      margin-bottom: 30px;
+    }
+    .e-link {
+      @include font-medium(15px, 15px);
+      color: $blue;
+      text-transform: uppercase;
+      i {
+        float: left;
+        font-size: 20px;
+        margin-right: 7px;
+      }
+    }
+}
+
+ul.page-numbers {
+  display: inline-block;
+  padding: 15px;
+  @include bc;
+  @include radius;
+  @include shadow(0 0 6px 0 rgba(0, 0, 0, 0.05));
+  li {
+    display: inline-block;
+    float: left;
+    margin: 0 5px;
+    a {
+      display: block;
+      @include dimensions(30px);
+      @include font-regular(15px, 30px);
+      color: $blue-grey-f;
+      @include center;
+      @include middle;
+      @include bc;
+      @include radius;
+      &:hover {
+        @include bc($electric);
+        color: $white;
+      }
+      &.prev, &.next {
+        @include box-sizing($bs: content-box);
+      }
+      &.prev{
+        border-right: 1px solid $white-4;
+        @include radius(3px 0 0 3px);
+        @include indents(0 15px 0 0, 0);
+      }
+      &.next{
+        border-left: 1px solid $white-4;
+        @include radius(0 3px 3px 0);
+        @include indents(0 0 0 15px, 0);
+      }
+      i {
+        display: block;
+        @include font-regular(20px, 30px);
+      }
+    }
+    span {
+      display: block;
+      @include dimensions(30px);
+      @include font-regular(15px, 30px);
+      color: $white;
+      @include center;
+      @include middle;
+      @include bc($electric);
+      @include radius;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .category .main .blog-roll .post-item {
+      width: 100%;
+      .thumbnail a {
+        height: 225px;
+        img {
+          height: 225px;
+        }
+      }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .category {
+    h1 {
+      @include font-light(42px, 60px);
+    }
+    .b-main-wrap {
+        padding: 0 0 0 180px;
+    }
+    .main {
+        width: 100%;
+        max-width: 525px;
+        padding: 0 0 0 30px;
+        float: left;
+    }
+    aside.sidebar-right {
+        width: 100%;
+        max-width: 525px;
+        float: left;
+        margin-right: 0;
+        padding-left: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .category {
+    h1 {
+      margin-bottom: 30px;
+    }
+    .b-main-wrap {
+        padding: 0;
+    }
+    aside.sidebar-left {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        float: none;
+        margin: 0 auto 45px;
+        div {
+          width: 48%;
+        }
+        .social-follow {
+            width: 100%;
+            margin-bottom: 0;
+        }
+    }
+    .main {
+        width: 100%;
+        max-width: 525px;
+        padding: 0;
+        margin: 0 auto;
+        float: none;
+    }
+    aside.sidebar-right {
+      width: 100%;
+      max-width: 525px;
+      padding: 0;
+      margin: 0 auto;
+      float: none;
+    }
+  }
+}

@@ -1,0 +1,439 @@
+section {
+  &.persona {
+    .top-banner {
+      position: relative;
+      padding: 0 0 60px;
+      background: url("../images/top-bg.jpg") #0e233d;
+      @include background($bs: cover, $bp: center center);
+      > .container {
+        min-height: 510px;
+      }
+      &.image-right-bottom .b-right {
+        @include absolute($t: auto, $r: 0, $b: 0);
+      }
+      &.top-banner.image-right .b-right {
+        @include absolute($r: 0, $b: 50%);
+        @include translateY(50%);
+      }
+      &.image-center .single-col {
+        img {
+          margin-bottom: 45px;
+        }
+        a {
+          margin-bottom: 60px;
+        }
+      }
+      .single-col {
+        padding-bottom: 0;
+        @include center;
+      }
+      img.tb-mobile {
+        display: none;
+      }
+      .single-col {
+        img {
+          display: block;
+          @include centerBlock;
+          &.tb-mobile {
+            display: none;
+          }
+        }
+        h1 {
+          margin: 0;
+        }
+        p {
+          margin-bottom: 30px;
+        }
+      }
+      .b-left-mobile {
+        display: none;
+      }
+      .b-left {
+        display: inline-block;
+        width: 50%;
+        @include absolute($t: 50%, $l: 15px);
+        float: left;
+        @include left;
+        @include top;
+        @include translateY(-50%);
+      }
+      h1 {
+        margin: 0;
+        @include font-medium(15px, 30px);
+        color: $blue-grey-e;
+        text-transform: uppercase;
+      }
+      p {
+        margin-bottom: 45px;
+        @include font-light(42px, 60px);
+        color: $white;
+      }
+      .b-right {
+        display: inline-block;
+        width: 50%;
+        float: right;
+        padding: 0;
+        @include top;
+        img {
+          display: block;
+        }
+      }
+    }
+    .b-left {
+      ul li img {
+        @include relative($t: 8px);
+        margin-right: 10px;
+      }
+      p img {
+        @include relative($t: 5px);
+      }
+    }
+    .b-right p > img, .b-right p span > img {
+      @include relative($t: 5px);
+    }
+    .anchors {
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      &.default {
+        @include absolute($b: 0);
+      }
+      &.fixed {
+        @include fixed($t: 76px, $b: auto);
+        background: url("../images/top-bg.jpg");
+        @include background($bs: cover, $bp: center bottom);
+        z-index: 997;
+      }
+      ul {
+        @include center;
+        li {
+          display: inline-block;
+          width: 24%;
+          a {
+            display: block;
+            @include font-regular(15px, 60px);
+            color: $white;
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.1);
+            }
+            &.active {
+              background-color: rgba(255, 255, 255, 0.1);
+              @include shadow(inset 0 -5px 0 0 $blue);
+            }
+          }
+        }
+      }
+    }
+    .page-content {
+      @include bc;
+    }
+    .excerpt {
+      width: 100%;
+      @include indents(0 auto 30px, 45px 20%);
+      @include font-regular(22px, 45px);
+      color: $ghost;
+      @include center;
+      border-bottom: 2px solid $pale-grey0;
+    }
+    &#executives .top-banner > .container,
+    &#business_analysts .top-banner > .container {
+      padding: 60px 0 0;
+    }
+  }
+}
+
+#executives .single-col img {
+  width: 100%;
+  max-width: 754px;
+  margin: 30px auto 0;
+}
+
+#business_analysts .single-col {
+  img {
+    margin-bottom: 45px;
+  }
+  a {
+    margin-bottom: 60px;
+  }
+}
+
+/*FEATURES*/
+section.features {
+  .top-banner {
+    position: relative;
+    height: 525px;
+    padding: 60px 0 60px;
+    @include background($bs: cover, $bp: center center);
+    .banner-content {
+      width: 100%;
+      @include center;
+    }
+    h1 {
+      margin-bottom: 15px;
+      @include font-light(54px, 60px);
+      color: $white;
+    }
+    p {
+      @include font-regular(20px, 30px);
+      color: $white;
+    }
+  }
+  .page-content {
+    @include bc;
+  }
+  .excerpt {
+    width: 100%;
+    @include indents(0 auto 30px, 45px 10%);
+    @include font-regular(22px, 45px);
+    color: $ghost;
+    @include center;
+    border-bottom: 2px solid $pale-grey0;
+  }
+}
+
+/*FEATURE ITEM*/
+article.feature {
+  padding: 45px 0;
+  h2 {
+    font-size: 30px;
+    @include font-regular(30px, 45px);
+  }
+  p {
+    @include font-regular(17px, 30px);
+    color: $blue-grey-e;
+    @include left;
+  }
+  a {
+    @include font-medium($fs: 15px);
+    text-transform: uppercase;
+    i {
+      float: left;
+      margin-right: 7px;
+      font-size: 20px;
+      @include middle;
+    }
+  }
+  ul li {
+    position: relative;
+    @include indents(0 0 15px, 0 0 0 40px);
+    @include font-regular(17px, 30px);
+    color: $text-color;
+  }
+  li img {
+    display: inline-block;
+    @include absolute($t: 0, $l: 0);
+    width: 20px;
+    padding: 5px 0;
+  }
+  &.left-image .b-left {
+    @include center;
+  }
+  &.right-image {
+    .b-right {
+      @include center;
+    }
+    .b-left {
+      margin-right: 55px;
+    }
+  }
+  &.left-image .b-right {
+    margin-left: 55px;
+  }
+  .b-left, .b-right {
+    display: inline-block;
+    width: 570px;
+    margin: 0;
+    line-height: initial;
+    @include middle
+  }
+  .b-left > img, .b-right > img {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  section.persona .top-banner {
+    padding: 0 0 60px;
+    .b-left {
+      float: left;
+      width: 50%;
+    }
+    .b-right {
+      float: right;
+      width: 50%;
+    }
+  }
+  article.feature {
+    .b-left, .b-right {
+      width: 45%;
+      margin: 0;
+    }
+    &.right-image .b-left {
+      margin-right: 9%;
+    }
+    &.left-image .b-right {
+      margin-left: 9%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section {
+    &.features .top-banner {
+      height: auto;
+      padding: 30px 0;
+      min-height: 525px;
+      @include background($bs: cover, $bp: center, $br: null);
+      background-image: -webkit-linear-gradient(314deg, #143056 0%, #0C1725 100%) !important;
+      background-image: -moz-linear-gradient(314deg, #143056 0%, #0C1725 100%) !important;
+      background-image: -ms-linear-gradient(314deg, #143056 0%, #0C1725 100%) !important;
+      background-image: -o-linear-gradient(314deg, #143056 0%, #0C1725 100%) !important;
+      background-image: linear-gradient(4deg, #143056 0%, #0C1725 100%) !important;
+    }
+    &.features .banner-content {
+      width: 100%;
+      max-width: 480px;
+      @include indents(0);
+      @include center;
+    }
+  }
+  article.feature {
+    padding: 0;
+    @include center;
+    .b-left, .b-right {
+      width: 100%;
+      @include centerBlock;
+    }
+    .b-left > img, .b-right > img {
+      display: block;
+      @include centerBlock;
+    }
+    &.left-image .b-right {
+      margin-left: 0;
+    }
+    &.right-image .b-left {
+      display: block;
+      width: 100%;
+      @include centerBlock(30px);
+    }
+  }
+  section.persona {
+    .top-banner {
+      .b-left {
+        float: none;
+        @include static($t: 0, $l: 0);
+        width: 100%;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        @include center;
+        @include translateY(0%);
+      }
+      h1 {
+        margin: 0;
+      }
+      p {
+        margin-bottom: 15px;
+        @include font-light(30px, 45px);
+      }
+      .b-right {
+        /*
+         TODO: get rid of !important
+        */
+        position: static !important;
+        float: none;
+        width: 100%;
+        -webkit-transform: translateY(0%) !important;
+        -moz-transform: translateY(0%) !important;
+        -ms-transform: translateY(0%) !important;
+        -o-transform: translateY(0%) !important;
+        transform: translateY(0%) !important;
+        img {
+          display: block;
+          width: 75%;
+          @include centerBlock;
+        }
+      }
+      .container {
+        min-height: initial;
+      }
+    }
+    .excerpt {
+      @include indents(0, 30px 0);
+      @include font-regular(22px, 30px);
+    }
+    .anchors ul li a {
+      display: block;
+      @include font-regular(10px, 55px);
+      text-transform: uppercase;
+      color: $white;
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section {
+    &.persona .top-banner {
+      padding: 0;
+    }
+    &#executives .top-banner > .container, &#business_analysts .top-banner > .container {
+      padding: 0 15px;
+    }
+    &.persona .top-banner {
+      .single-col {
+        @include indents(0, 30px 0);
+        @include center;
+      }
+      img.tb-mobile {
+        display: block;
+        @include centerBlock;
+      }
+      .single-col img {
+        display: none;
+        &.tb-mobile {
+          display: block;
+          margin: 0 auto 30px !important;
+        }
+      }
+    }
+  }
+  #business_analysts .single-col a {
+    margin-bottom: 0;
+  }
+  section.persona {
+    .top-banner {
+      .b-left-mobile {
+        display: block;
+        @include indents(0 auto, 30px 0);
+      }
+      .b-right {
+        display: none;
+      }
+    }
+    .anchors.default {
+      display: none;
+    }
+    .excerpt {
+      @include indents(0, 30px 0);
+      @include font-regular(20px, 30px);
+    }
+    article.feature .b-left > img, article.feature .b-right > img {
+      @include centerBlock(30px);
+    }
+  }
+  article.feature ul li {
+    @include left;
+  }
+  section.features .excerpt {
+    width: 100%;
+    @include indents(0 auto 30px, 30px 0);
+    @include font-regular(20px, 30px);
+    color: $ghost;
+    @include center;
+    border-bottom: 2px solid $pale-grey0;
+  }
+  article.feature h2 {
+    margin-bottom: 22px;
+    @include font-regular(22px, 30px);
+  }
+}

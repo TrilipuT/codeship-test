@@ -1,0 +1,268 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../base/base';
+@import '../base/dr-font';
+@import '../parts/forms';
+@import "../parts/share";
+
+.practical-ml-program {
+  background-color: #ffffff;
+  .container {
+    @media only screen and (max-width: 1024px) and (min-width: 720px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+  > .wrapper {
+    background: url('../images/practical-ml/header-bg.jpg') no-repeat top center;
+    padding-top: 0;
+    @media only screen and (max-width: 719px) {
+      background-size: auto 40%;
+    }
+  }
+  .holder {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, .15);
+    margin-bottom: 60px;
+    @media only screen and (max-width: 1023px) {
+      margin-bottom: 45px;
+      padding-bottom: 25px;
+    }
+  }
+  header {
+    .container {
+      .holder {
+        @include flex(space-between);
+        padding-top: 30px;
+        @media only screen and (max-width: 719px) {
+          flex-direction: column;
+          text-align: center;
+          padding-top: 10px;
+        }
+      }
+    }
+    .logo {
+      display: block;
+      @media only screen and (max-width: 1023px) {
+        line-height: 60px;
+      }
+      @media only screen and (max-width: 719px) {
+        flex-direction: column;
+      }
+      .logo-img {
+        display: inline-block;
+        height: 31px;
+        max-width: none;
+        vertical-align: middle;
+      }
+    }
+    .subtitle {
+      justify-self: self-end;
+      width: 100%;
+      font-size: 20px;
+      text-align: right;
+      line-height: 30px;
+      color: #ffffff;
+      @media only screen and (max-width: 1023px) {
+        max-width: 250px;
+      }
+      @media only screen and (max-width: 719px) {
+        max-width: 200px;
+        text-align: center;
+        margin: 20px auto 0;
+        font-size: 15px;
+        line-height: 1.33;
+      }
+    }
+  }
+  h1 {
+    max-width: 650px;
+    margin-bottom: 45px;
+    font-size: 42px;
+    line-height: 1.43;
+    font-weight: 300;
+    color: #ffffff;
+    @media only screen and (max-width: 1280px) {
+      font-size: 36px;
+    }
+    @media only screen and (max-width: 1023px) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    @media only screen and (max-width: 719px) {
+      font-size: 30px;
+      line-height: 1.5;
+    }
+  }
+  .form-holder {
+    @include flex(space-between);
+    align-items: center;
+    margin-bottom: 75px;
+    @media only screen and (max-width: 1023px) {
+      flex-direction: column;
+      text-align: center;
+    }
+    .item {
+      max-width: 495px;
+      width: 100%;
+      @media only screen and (max-width: 1024px) and (min-width: 1024px) {
+        max-width: 445px;
+      }
+    }
+    .b-left {
+      max-width: 705px;
+      margin-right: 45px;
+      @media only screen and (max-width: 1023px) {
+        margin-right: 0;
+        max-width: 720px;
+        margin-bottom: 75px;
+      }
+      @media only screen and (max-width: 719px) {
+        margin-bottom: 50px;
+      }
+    }
+    h4 {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+    p {
+      max-width: 600px;
+      opacity: 0.7;
+      font-size: 17px;
+      line-height: 1.76;
+      color: #ffffff;
+      @media only screen and (max-width: 1023px) {
+        max-width: 100%;
+      }
+    }
+    .dr-form {
+      @media only screen and (max-width: 719px) {
+        padding: 10px;
+      }
+      input.text, textarea, .button {
+        font-size: 15px;
+        @media only screen and (max-width: 719px) {
+          line-height: 1.33;
+        }
+      }
+    }
+    .button {
+      border: 0;
+      height: auto;
+      @media only screen and (max-width: 1024px) {
+        padding: 15px;
+      }
+    }
+  }
+  .practical-ml-form {
+    padding: 45px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #f4f7f8;
+    box-shadow: 0 40px 70px 0 rgba(0, 0, 0, 0.1), 0 20px 20px 0 rgba(28, 39, 57, 0.06);
+  }
+  .intro {
+    p {
+      max-width: 810px;
+      padding-bottom: 35px;
+      margin: 0 auto;
+      font-size: 22px;
+      line-height: 2.05;
+      text-align: center;
+      color: #344d62;
+      @media only screen and (max-width: 719px) {
+        font-size: 17px;
+        line-height: 1.76;
+      }
+    }
+    border-bottom-color: #e1e9f0;
+  }
+  .benefits {
+    h3 {
+      font-size: 30px;
+      text-align: center;
+      color: #061d3b;
+      margin-top: 90px;
+      margin-bottom: 60px;
+    }
+    .row-wrap {
+      @include flex(space-between);
+      @media only screen and (max-width: 1023px) {
+        flex-flow: row wrap;
+      }
+      .item {
+        flex-basis: 25%;
+        max-width: 270px;
+        padding: 0 10px;
+        font-size: 15px;
+        line-height: 2.0;
+        text-align: center;
+        color: #061d3b;
+        @media only screen and (max-width: 1023px) {
+          flex-basis: 50%;
+          padding: 0 20px;
+          max-width: 100%;
+          margin-bottom: 50px;
+        }
+        @media only screen and (max-width: 719px) {
+          flex-basis: 100%;
+        }
+        p {
+          opacity: 0.7;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+  footer {
+    margin-top: 110px;
+    border-top: 1px solid #E1E8F0;
+    background-color: #ffffff;
+    position: relative;
+    @media only screen and (max-width: 1023px) {
+      margin-top: 0;
+    }
+    .row-wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 30px 0;
+      @media only screen and (max-width: 1023px) {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    .copyright {
+      display: inline-block;
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+      img {
+        display: inline-block;
+        width: 16px;
+        margin-right: 10px;
+        vertical-align: middle;
+        @media only screen and (max-width: 1023px) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      @media only screen and (max-width: 1023px) {
+        order: 2;
+      }
+    }
+    .bpf {
+      display: inline-block;
+      @include font-regular(15px, 30px);
+      color: $blue-grey-e;
+      @media only screen and (max-width: 1023px) {
+        order: 3;
+      }
+    }
+  }
+}

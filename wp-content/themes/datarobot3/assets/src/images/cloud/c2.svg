@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="31px" viewBox="0 0 44 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#D9ECFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Cloud-3" transform="translate(-139.000000, -345.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-7" transform="translate(-17.000000, 345.000000)">
+                <path d="M170.054362,10.0751561 C169.000056,9.72689364 167.873327,9.53846154 166.702703,9.53846154 C160.791763,9.53846154 156,14.3427906 156,20.2692308 C156,26.195671 160.791763,31 166.702703,31 C167.104659,31 167.501441,30.9777834 167.891892,30.934508 L167.891892,31 L185.135135,31 L185.135135,30.9887465 C193.397605,30.6754677 200,23.8607918 200,15.5 C200,6.93958638 193.078564,0 184.540541,0 C177.906014,0 172.24761,4.19023889 170.054362,10.0751561 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

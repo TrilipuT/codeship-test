@@ -1,0 +1,135 @@
+.form-material {
+  font-family: "Roboto", "Noto", sans-serif;
+  label:not(.checkbox) {
+    margin-bottom: 15px;
+    background-color: #fff;
+    outline: none;
+    &:after {
+      display: none;
+    }
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 39px;
+      cursor: text;
+      pointer-events: none;
+      span {
+        color: $blue-grey;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include font-regular(17px, 39px);
+        background-color: #fff;
+        transform-origin: 0% 50%;
+        transition: all 150ms ease-in-out;
+        cursor: text;
+      }
+    }
+  }
+  .dropdown-parent:after {
+    display: block !important;
+  }
+  input.text {
+    width: 100%;
+    font-size: 17px;
+    margin: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 1px solid #E6E8EB;
+    border-radius: 0;
+  }
+  select {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #E6E8EB;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    &:-moz-focusring {
+      color: transparent;
+      text-shadow: 0 0 0 #000;
+    }
+  }
+
+  .field {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 17px 0 3px;
+    color: #465275;
+    outline: none;
+    cursor: text;
+    background-color: #fff;
+    transition: opacity 150ms ease-in-out;
+    border-bottom: 1px solid #E6E8EB;
+  }
+
+  .field::-webkit-input-placeholder {
+    color: #B1C3D5;
+  }
+  .field::-moz-placeholder {
+    color: #B1C3D5;
+  }
+
+  /* IE doesn't show placeholders when empty+focused */
+  .field:-ms-input-placeholder {
+    color: #B1C3D5;
+  }
+
+  .field.is-empty:not(.is-focused) {
+    // opacity: 0;
+  }
+
+  label .field.is-focused + span span,
+  label .field:not(.is-empty) + span span {
+    font-weight: 500;
+    background-color: transparent;
+    transform: scale(0.68) translateY(-27px);
+    cursor: default;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    margin-top: 60px;
+    border: none;
+    outline: none;
+    @include font-medium(16px, 30px);
+    border-radius: 0;
+    cursor: pointer;
+  }
+  input.text:focus, select:focus, textarea:focus {
+    border-color: #2D8FE2;
+  }
+  .validation_error {
+    border-color: #E55653 !important;
+  }
+  .dr-loader {
+    display: block;
+    margin: 0 auto;
+    width: 36px;
+    height: 36px;
+  }
+
+  #error-wrap {
+    display: none;
+    margin: 15px 0 0;
+  }
+  #form-errors {
+    padding: 0;
+    color: #E55653;
+    text-align: center;
+    line-height: 20px;
+  }
+}

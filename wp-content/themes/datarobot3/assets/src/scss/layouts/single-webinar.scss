@@ -1,0 +1,294 @@
+.single-webinar {
+  background-color: $black-blue;
+
+  .container {
+    width: 100%;
+    max-width: 1360px;
+    display: flex;
+    @include min(1024) {
+      padding-right: 0;
+    }
+    @include max(1024) {
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    @include max(720) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+  header {
+    @include flex(space-between);
+    align-items: center;
+    padding: 45px 0;
+    @include max(720) {
+      display: block;
+      padding: 15px 0;
+    }
+    .subtitle {
+      color: $blue-grey-e;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 32px;
+      @include max(720) {
+        font-size: 17px;
+      }
+    }
+    .logo img {
+      display: block;
+      @include max(720) {
+        max-width: 140px;
+      }
+    }
+  }
+  .fixed-holder {
+    display: none;
+    @include max(1024) {
+      @include flex(center);
+      align-items: center;
+      //position: fixed;
+      //left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 200px;
+      margin-top: -100px;
+      z-index: 10;
+      background: linear-gradient(180deg, rgba(6, 29, 59, 0) 0%, #061D3B 90%);
+    }
+    @include max(720) {
+      height: 100px;
+      margin-top: 0;
+    }
+  }
+  .content-holder {
+    flex: 5 1 calc(100% - 420px);
+    margin-right: 495px;
+    background-color: $black-blue;
+    @include max(1280) {
+      margin-right: 435px;
+    }
+    @include max(1024) {
+      margin-right: 0;
+    }
+  }
+  .form-holder {
+    backface-visibility: hidden;
+    @include min(1025) {
+      background-color: #ffffff;
+      flex: 1 5 420px;
+      width: 480px;
+      padding: 60px 60px 30px;
+      margin-left: 60px;
+      position: fixed;
+      right: 0;
+      height: 100%;
+      /*&:after {
+        content: '';
+        background-color: #ffffff;
+        width: 100%;
+        margin-left: -60px;
+        top: 0;
+        height: 100%;
+        position: fixed;
+        z-index: -1;
+        backface-visibility: hidden;
+        @include max(1280) {
+          margin-left: -30px;
+        }
+      }*/
+      .form-wrap {
+        position: static;
+        transition: none;
+        top: auto;
+        width: auto;
+        transform: none;
+        background: #fff;
+        padding: 0;
+        box-shadow: none;
+      }
+      .popup-close {
+        display: none;
+      }
+      @include max(1280) {
+        width: 420px;
+        padding: 30px;
+        margin-left: 30px;
+      }
+    }
+
+    .form-wrap {
+      background-color: white;
+    }
+    @include max(720) {
+      background-color: #ffffff;
+    }
+    @include max(1024) {
+      display: none;
+    }
+    .form-title {
+      font-size: 30px;
+      line-height: 35px;
+      color: $black-blue;
+    }
+  }
+  footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    @include flex(space-between);
+    color: #7E91A2;
+    font-size: 16px;
+    line-height: 16px;
+    background-color: transparent;
+    @include max(480) {
+      display: block;
+      text-align: center;
+    }
+    &:before {
+      content: '';
+      height: 2px;
+      top: 0;
+      width: 200%;
+      right: -485px;
+      background-color: rgba(255, 255, 255, 0.15);
+      position: absolute;
+      @include max(1280) {
+        right: -425px;
+      }
+      @include max(1024) {
+        right: -50px;
+      }
+      @include max(720) {
+        right: -15px;
+      }
+    }
+    .copyright {
+      @include flex(flex-start);
+      align-items: center;
+      @include max(480) {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      img {
+        height: 18px;
+        width: auto;
+        margin-right: 15px;
+        @include max(480) {
+          margin: 0 auto 15px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .title {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 20px;
+    @include max(720) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  .date {
+    @include flex(space-between);
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 30px;
+    .add-to-calendar, span {
+      //margin-right: 30px;
+      margin-bottom: 10px;
+      flex: 0 0 30%;
+      min-width: 275px;
+      &:last-child {
+        flex-basis: 185px;
+        min-width: 185px;
+      }
+      @include max(1023) {
+        flex-basis: 50%;
+      }
+      @include max(729) {
+        flex-basis: 100%;
+      }
+    }
+    svg {
+      vertical-align: middle;
+    }
+    time {
+      margin-left: 15px;
+    }
+    .add-to-calendar {
+      color: #2D8FE2;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 13px;
+      padding: 6px 12px;
+      border: 1px solid #2D8FE2;
+      border-radius: 3px;
+      text-transform: uppercase;
+      transition: background-color .25s;
+      &:hover {
+        background-color: rgba(45, 143, 226, .25);;
+      }
+    }
+  }
+
+  .content {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 32px;
+  }
+
+  .layout-block {
+    margin-bottom: 80px;
+    @include max(1024) {
+      margin-bottom: 60px;
+    }
+    @include max(720) {
+      margin-bottom: 45px;
+    }
+    .sub-title {
+      font-size: 32px;
+      line-height: 45px;
+      color: #ffffff;
+      margin-bottom: 60px;
+      @include max(1024) {
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  @import "webinar/block-content";
+  @import "webinar/block-info";
+  @import "webinar/block-check-list";
+  @import "webinar/block-benefits-list";
+  @import "webinar/block-speakers-list";
+
+  @import "../parts/dr-form-material";
+  .dr-form {
+    button {
+      margin-top: 30px;
+    }
+  }
+  &.watch {
+    overflow-x: hidden;
+    .content-holder{
+      margin-right: 0;
+    }
+    .container {
+      max-width: 1280px;
+      @include min(1024) {
+        padding-right: 15px;
+      }
+    }
+    footer {
+      &:before {
+        right: -25%;
+      }
+    }
+  }
+}

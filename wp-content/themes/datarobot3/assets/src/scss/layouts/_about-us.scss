@@ -1,0 +1,274 @@
+section.about-us {
+  @include bc;
+  .top-banner {
+    @include center;
+    @include background($bs: cover, $bp: center);
+  }
+  .banner-content {
+    width: 70%;
+    margin: 0 auto;
+    padding: 200px 0;
+  }
+  .top-banner {
+    h1 {
+      @include font-light(42px, 45px);
+      color: $white;
+    }
+    p {
+      @include font-regular(17px, 30px);
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  h2 {
+    margin: 60px 0;
+    @include center;
+    @include font-light($fs:42px);
+  }
+}
+
+.record-wrap {
+  @include flex(center);
+  @include center;
+  color: $white;
+}
+
+.record {
+  display: inline-block;
+  @include dimensions(285px, 360px);
+  @include indents(15px, 90px 0 0);
+  background-size: cover;
+  @include radius(6px);
+  overflow: hidden;
+  cursor: default;
+  span {
+    @include font-medium(90px, 100px);
+    display: block;
+    margin-bottom: 15px;
+    color: $white;
+  }
+  p {
+    display: block;
+    padding: 0 30px;
+    @include font-light(20px, 30px);
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.about-us .quote-slider .item {
+  display: inline-block;
+  float: left;
+  @include dimensions(50%, 225px);
+  padding: 0 60px;
+  line-height: 225px;
+  @include bc($white-bg);
+}
+
+.quote-slider .item {
+  &:nth-child(3n+1) {
+    @include bc($main-white-bg);
+  }
+  &:nth-child(odd) {
+    @include right;
+  }
+}
+
+.about-us .quote-slider blockquote {
+  display: inline-block;
+  width: 100%;
+  @include indents(0);
+  @include inherit;
+  @include middle;
+  p {
+    @include indents(0);
+    @include font-regular(22px, 30px);
+    color: $ghost;
+    font-style: normal;
+    @include inherit;
+    &:before, &:after {
+      display: none;
+    }
+  }
+}
+
+.quote-slider span.name {
+  margin-bottom: 0;
+  @include font-regular(15px, 30px);
+  color: $blue-grey-e;
+}
+
+.about-uc {
+  .item {
+    margin-bottom: 30px;
+    position: relative;
+  }
+  .img-holder {
+    @include absolute($t:0, $b:0);
+    width: 22%;
+    @include center;
+  }
+  .left-image .img-holder {
+    left: 0;
+  }
+  .right-image .img-holder {
+    right: 0;
+  }
+  .img-holder img {
+    display: block;
+    @include absolute($t:50%);
+  }
+  .left-image img {
+    left: 50%;
+    @include translate((-50%, -50%));
+  }
+  .right-image img {
+    right: 50%;
+    @include translate((-50%, -50%));
+  }
+  .item .text-holder {
+    display: block;
+    width: 56%;
+    @include centerBlock;
+    @include bc($main-white-bg);
+    padding: 45px;
+    @include font-regular(15px, 30px);
+    color: $text-color;
+    @include radius;
+  }
+  .left-image .text-holder {
+    border-left: 4px solid $blue;
+  }
+  .right-image .text-holder {
+    border-right: 4px solid $blue;
+  }
+}
+
+.more-uc {
+  @include center;
+  a {
+    @include font-medium(15px, 20px);
+    text-transform: uppercase;
+    border-bottom: 1px dashed $blue;
+  }
+}
+
+.expertise .logos {
+  @include flex(space-between);
+  li {
+    line-height: 75px;
+    @include middle;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .about-uc .item {
+    &.left-image .text-holder {
+      width: 75%;
+      @include indents(0 0 0 25%, 30px);
+    }
+    &.right-image .text-holder {
+      width: 75%;
+      @include indents(0 25% 0 0, 30px);
+    }
+  }
+  section.about-us h2 {
+    margin: 60px 0 45px;
+    @include font-light($fs:30px);
+    @include center;
+  }
+  .about-us .quote-slider .item {
+    display: block;
+    float: none;
+    @include dimensions(100%, 160px);
+    line-height: 160px;
+    @include left;
+    @include bc($white-bg);
+  }
+  .quote-slider .item {
+    &:nth-child(odd) {
+      @include left;
+    }
+    &:nth-child(3n+1) {
+      background-color: #EAF0F5;
+    }
+  }
+  .expertise .logos {
+    @include flex(center);
+    flex-flow: row wrap;
+    li {
+      margin: 0 30px 30px;
+      line-height: 75px;
+      @include middle;
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section.about-us {
+    .top-banner h1{
+      @include font-light(30px, 45px);
+    }
+    h2 {
+      margin: 45px 0;
+      @include font-light(30px, 45px);
+    }
+    .banner-content {
+      width: 100%;
+      @include indents(0 auto, 100px 0);
+    }
+    .quote-slider {
+      blockquote {
+        padding: 0;
+        @include centerBlock;
+        p {
+          margin-bottom: 20px;
+          padding:0;
+          @include font-regular(22px, 30px);
+          @include center;
+        }
+      }
+      .name{
+        @include font-regular(15px, 30px);
+        @include center;
+      }
+      .item{
+        height: auto;
+        padding: 60px 30px;
+        @include middle;
+      }
+      .bx-viewport{
+        height: auto!important;
+      }
+    }
+  }
+  .record-wrap {
+    @include flex(center);
+    flex-flow: row wrap;
+    color: $white;
+    @include center;
+  }
+  .about-uc {
+    .img-holder {
+      @include relative($t:0, $b:0);
+      width: 100%;
+      margin-bottom: 15px;
+      @include center;
+      img {
+        display: block;
+        @include centerBlock;
+        @include relative($t:0);
+      }
+    }
+    .left-image img {
+      left: 0;
+      transform: none;
+    }
+    .item {
+      &.left-image .text-holder, &.right-image .text-holder {
+        width: 100%;
+        @include indents(0 30px, 15px);
+        border: 0;
+        border-top: 4px solid $blue;
+      }
+    }
+  }
+}

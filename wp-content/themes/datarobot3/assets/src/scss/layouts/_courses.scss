@@ -1,0 +1,452 @@
+.courses {
+  .top-block {
+    padding: 60px 0;
+    @include center;
+    h1 {
+      margin-bottom: 30px;
+      @include font-regular(42px, 45px);
+      color: $white;
+    }
+    p {
+      width: 810px;
+      @include font-regular(17px, 30px);
+      color: $white;
+      @include centerBlock;
+      opacity: 0.7;
+    }
+  }
+  .trainings {
+    padding: 90px 0;
+  }
+}
+
+.trainings .item {
+  margin-bottom: 30px;
+  .cover {
+    @include flex(space-between);
+    flex-direction: column;
+    float: left;
+    position: relative;
+    @include dimensions(390px, 380px);
+    padding: 45px 30px 30px;
+    @include bc;
+    @include radius(6px);
+    @include shadow( 0 0 6px 0 rgba(0, 0, 0, 0.05));
+  }
+}
+
+.item .cover {
+  .type {
+    margin-bottom: 15px;
+    @include font-medium(13px, 20px);
+    color: $ruby;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin-bottom: 10px;
+    @include font-regular(30px, 45px);
+  }
+  p.for {
+    margin-bottom: 25px;
+    @include font-regular(15px, 20px);
+    color: $blue-grey-e;
+  }
+  a.button{
+    float: left;
+  }
+  a.all-classes{
+    float: left;
+    width: 100%;
+    @include font-medium(15px, 15px);
+    color: $blue;
+    text-transform: uppercase;
+    i{
+      @include relative($t:3px);
+      margin-right: 10px;
+      font-size: 18px;
+    }
+    &:hover{
+      color: $skiey;
+    }
+  }
+  .title-wrap, .action-wrap{
+    float: left;
+    width: 100%;
+    .button{
+      width: 100%;
+      max-width: 330px;
+      @include center;
+    }
+  }
+}
+
+.trainings .item .main {
+  height: 350px;
+  @include indents(15px 0 15px 390px, 0 30px);
+  @include bc($white-4);
+  @include radius(0 6px 6px 0);
+  &.loading .calendar-slider {
+    opacity: 0;
+  }
+  .calendar-slider {
+    opacity: 1;
+  }
+  .course_outline {
+    opacity: 0;
+    overflow-x: scroll;
+  }
+}
+
+.tab-headers {
+  height: 75px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid $white-grey;
+  li {
+    display: inline-block;
+    float: left;
+    a {
+      display: block;
+      padding: 30px 30px 28px;
+      @include font-medium(13px, 15px);
+      color: $blue-grey-e;
+      text-transform: uppercase;
+      border-bottom: 2px solid transparent;
+    }
+    &.active a {
+      color: $blue;
+      border-bottom-color: $blue;
+    }
+    a:hover {
+      border-bottom-color: $blue;
+    }
+  }
+}
+
+.course_outline {
+  > p {
+    @include font-regular(15px, 30px);
+  }
+  .row_wrap {
+    @include dimensions(810px, 200px);
+    white-space: nowrap;
+  }
+  .column {
+    display: inline-block;
+    float: left;
+    width: 240px;
+    margin: 0 15px;
+    @include font-regular(15px, 20px);
+    @include top;
+  }
+}
+
+.all-courses .tabfield .column {
+  display: inline-block;
+  float: left;
+  width: 240px;
+  margin: 0 15px;
+  @include font-regular(15px, 20px);
+  @include top;
+}
+
+.course_outline .column p, .all-courses .tabfield .column p {
+  margin-bottom: 10px;
+  font-weight: $font-weight-medium;
+  color: $ghost;
+}
+
+.course_outline .column li, .all-courses .tabfield .column li {
+  position: relative;
+  @include indents(0 0 10px, 0 0 0 30px);
+}
+
+.course_outline .column li:before, .all-courses .tabfield .column li:before {
+  content: '';
+  display: block;
+  @include absolute($t:0, $l:0);
+  @include dimensions(20px);
+  background: url("../images/list-bullet.png");
+  @include background($bs: 18px, $bp: center center);
+}
+
+.course_outline .column li span {
+  color: $blue-grey-e;
+}
+
+.calendar-slider {
+  position: relative;
+  height: 240px;
+  padding: 15px 45px;
+  ul {
+    height: 255px;
+  }
+  li {
+    position: relative;
+    @include center;
+    @include radius;
+    &:first-child {
+      margin-left: 0;
+    }
+    .date {
+      padding: 30px 30px 0;
+      @include bc;
+      @include radius(3px 3px 0 0);
+    }
+  }
+  p.month {
+      display: block;
+      @include font-medium(17px, 20px);
+      color: $text-color;
+      @include left;
+      text-transform: uppercase;
+    span.price{
+      float: right;
+      @include font-medium(17px, 20px);
+      color: $lime1;
+      @include top;
+    }
+  }
+  span.day {
+    display: block;
+    @include font-regular(30px, 30px);
+    color: $text-color;
+    @include left;
+    text-transform: uppercase;
+  }
+  li {
+    .venue {
+      display: block;
+      padding: 10px 28px 30px;
+      @include font-regular(15px, 15px);
+      color: $text-color;
+      @include left;
+      @include bc($white);
+      i{
+        @include relative($t:3px);
+        margin-right: 5px;
+        font-size: 18px;
+        color: $white-4;
+      }
+    }
+    .signUp{
+      .button{
+        width: 100%;
+        @include radius(0 0 3px 3px);
+      }
+    }
+  }
+  .controls a {
+    display: block;
+    @include dimensions(24px);
+    &.bx-prev {
+      @include absolute($t:85px, $l:0);
+    }
+    &.bx-next {
+      @include absolute($t:85px, $r:0);
+    }
+    i {
+      @include font-regular(24px, 1em);
+      color: $blue-grey-f;
+    }
+    &.disabled i {
+      color: $white-grey;
+    }
+  }
+  .bx-controls{
+    display: none;
+  }
+}
+
+section.courses .get-in-touch {
+  @include bc(transparent);
+  padding: 0 0 90px;
+}
+
+@media only screen and (max-width: 1366px) {
+  .trainings .item .cover {
+    @include dimensions(390px, 355px);
+    padding: 30px;
+  }
+  .item .cover h2 {
+    margin-bottom: 10px;
+    @include font-regular(24px, 30px);
+  }
+  .trainings .item .main {
+    height: 325px;
+    @include indents(15px 0 15px 390px, 0 30px);
+  }
+  .tab-headers {
+    height: 55px;
+    border-bottom: 1px solid #D9DFE4;
+    margin-bottom: 15px;
+    li a {
+      display: block;
+      padding: 20px 30px 18px;
+      @include font-medium(13px, 15px);
+    }
+  }
+  .course_outline .column li {
+    margin-bottom: 7px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .trainings .item {
+    .cover {
+      width: 330px;
+    }
+    .main {
+      margin: 15px 0 15px 330px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .get-in-touch {
+    padding: 60px 0;
+    .button-wrap {
+      padding: 30px 0;
+      @include center;
+      @include background($bs: cover, $bp: center);
+    }
+  }
+  .courses {
+    .top-block p {
+      width: 100%;
+    }
+    .trainings {
+      padding: 30px 0;
+    }
+  }
+  .trainings .item .cover {
+    flex-direction: row;
+    float: none;
+    @include dimensions(100%, auto);
+    padding: 30px;
+  }
+  .item .cover p.for {
+    max-width: 500px;
+  }
+  .trainings .item .main {
+    @include dimensions(100%, auto);
+    @include indents(-25px 0 0, 30px);
+  }
+  .item .cover .action-wrap{
+    @include flex(center);
+    flex-direction: column;
+    align-items: flex-end;
+    @include right;
+  }
+  .item .cover a{
+    &.button {
+    float: none;
+    }
+    &.courses{
+      float: right;
+      margin: 0 25px 10px 0;
+    }
+  }
+  .tab-contents {
+    width: 100%;
+  }
+  .vacancy-detail .container {
+    width: 100%;
+  }
+  .positions .positions-list {
+    float: none;
+    @include centerBlock;
+    .it {
+      max-width: 48%;
+      width: 100%;
+      @include indents(1%, 20px);
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .courses .top-block {
+    padding: 45px 0;
+    @include center;
+    h1 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+  }
+  .item .cover .action-wrap{
+    align-items: flex-start;
+    margin-top: 30px;
+    @include left;
+  }
+  .trainings .item .cover {
+    flex-direction: column;
+    padding: 15px;
+    a.courses{
+      margin: 0 0 10px 0;
+    }
+  }
+  .trainings .item .main {
+    padding: 30px 0 30px;
+  }
+  .tab-headers li {
+    width: 33%;
+    line-height: 53px;
+    @include center;
+    border-bottom: 2px solid transparent;
+    &.active {
+      border-bottom-color: $blue;
+    }
+    a {
+      display: inline-block;
+      height: auto;
+      padding: 0;
+      @include font-regular(12px, 15px !important);
+      @include center;
+      @include middle;
+      border-bottom: 0;
+    }
+  }
+  .get-in-touch {
+    padding: 0;
+  }
+}
+
+
+@media only screen and (max-width: 419px){
+  .calendar-slider{
+    .bx-controls{
+      display: block;
+      margin-top: 20px;
+    }
+    .bx-pager{
+      @include flex(center);
+    }
+    .bx-pager-item{
+      margin-right: 10px;
+      &:nth-last-of-type(1){
+        margin: 0;
+      }
+      a{
+        display: block;
+        @include dimensions(12px);
+        color: transparent;
+        @include bc($white-grey);
+        @include radius(50%);
+        &.active{
+          @include bc($blue);
+        }
+      }
+    }
+    .bx-viewport{
+      max-width: 210px;
+      @include centerBlock;
+    }
+    .controls a {
+      &.bx-prev {
+        left: 10px;
+      }
+      &.bx-next {
+        right: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,1535 @@
+.page-template-page-dru-lp {
+  @include bc;
+}
+
+#sh_wr {
+  header.fixed {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    margin-top: -76px;
+    position: relative;
+  }
+  section.landing {
+    padding-top: 136px;
+    margin-top: -76px;
+  }
+  #logo a img {
+    display: block;
+    padding: 27px 0;
+  }
+  .bpf {
+    font-family: komika;
+    font-size: 26px;
+    color: #FFFFFF;
+    position: relative;
+    &:after {
+      background-image: linear-gradient(-90deg, rgba(45,143,226,0.00) 0%, rgba(71,136,198,0.63) 74%, #FF5600 100%);
+      border-radius: 1px;
+    }
+  }
+  .e-upper h1 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 45px;
+  }
+  .e-upper p {
+    font-family: "Roboto", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  .event-box {
+    background: rgba(0,0,0,0.40);
+  }
+}
+
+section.landing {
+  padding: 60px 0;
+  background: url("../images/top-bg.jpg");
+  @include background($bs:cover, $bp:center center);
+}
+
+.landing {
+  .lp-left {
+    float: left;
+    width: 55%;
+  }
+  .lp-right {
+    float: right;
+    width: 40%;
+  }
+}
+
+.e-upper {
+  margin-bottom: 60px;
+  h1 {
+    @include font-light(42px, 45px);
+    color: inherit;
+  }
+  p {
+    @include font-regular(17px, 1.5em);
+    color: inherit;
+    opacity: 0.7;
+  }
+  .team-wrap{
+    display: inline;
+    p{
+      display: inline;
+      @include font-light(20px, 45px);
+      opacity: .7;
+    }
+    img{
+      max-width: 45px;
+      @include relative($t: 15px);
+      margin: 0 10px;
+    }
+    &:nth-of-type(1) {
+      &:after {
+        content: 'vs';
+        padding: 0 5px;
+        @include font-light(20px, 45px);
+      }
+    }
+  }
+}
+
+.e-mobile-button {
+  display: none;
+}
+
+.e-bottom {
+  @include flex(space-between);
+  align-items: flex-start;
+  .media {
+    width: 37%;
+  }
+}
+
+.event-box {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  @include radius(6px);
+  img {
+    margin-bottom: 30px;
+  }
+  .devider {
+    @include dimensions(100%, 1px);
+    margin: 25px 0;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .title, p {
+    color: $white;
+  }
+  .title {
+    @include font-medium($fs:17px);
+    text-transform: uppercase;
+  }
+  p {
+    @include font-regular(15px, 30px);
+  }
+  .details-extra {
+    font-size: 12px;
+    color: #9b9b9b;
+    line-height: 1.5em;
+    margin-top: 15px;
+  }
+}
+
+.media.dark{
+    width: 42%;
+  .event-box{
+    min-width: 235px;
+    background: rgba(0, 0, 0, 0.2);
+    .short-desc{
+      width: 100%;
+      @include font-regular(14px, 20px);
+      color: $white;
+      opacity: .7;
+      clear: both;
+    }
+    .desc-wrap{
+      @include flex(center);
+      flex-direction: column;
+      max-width: 160px;
+      i{
+        margin-right: 10px;
+      }
+      p{
+        @include flex(flex-start);
+        flex-direction: row;
+        &:nth-of-type(1){
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .details-wrap{
+    display: flex;
+    flex-direction: row;
+    min-height: 74px;
+    margin-bottom: 20px;
+  }
+  .date-box{
+    display: block;
+    @include dimensions(75px, 90px);
+    @include indents(0 15px 0 0, 5px 0 0);
+    @include center;
+    @include bc;
+    @include radius;
+    @include shadow(0 10px 15px rgba(0, 0, 0, .25));
+    .month{
+      @include font-medium(11px, 13px);
+      color: $blue-grey-e;
+      @include center;
+      text-transform: uppercase;
+    }
+    .date{
+      padding: 5px 0;
+      @include font-regular(30px, 35px);
+      color: $text-color;
+    }
+    .day{
+      padding: 8px 0;
+      @include font-regular(13px, 15px);
+      color: $blue-grey-e;
+      @include bc($white-4);
+      @include radius(0 0 3px 3px);
+    }
+  }
+}
+
+.lp-right > .event-box {
+  margin-bottom: 30px;
+  p {
+    font-size: 17px;
+  }
+}
+
+.e-bottom {
+  &.video .media {
+    width: 50%;
+  }
+  img {
+    display: block;
+    @include centerBlock;
+  }
+  .details {
+    width: 55%;
+    &.list {
+      width: 100%;
+    }
+  }
+  &.video .details {
+    width: 45%;
+  }
+  .details h3 {
+    @include font-medium;
+    color: inherit;
+  }
+}
+
+.details {
+  li {
+    padding-left: 30px;
+    margin-bottom: 15px;
+    @include font-regular(16px, 20px);
+    color: inherit;
+    background: url("../images/result-tick.png");
+    @include background($bs:16px, $bp:0 0);
+  }
+  &.list {
+    span {
+      float: left;
+      width: 45%;
+      padding-left: 30px;
+      margin-right: 30px;
+      margin-bottom: 30px;
+      @include font-regular(16px, 20px);
+      color: inherit;
+      background: url("../images/result-tick.png");
+      @include background($bs:16px, $bp:0 0);
+    }
+    float: left;
+  }
+  li:last-child, &.list span:last-child {
+    margin-bottom: 0;
+  }
+  .text p {
+    @include indents(0, 0 0 10px);
+    @include font-regular(15px, 30px);
+    color: $white-grey;
+  }
+}
+
+.dr-form {
+  &.form-orange {
+    width: 100%;
+    padding: 45px;
+    @include bc($white-6);
+    @include radius(6px);
+    @include shadow((0 0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
+  }
+  input.text, select, textarea {
+    display: block;
+    @include dimensions(100%, 45px);
+    margin-bottom: 15px;
+    padding: 0 20px;
+    font-family: inherit;
+    @include font-regular(17px, 45px);
+    @include bc;
+    border: none;
+    border-left: 3px solid transparent;
+    @include radius;
+    @include shadow(0 1px 1px 0 $white-grey);
+    @include ease-transition(.3s);
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+.form-orange {
+  input {
+    &.text {
+      color: $graphite;
+    }
+    &.first {
+      display: inline-block;
+      float: left;
+      width: 48.5%;
+    }
+    &.last {
+      display: inline-block;
+      width: 48.5%;
+      margin-left: 3%;
+    }
+  }
+  select {
+    color: $blue-grey;
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+  label {
+    display: block;
+    position: relative;
+    width: 100%;
+    &:after {
+      content: '';
+      display: block;
+      @include absolute($t:20px, $r:15px);
+      @include dimensions(12px, 8px);
+      background-image: url("../images/select-tick.png");
+      @include background($bs:cover);
+      pointer-events: none;
+    }
+  }
+  input.submit {
+    display: block;
+    width: 100%;
+    margin: 15px 0 0 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+}
+
+.dr-form {
+  input.text:focus, select:focus, textarea:focus {
+    border-left-color: $blue;
+  }
+  .validation_error {
+    border-left-color: $coral !important;
+  }
+}
+
+.dru .top-block {
+  background-color: $blue-1;
+  @include linear-gradient(to top, bottom, ($skiey-4 0%, $azure-1 49%, $blue-6 95%));
+  .wrap {
+    width: 600px;
+    padding: 60px 0;
+    @include left;
+    h1 {
+      margin-bottom: 20px;
+      @include font-light($fs:48px);
+      color: $white;
+    }
+    p {
+      margin-bottom: 0;
+      @include font-light($fs:20px);
+      color: $white;
+    }
+  }
+}
+
+section article {
+  position: relative;
+}
+
+.lp-info .b-info {
+  width: 600px;
+  padding: 60px 0;
+}
+
+.event-details {
+  width: 230px;
+  @include indents(0 auto, 20px);
+  @include bc($main-white-bg);
+  @include radius(4px);
+}
+
+.dru .event-details {
+  float: left;
+  margin: 0;
+}
+
+.event-details {
+  h2 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    @include font-medium($fs:18px);
+    border-bottom: 1px solid $pale-grey0;
+  }
+  p {
+    margin-left: 0;
+    margin-bottom: 0;
+    @include font-regular(14px, 30px);
+    color: $text-color;
+  }
+}
+
+.lp-info {
+  .main-content {
+    margin-left: 270px;
+    padding-left: 0;
+    padding-right: 15px;
+    @include font-regular($fs:14px);
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .b-info ul {
+    list-style: none none;
+  }
+}
+
+.b-info ul li {
+  position: relative;
+  margin-top: 30px;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.lp-info .b-form {
+  @include absolute($t:-178px, $r:0);
+  width: 39.16%;
+  padding: 45px 50px;
+  @include bc;
+  @include radius(4px);
+  @include shadow(0 6px 20px 0 rgba(0, 0, 0, 0.05));
+  z-index: 2;
+}
+
+.dru .lp-info .b-form {
+  top: -208px;
+  padding: 30px 45px;
+  margin-bottom: 90px;
+}
+
+.form-blue {
+  width: 100%;
+  @include indents(0 auto, 0);
+  @include bc;
+  @include radius(4px);
+  input, textarea, select {
+    @include ease-transition(.3s);
+  }
+  input.text {
+    display: block;
+    @include dimensions(100%, 30px);
+    @include indents(0 auto 20px, 0);
+    @include font-regular(15px, 30px);
+    color: $graphite;
+    border: 0;
+    border-bottom: 1px solid $white-grey-2;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+  }
+}
+
+.page-template-page-dru-lp footer {
+  display: none;
+}
+
+.dr-form {
+  #state:disabled, #province:disabled {
+    opacity: 0.5;
+  }
+}
+
+.form-blue {
+  input:focus, textarea:focus {
+    border-bottom: 1px solid $blue-1;
+  }
+  input.validation_error, textarea.validation_error {
+    border-bottom: 1px solid $coral-1;
+    color: $coral-1;
+  }
+  select.validation_error {
+    border-bottom: 1px solid $coral-1;
+  }
+}
+
+.validation_error_message {
+  display: none;
+  margin-top: -20px;
+  @include font-regular($fs:12px);
+  color: $coral-1;
+  @include left;
+}
+
+.form-blue {
+  #state, #province {
+    display: none;
+  }
+  .checkboxes {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    @include font-regular(15px, 30px);
+    color: $grey-b;
+    border-bottom: 1px solid $white-grey-2;
+    > span {
+      display: block;
+      line-height: 30px;
+    }
+    label {
+      line-height: 30px;
+      color: $graphite;
+      @include middle;
+    }
+    input {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      @include font-regular(16px, 30px);
+      color: $graphite;
+      @include middle;
+    }
+  }
+  select {
+    display: block;
+    width: 100%;
+    @include indents(0 auto 20px, 0);
+    @include font-regular(15px,30px);
+    color: $grey-a9;
+    @include bc;
+    border: 0;
+    border-bottom: 1px solid $white-grey-2;
+    border-radius: 0;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  .select {
+    //background: url("../images/tick-down.png");
+    @include background($bs:12px, $bp:98% 50% );
+  }
+  textarea {
+    margin-bottom: 20px;
+    padding: 0;
+    @include font-regular(15px, 24px);
+    color: $graphite;
+    border: 0;
+    border-bottom: 1px solid $white-grey-2;
+    border-radius: 0;
+    resize: none;
+  }
+  input.submit {
+    display: block;
+    width: 100%;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+}
+
+.dr-form-email {
+  width: 440px;
+  margin: 0 auto 20px;
+  @include font-medium($fs:14px);
+  color: $light-blue;
+  @include center;
+  .mailto {
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.autocomplete-suggestions {
+  display: none;
+  position: absolute;
+  margin-top: -4px;
+  padding: 10px 0 20px;
+  @include left;
+  @include bc;
+  border: 1px solid $light-c9-grey;
+  border-top: 0;
+  @include radius(0 0 4px 4px);
+  @include shadow(-1px 1px 3px rgba(0, 0, 0, 0.1));
+  /* core styles should not be changed */
+  @include box-sizing;
+  overflow: hidden;
+  overflow-y: auto;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.autocomplete-suggestion {
+  position: relative;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  @include font-regular(14px, 20px);
+  color: $graphite-1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-indent: 5px;
+  b {
+    font-weight: normal;
+    color: $blue-4;
+  }
+  &.selected {
+    @include bc($white-2);
+  }
+  .icon {
+    display: block;
+    float: left;
+    width: 30px;
+    @include middle;
+    img {
+      display: block;
+      max-width: 100%;
+      @include dimensions(100%, auto);
+    }
+  }
+  span.domain {
+    display: block;
+    padding-left: 30px;
+    @include font-regular(10px, 10px);
+    color: $grey-9;
+    @include left;
+  }
+}
+
+.bpf {
+  float: right;
+  height: 75px;
+  @include font-light(22px, 75px);
+  @include middle;
+}
+
+.guide {
+  .top-block {
+    @include bc($blue-1);
+  }
+  &.reg .top-block {
+    @include linear-gradient(to bottom right, top left, (skiey-1 0%, $blue 100%));
+  }
+  .top-block .wrap {
+    width: 600px;
+    padding: 60px 0;
+    @include left;
+    h1 {
+      margin-bottom: 20px;
+      @include font-light($fs:48px);
+      color: $white;
+    }
+  }
+  &.reg .top-block .wrap h1 {
+    margin-bottom: 0;
+    @include font-light($fs:40px);
+    color: $white;
+  }
+  .top-block .wrap p {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: $white;
+  }
+}
+
+.guide-info, .main-info {
+  position: relative;
+}
+
+.guide-info .b-info {
+  width: 600px;
+  padding: 60px 0;
+}
+
+.reg .main-info .b-info {
+  width: 710px;
+  padding: 60px 0;
+}
+
+.guide-info .b-info {
+  > img {
+    float: left;
+    width: 219px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-left: 270px;
+  }
+  ul {
+    margin-left: 270px;
+    padding-left: 30px;
+    @include font-regular($fs:14px);
+    list-style: none none;
+    li {
+      position: relative;
+      margin-top: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+      span {
+        @include absolute($l:-30px);
+        img {
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+.left_img_text {
+  float: left;
+  width: 200px;
+  margin-right: 60px;
+  padding: 20px;
+  @include bc($main-white-bg);
+  img {
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: $grey-b;
+  }
+}
+
+p.vs_venue {
+  margin-bottom: 10px;
+  @include font-regular(14px !important, 24px);
+  color: $graphite !important;
+}
+
+.right_text {
+  width: 450px;
+  margin: 0 60px 0 260px;
+  h2 {
+    @include font-medium($fs:20px);
+  }
+  p {
+    @include font-regular($fs:16px);
+    color: $grey-b;
+  }
+}
+
+.reg-form {
+  @include absolute($t:-137px, $r:0);
+  width: 400px;
+  z-index: 2;
+  img {
+    display: block;
+    width: 359px;
+    margin: 0 auto 25px;
+  }
+  .b-form {
+    padding: 45px;
+    @include bc;
+    @include radius(4px);
+    @include shadow(0 6px 20px 0 rgba(0, 0, 0, 0.05));
+  }
+}
+
+.guide-info .b-form {
+  @include absolute($t:-178px, $r:0);
+  width: 39.16%;
+  padding: 45px 50px;
+  @include bc;
+  @include radius(4px);
+  @include shadow(0 6px 20px 0 rgba(0, 0, 0, 0.05));
+  z-index: 2;
+}
+
+.aml .guide-info .b-form {
+  top: -240px;
+}
+
+.guide-info {
+  .b-form label {
+    margin-bottom: 20px;
+    @include font-regular(15px, 22px);
+    input[type="checkbox"] {
+      margin-right: 10px;
+      @include font-regular(15px, 20px);
+      @include middle;
+    }
+    span {
+      @include middle;
+    }
+  }
+  .guide-cta {
+    margin: 60px 0 90px;
+    @include font-regular($fs:30px);
+    color: $ruby;
+    @include center;
+  }
+}
+
+.webinar {
+  .top-block {
+    padding: 45px 0;
+    @include linear-gradient(to bottom right, top left, ($skiey-1 0%, $blue 100%));
+  }
+  .wrap-left {
+    float: left;
+    @include absolute($t:50%);
+    margin-top: -60px;
+    width: 600px;
+    h1 {
+      margin-bottom: 0;
+      @include font-regular(45px, 60px);
+      color:$white;
+    }
+  }
+  .wrap-right {
+    float: right;
+    width: 600px;
+  }
+}
+
+.event-details {
+  width: 230px;
+  @include indents(0 auto, 20px);
+  @include bc($main-white-bg);
+  @include radius(4px);
+  h2 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    @include font-medium($fs:18px);
+    border-bottom: 1px solid $pale-grey0;
+  }
+}
+
+.page-template-page-webinar .event-details p {
+  font-size: 14px;
+  color: #465275;
+  line-height: 21px;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.webinar {
+  .b-info {
+    display: inline-block;
+    width: 500px;
+    padding: 45px 0;
+    p {
+      margin-left: 0;
+      margin-bottom: 15px;
+      @include font-regular($fs:20px);
+    }
+    ul {
+      margin-left: 0;
+      padding-left: 30px;
+      @include font-regular($fs:14px);
+      list-style: none none;
+    }
+  }
+  .bt-form {
+    display: inline-block;
+    float: right;
+    width: 600px;
+    padding: 45px 0;
+    @include top;
+    overflow: scroll;
+  }
+}
+
+section.dru-reg {
+  .event-details {
+    float: left;
+    margin: 0;
+    p {
+      margin-left: 0;
+      margin-bottom: 0;
+      @include font-regular(14px, 30px);
+      color: $text-color;
+    }
+  }
+  .guide-info {
+    .b-info ul {
+      padding-left: 0;
+      padding-right: 15px;
+    }
+    .b-form {
+      top: -208px;
+      margin-bottom: 90px;
+      padding: 30px 45px;
+    }
+  }
+  #state {
+    display: block;
+  }
+}
+
+.page-template-page-fraud .bpf {
+  float: right;
+  height: 75px;
+  @include font-light(22px, 75px);
+  @include middle;
+}
+
+section.fd-lp {
+  position: relative;
+  @include bc;
+}
+
+.fd-lp {
+  .top-block {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 45px;
+    @include linear-gradient(to top, bottom, ($skiey-4 0%, $azure-1 49%, $blue-6 95%));
+    .wrap {
+      width: 570px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      @include indents(42px, 45px);
+      color: $white;
+    }
+    p {
+      margin-bottom: 0;
+      @include font-light(20px, 28px);
+      color: $white;
+    }
+  }
+  .guide-info {
+    padding: 60px 0 75px;
+    .b-info {
+      width: 670px;
+      padding: 0;
+      > img {
+        display: block;
+        float: left;
+        width: 245px;
+      }
+    }
+  }
+  .b-info > {
+    p {
+      margin-bottom: 30px;
+      margin-left: 305px;
+      @include font-regular(30px, 1em);
+    }
+    ul {
+      display: block;
+      margin-left: 305px;
+      li {
+        position: relative;
+        margin-bottom: 20px;
+        @include font-regular(17px, 20px);
+        span {
+          display: block;
+          @include absolute($l:-30px, $t:0);
+          padding: 2px 0;
+          line-height: 20px;
+          img {
+            display: block;
+            width: 16px;
+          }
+        }
+      }
+    }
+  }
+  .guide-info .b-form {
+    top: -185px;
+    > img {
+      @include absolute($t:-60px, $l:0);
+      width: 100%;
+    }
+  }
+}
+
+.lp-clients {
+  padding: 60px 0;
+  @include bc($main-white-bg);
+  @include center;
+  h2 {
+    margin-bottom: 30px;
+    @include font-regular(30px, 1em);
+    color: $blue-grey-f;
+  }
+  ul {
+    @include flex(space-between);
+  }
+  li {
+    line-height: 80px;
+    img {
+      @include middle;
+    }
+  }
+}
+
+.lp-features-v {
+  padding: 90px 0;
+  article.feature {
+    margin-bottom: 90px;
+    padding: 0;
+    border-bottom: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    h2 {
+      margin-bottom: 30px;
+      @include font-regular(30px, 1.5em);
+    }
+    p {
+      margin-bottom: 30px;
+      @include font-regular(17px, 30px);
+      color: $blue-grey-f;
+    }
+    ul {
+      margin-bottom: 0;
+      padding-left: 35px;
+    }
+    li {
+      margin-bottom: 20px;
+      @include font-regular(17px, 24px);
+      color: $ghost;
+      list-style: none;
+    }
+    ul li::before {
+      content: '';
+      display: none;
+    }
+    li span {
+      display: block;
+      @include absolute($t:0, $l:-35px);
+      img {
+        display: block;
+        @include dimensions(24px);
+      }
+    }
+  }
+}
+
+.lp-features-h {
+  padding: 60px 0;
+  @include bc($white-6);
+  h2 {
+    margin-bottom: 60px;
+    @include font-regular(30px, 45px);
+    @include center;
+  }
+  .item-3 {
+    display: inline-block;
+    float: left;
+    margin: 0 15px;
+    width: 370px;
+    > img {
+      display: block;
+      width: 120px;
+      margin: 0 auto 10px;
+    }
+    h3 {
+      margin-bottom: 10px;
+      @include font-regular(22px, 45px);
+      @include center;
+    }
+    p {
+      @include font-regular(15px, 30px);
+      color: $blue-grey-f;
+      @include center;
+    }
+  }
+}
+
+.bottom-form {
+  padding: 60px 0 0;
+  background-image: radial-gradient(circle at 50% 100%, $pale-purple 50%, $dark-purple 100%);
+  p {
+    width: 60%;
+    margin: 0 auto 60px;
+    @include font-regular(22px, 30px);
+    color: $white;
+    @include center;
+  }
+  .b-form .dr-form {
+    width: 40%;
+    padding: 45px;
+    @include radius(4px 4px 0 0);
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 1024px;
+    @include indents(0 auto, 0 15px);
+  }
+  .guide-info .b-form {
+    width: 38%;
+    padding: 45px 30px;
+  }
+  .webinar {
+    .wrap-left {
+      width: 50%;
+      margin-top: -54px;
+      h1 {
+        @include font-regular(36px, 54px);
+      }
+    }
+    .wrap-right, .b-info {
+      width: 50%;
+    }
+    .bt-form {
+      width: 50%;
+      object {
+        width: 100%;
+      }
+    }
+  }
+  .reg .main-info .b-info {
+    width: 66%;
+    padding: 60px 0;
+  }
+  .e-upper h1 {
+    font-size: 36px;
+  }
+  .dr-form.form-orange {
+    width: 100%;
+    padding: 30px;
+  }
+  .details.list span {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  #sh_wr header.fixed {
+    margin-top: 0;
+  }
+  .wrapper {
+    padding-top: 0;
+  }
+  header.fixed {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    z-index: 3;
+  }
+  .bpf {
+    display: none;
+  }
+  .dru .main-block {
+    padding-bottom: 60px;
+    @include bc($main-white-bg);
+  }
+  .lp-info .b-info {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px 0;
+  }
+  .dru {
+    .event-details {
+      @include bc;
+    }
+    .lp-info .b-form {
+      @include relative($t:0, $r:0);
+      width: 50%;
+      max-width: 375px;
+      min-width: 300px;
+      @include indents(0 auto, 30px);
+      @include bc;
+      @include radius(4px);
+      @include bc;
+      @include shadow(0 6px 20px 0 rgba(0, 0, 0, 0.05));
+      z-index: 1;
+    }
+  }
+  .guide .main-block {
+    @include bc($main-white-bg);
+  }
+  .reg .main-block {
+    @include bc;
+  }
+  section.dru-reg .main-block {
+    padding-bottom: 60px;
+  }
+  .guide-info .b-info {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px 0;
+  }
+  .webinar {
+    .b-info .left {
+      @include center;
+      @include bc;
+    }
+    .event-details {
+      margin-bottom: 0;
+      @include bc;
+    }
+  }
+  section.dru-reg .event-details {
+    @include bc;
+  }
+  .e-notice p {
+    padding: 10px 20px;
+  }
+  .guide.webinar .b-form {
+    top: 0;
+  }
+  .guide-info {
+    .guide-cta {
+      @include indents(0, 60px 0 90px);
+    }
+    .b-form {
+      @include relative($t:0, $r:0);
+      width: 50%;
+      max-width: 375px;
+      min-width: 300px;
+      @include indents(0 auto, 30px);
+      @include bc;
+      z-index: 1;
+    }
+  }
+  section.dru-reg .guide-info .b-form {
+    top: 0;
+    margin-bottom: 0;
+    padding: 45px 50px;
+  }
+  .aml .guide-info .b-form {
+    top: 0;
+  }
+  .reg {
+    .top-block .wrap {
+      @include centerBlock;
+      @include center;
+    }
+    .main-info .b-info {
+      width: 100%;
+      padding: 60px 0;
+    }
+  }
+  .right_text {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    margin: 0 0 0 245px;
+  }
+  .reg-form {
+    @include relative($t:0, $r:0);
+    width: auto;
+    @include indents(0 -20px, 20px);
+    @include linear-gradient(135deg,135deg,($skiey-1 0%, $blue 100%));
+    z-index: 2;
+    img {
+      width: 359px;
+    }
+    .b-form {
+      width: 400px;
+      @include indents(0 auto, 45px 30px);
+    }
+  }
+  .webinar {
+    .wrap-left {
+      float: none;
+      position: initial;
+      top: 0;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 30px;
+      @include center;
+    }
+    .wrap-right {
+      float: none;
+      width: 100%;
+    }
+    .bt-form {
+      display: block;
+      float: none;
+      width: 100%;
+      padding: 45px 0;
+      @include top;
+    }
+  }
+  .guide .top-block .wrap {
+    width: 100%;
+    padding: 30px 0;
+    @include left;
+  }
+  .webinar .top-block .wrap, .reg .top-block .wrap {
+    @include center;
+  }
+  .guide.reg .top-block .wrap h1 {
+    font-size: 24px;
+  }
+  .reg {
+    .main-block {
+      @include bc;
+    }
+    .main-info .b-info {
+      width: 100%;
+      padding: 30px 0;
+    }
+  }
+  .left_img_text {
+    float: none;
+    width: 200px;
+    @include indents(0 auto 30px, 20px);
+    @include bc($main-white-bg);
+  }
+  .right_text {
+    float: none;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    @include center;
+  }
+  .reg-form {
+    @include relative($t:0, $r:0);
+    width: 100%;
+    @include indents(0 auto, 20px);
+    @include linear-gradient(135deg, 135deg, ($skiey-1 0%, $blue 100%));
+    z-index: 2;
+    img {
+      width: 359px;
+    }
+    .b-form {
+      max-width: 400px;
+      @include indents(0 auto, 45px 30px);
+    }
+  }
+  .webinar .wrap-left h1 {
+    font-size: 32px;
+  }
+  section.dru-reg .guide-info .b-form {
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 45px 50px;
+  }
+  .landing .lp-left {
+    float: none;
+    width: 100%;
+  }
+  .e-upper {
+    margin-bottom: 30px;
+    @include center;
+  }
+  .e-mobile-button {
+    display: block;
+    margin-bottom: 90px;
+    @include center;
+  }
+  .e-bottom {
+    justify-content: space-around;
+    .media {
+      width: 35%;
+    }
+    .event-box {
+      text-align: center;
+      img {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+    &.video .media, .details {
+      width: 45%;
+    }
+  }
+  .details.list span {
+    width: 45%;
+  }
+  .short-desc, .desc-wrap{
+    @include left;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .container {
+    padding: 0 10px;
+  }
+  .dru {
+    .top-block .wrap {
+      width: 100%;
+      h1 {
+        font-size: 32px;
+      }
+    }
+    .lp-info .b-form {
+      top: 0;
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 0;
+      padding: 30px;
+    }
+  }
+  .details.list span {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .dru .event-details {
+    float: none;
+    margin: 0 auto 30px;
+  }
+  .lp-info .main-content {
+    margin: 0 15px;
+    padding-right: 0;
+  }
+  section.dru-reg {
+    .event-details {
+      float: none;
+      margin: 0 auto 30px;
+    }
+    .guide-info .b-info {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 30px 0;
+      ul {
+        margin: 0 15px;
+        padding-right: 0;
+      }
+    }
+  }
+  .details.list span {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .guide-info {
+    .b-info {
+      > img {
+        display: block;
+        float: none;
+        width: 219px;
+        margin: 0 auto 30px;
+      }
+      p {
+        margin-left: 0;
+        @include center;
+      }
+      ul {
+        margin-left: 0;
+        padding-left: 30px;
+      }
+    }
+    .b-form {
+      width: 100%;
+      max-width: 375px;
+      min-width: 300px;
+      @include indents(0 auto, 30px 15px);
+    }
+  }
+  .reg-form .b-form {
+    width: auto;
+    max-width: 100%;
+    @include indents(0 auto, 30px 20px);
+  }
+  .webinar .b-info .left {
+    float: none !important;
+    margin: 0 auto 30px;
+  }
+  .e-upper h1 {
+    font-size: 30px;
+  }
+  .e-mobile-button {
+    margin-bottom: 60px;
+  }
+  .e-bottom {
+    flex-flow: row wrap;
+    .media {
+      width: 100%;
+      margin: 0 auto 45px;
+    }
+    &.video .media, .details, &.video .details {
+      width: 100%;
+    }
+    h3 {
+      @include center;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .guide .top-block .wrap {
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
+.popup-mobile {
+  display: none;
+}
+
+/*FOOTER*/
+@media only screen and (max-width: 1023px) {
+  .landing .lp-right {
+    float: none;
+    width: 100%;
+    margin-top: 45px;
+  }
+  .dr-form.form-orange {
+    min-width: 300px;
+    max-width: 600px;
+    @include centerBlock;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .dr-form.form-orange {
+    @include relative($t:auto, $l:auto);
+    width: 100%;
+    @include indents(0 auto, 30px 15px 30px);
+    transform: none;
+    @include bc($main-white-bg);
+    @include radius(6px);
+    box-shadow: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .form-orange input {
+    &.first {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+    &.last {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+}

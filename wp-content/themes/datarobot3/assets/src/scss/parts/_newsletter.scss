@@ -1,0 +1,131 @@
+.newsletter-block {
+  display: none;
+  padding: 90px 0;
+  background-color: $black-blue;
+  .preloader {
+    text-align: center;
+  }
+}
+
+.newsletter-wrap {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.newsletter-wrap .image-wrap {
+  width: 50%;
+  max-width: 390px;
+  margin: 0;
+  .full-image {
+    display: block;
+  }
+  .medium-image {
+    display: none;
+  }
+}
+
+.n-form-wrap {
+  width: 50%;
+  max-width: 495px;
+  margin: 0;
+  .n-form-inner-wrap > span {
+    @include font-regular(17px, 30px);
+    color: #FFFFFF;
+    opacity: 0.7;
+  }
+  p {
+    @include font-regular(30px, 45px);
+    color: #FFFFFF;
+    margin-bottom: 45px;
+  }
+}
+
+.n-success-wrap {
+  display: none;
+  span {
+    @include font-regular(17px, 30px);
+  }
+  .success {
+    color: $lime1;
+  }
+  .error {
+    color: $coral;
+  }
+}
+
+.dr-form.newsletter-form {
+  form {
+    position: relative;
+    margin: 0 auto;
+  }
+  .first {
+    width: 49%;
+  }
+  .last {
+    width: 49%;
+    margin-left: 2%;
+  }
+  .validation_error {
+    border-color: $coral !important;
+  }
+  button.submit {
+    display: block;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    span {
+      display: inline-block;
+    }
+    i {
+      font-size: 24px;
+      color: $white;
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .newsletter-block {
+    padding: 30px 0 90px;
+  }
+  .newsletter-wrap {
+    display: block;
+  }
+  .newsletter-wrap .image-wrap {
+    width: 50%;
+    max-width: 195px;
+    margin: 0 auto 15px;
+    .full-image {
+      display: none;
+    }
+    .medium-image {
+      display: block;
+    }
+  }
+  .n-form-wrap {
+    width: 100%;
+    max-width: 510px;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .n-form-wrap {
+    p {
+      @include font-regular(22px, 30px);
+      margin-bottom: 30px;
+    }
+  }
+  .dr-form.newsletter-form .first {
+    width: 100%;
+  }
+  .dr-form.newsletter-form .last {
+    width: 100%;
+    margin-left: 0;
+  }
+}

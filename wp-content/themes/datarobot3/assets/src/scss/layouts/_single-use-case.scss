@@ -1,0 +1,882 @@
+section.use-cases-new{
+  .uc-top-banner {
+    min-height: 210px;
+    line-height: 210px;
+    padding: 60px 0;
+    @include center;
+    @include linear-gradient(225deg, 225deg, ($text-color 0%, $black-blue 100%));
+  }
+
+  .uc-top-banner-wrap {
+    display: inline-block;
+    @include middle;
+    h3 {
+      display: block;
+      margin-bottom: 10px;
+      @include font-light(42px, 60px);
+      color: $white;
+    }
+    p {
+      width: 100%;
+      @include centerBlock;
+      @include font-light(20px, 30px);
+      color: $white;
+      opacity: .7;
+    }
+    .header-text {
+      float: left;
+      width: 55%;
+      margin-right: 5%;
+      @include left;
+    }
+    .video {
+      float: left;
+      max-width: 500px;
+      width: 40%;
+    }
+  }
+
+  .uc-inner-description {
+    padding: 0;
+    @include bc;
+  }
+
+  .us-company-block {
+    display: inline-block;
+    width: 100%;
+    @include indents(0 0 70px 0, 3.5% 8%);
+    @include bc($main-white-bg);
+  }
+
+  .b-logo, .b-photo {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+    @include center;
+  }
+
+  .b-logo{
+    padding: 2% 0;
+    img{
+      max-width: 200px;
+    }
+  }
+
+  .b-quote {
+    float: left;
+    width: 65%;
+    padding: 10px 0;
+    @include left;
+    p {
+      &.quote {
+        margin-bottom: 20px;
+        @include font-medium($fs: 17px);
+        color: $ghost;
+      }
+      &.author {
+        font-size: 15px;
+        color: $blue-grey-e;
+      }
+    }
+    &.alone {
+      float: none;
+      width: 100%;
+      max-width: 810px;
+      @include centerBlock;
+      p {
+        &.quote, &.author {
+          @include center;
+        }
+      }
+    }
+  }
+
+  .uc-highlights {
+    float: left;
+    width: 345px;
+    padding: 40px 30px 10px;
+    @include bc;
+    border: 2px solid $white-4;
+    @include radius;
+    div p {
+      margin-bottom: 0;
+      @include font-regular(15px, 20px);
+      color: $blue-grey-e;
+    }
+    span.title {
+      display: block;
+      margin-bottom: 10px;
+      @include font-medium($fs: 15px);
+      color: $ghost;
+    }
+    .b-industry, .b-why-dr {
+      margin-bottom: 20px;
+    }
+  }
+
+  .b-highlights {
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 15px;
+      @include font-regular(15px, 20px);
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-solution {
+    @include indents(0 0 0 420px, 40px 0);
+    h2 {
+      margin-bottom: 0;
+      @include font-regular(22px, 45px);
+      color: $ghost;
+    }
+    p {
+      margin-bottom: 30px;
+      @include font-regular(17px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-results {
+    @include indents(0 0 0 420px, 0);
+    p {
+      margin-bottom: 30px;
+      @include font-regular(17px, 30px);
+      color: $ghost;
+    }
+    h2 {
+      margin-bottom: 30px;
+      @include font-regular(30px, 45px);
+      color: $ghost;
+    }
+    div.results{
+      @include flex(flex-start);
+      width: 100%;
+      i{
+        margin-right: 10px;
+        font-size: 22px;
+        color: $lime1;
+      }
+      p{
+        @include indents(0);
+        @include font-regular(17px, 30px);
+        color: $ghost;
+      }
+    }
+  }
+
+  .b-challenge {
+    margin-bottom: 30px;
+  }
+
+  .uc-similar-case {
+    padding: 60px 0;
+    color: $white;
+    @include bc($blue);
+    background-image: url("../images/similar-case.png");
+    @include background($bs: contain, $bp: 100% 0);
+  }
+
+  .sc-text {
+    max-width: 500px;
+    @include left;
+    h4 {
+      display: block;
+      margin-bottom: 20px;
+      color: $white;
+      @include font-regular(30px, 1.5em);
+    }
+    p {
+      margin-bottom: 45px;
+      @include font-regular(17px, 30px);
+    }
+  }
+
+  .uc-pdf {
+    max-width: 630px;
+    @include indents(30px 0 0, 40px 45px);
+    @include bc($main-white-bg);
+    @include radius;
+    @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.05));
+    p {
+      margin-bottom: 30px;
+      @include font-regular(30px, 30px);
+      color: $text-color;
+    }
+    a {
+      &.button {
+        margin-right: 35px;
+      }
+      &.pdf-link {
+        min-width: 140px;
+        @include center;
+        white-space: nowrap;
+        i{
+          @include relative($t:4px);
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .slide-caption {
+    float: left;
+    @include font-regular(20px, 30px);
+    color: $ghost;
+  }
+
+  .results-slider li {
+    padding-top: 60px;
+    @include bc;
+    img {
+      display: block;
+    }
+  }
+
+  .bx-caption {
+    @include absolute($t: 0, $l: 30px);
+    @include font-regular(20px, 60px);
+    color: $ghost;
+  }
+
+  .uc-results-video {
+    position: relative;
+    padding: 45px 0 60px;
+  }
+
+  .uc-results-video-left {
+    float: left;
+    width: 50%;
+  }
+
+  .uc-testimonial-author {
+    margin-bottom: 50px;
+  }
+
+  .uc-testimonial-author img, .b-photo img {
+    display: block;
+    float: right;
+    width: 90px;
+    @include radius(50%);
+    overflow: hidden;
+  }
+
+  p {
+    &.name {
+      @include indents(0 0 0 105px, 15px 0 0);
+      @include font-regular(22px, 30px);
+      color: $ghost;
+    }
+    &.title {
+      @include indents(0 0 0 105px, 0 0 15px);
+      @include font-light(18px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-testimonial {
+    max-width: 540px;
+    @include font-light(17px, 30px);
+    color: $ghost;
+    span {
+      display: block;
+      margin-bottom: 15px;
+      color: $ghost;
+    }
+    p {
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-results-video-right {
+    float: right;
+    width: 50%;
+    @include right;
+    padding-left: 15px;
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+section.use-cases-old{
+  .uc-top-banner {
+    height: 330px;
+    line-height: 330px;
+    @include center;
+    @include linear-gradient(225deg, 225deg, ($primary-color 0%, $black-blue 100%));
+  }
+
+  .uc-top-banner-wrap {
+    display: inline-block;
+    @include middle;
+    h3 {
+      display: block;
+      margin-bottom: 25px;
+      @include font-light(54px, 60px);
+      color: $white;
+    }
+    p {
+      width: 75%;
+      @include centerBlock;
+      @include font-light(20px, 30px);
+      color: $white;
+    }
+  }
+
+
+  .uc-inner-description {
+    padding: 45px 0 60px;
+    background-color: $white;
+  }
+
+  .uc-highlights {
+    float: left;
+    width: 345px;
+    padding: 40px 30px 10px;
+    @include bc;
+    border: 2px solid $white-4;
+    @include radius;
+    div p {
+      margin-bottom: 0;
+      @include font-regular(15px, 20px);
+      color: $blue-grey-e;
+    }
+    span.title {
+      display: block;
+      margin-bottom: 10px;
+      @include font-medium($fs:15px);
+      color: $ghost;
+    }
+    .b-logo {
+      margin-bottom: 30px;
+    }
+    .b-industry, .b-why-dr {
+      margin-bottom: 20px;
+    }
+  }
+
+  .b-highlights {
+    ul {
+      padding-left: 20px;
+      list-style-type: disc;
+    }
+    li {
+      margin-bottom: 15px;
+      @include font-regular(15px, 20px);
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-solution {
+    margin-left: 420px;
+    padding: 40px 0;
+    h2 {
+      margin-bottom: 15px;
+      @include font-regular(30px, 45px);
+      color: $ghost;
+    }
+    p {
+      margin-bottom: 0;
+      @include font-regular(17px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+
+  .b-challenge {
+    margin-bottom: 30px;
+  }
+
+  .uc-similar-case {
+    padding: 60px 0;
+    color: $white;
+    @include bc($blue);
+    background-image: url("../images/similar-case.png");
+    @include background($bs: contain, $bp: 100% 0);
+  }
+
+  .sc-text {
+    max-width: 500px;
+    @include left;
+  }
+
+  .sc-text h4 {
+    display: block;
+    margin-bottom: 20px;
+    @include font-regular(30px, 1.5em);
+    color: $white;
+  }
+
+  .sc-text p {
+    margin-bottom: 45px;
+    @include font-regular(17px, 30px);
+  }
+
+  .uc-results-slider {
+    padding: 60px 0;
+    position: relative;
+  }
+
+  .uc-results-slider-left {
+    float: left;
+    position: relative;
+    width: 50%;
+    min-height: 465px;
+    padding-bottom: 50px;
+    h2 {
+      margin-bottom: 30px;
+      @include font-light(42px, 45px);
+      color: $ghost;
+    }
+    li {
+      margin-bottom: 15px;
+      padding-left: 30px;
+      @include font-regular(17px, 30px);
+      color: $ghost;
+      background: url("../images/result-tick.png");
+      @include background($bs:20px, $bp:0 5px);
+    }
+  }
+
+  .uc-pdf {
+    @include absolute($b:0, $l:0);
+    padding: 30px 30px 30px 26px;
+    @include bc;
+    border-left: 4px solid $blue;
+    @include radius;
+    @include shadow(0 0 4px 0 rgba(0, 0, 0, 0.05));
+    p {
+      margin-bottom: 30px;
+      @include font-regular(22px, 1em);
+    }
+  }
+
+  .uc-results-slider-right {
+    float: right;
+    position: relative;
+    width: 50%;
+    padding-left: 15px;
+  }
+
+  .slider-panel {
+    @include absolute($t:0, $l:15px, $r:0);
+    height: 60px;
+    padding: 15px 30px;
+    @include radius(px 3px 0 0);
+    @include shadow(0 0 6px 0 rgba(0, 0, 0, 0.05));
+    z-index: 5;
+  }
+
+  .uc-results-slider-right.single-slide .slider-panel {
+    display: none;
+  }
+
+  .slider-pager {
+    margin: 0 15px;
+    @include font-medium(13px, 30px);
+    color: $blue-grey-f;
+  }
+
+  .slide-caption {
+    float: left;
+    @include font-regular(20px, 30px);
+    color: $ghost;
+  }
+
+  .results-slider li {
+    padding-top: 60px;
+    @include bc;
+    img {
+      display: block;
+    }
+  }
+
+  .uc-results-slider-right.single-slide li {
+    padding-top: 0;
+  }
+
+  .bx-caption {
+    @include absolute($t:0, $l:30px);
+    @include font-regular(20px, 60px);
+    color: $ghost;
+  }
+
+  .uc-results-video-wrap{
+    width: 100%;
+    padding: 60px 0;
+    @include bc;
+  }
+
+  .uc-results-video {
+    position: relative;
+    padding: 45px 0 60px;
+  }
+
+  .uc-results-video-left {
+    float: left;
+    width: 50%;
+  }
+
+  .uc-testimonial-author {
+    margin-bottom: 50px;
+  }
+
+  .uc-testimonial-author img {
+    display: block;
+    float: left;
+    width: 90px;
+    @include radius(50%);
+    overflow: hidden;
+  }
+
+  .uc-testimonial-author p {
+    &.name {
+      margin-left: 105px;
+      margin-bottom: 0;
+      padding-top: 15px;
+      @include font-regular(22px, 30px);
+      color: $ghost;
+    }
+    &.title {
+      margin-left: 105px;
+      margin-bottom: 0;
+      padding-bottom: 15px;
+      @include font-light(18px, 30px);
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-testimonial {
+    max-width: 540px;
+    @include font-regular(17px, 30px);
+    color: $ghost;
+    span {
+      display: block;
+      margin-bottom: 15px;
+      color: $ghost;
+    }
+    p {
+      color: $blue-grey-e;
+    }
+  }
+
+  .uc-results-video-right {
+    float: right;
+    width: 50%;
+    padding-left: 15px;
+    @include right;
+    > * {
+      width: 100%;
+    }
+  }
+}
+
+.panel-controls {
+  float: right;
+  div {
+    float: left;
+  }
+}
+
+.panel-controls a {
+  display: block;
+  width: 30px;
+  @include font-regular(12px, 26px);
+  color: $blue-grey-f;
+  @include center;
+  border: 2px solid $light-d8-grey;
+  @include radius;
+  &.disabled {
+    display: none;
+  }
+  i {
+    @include middle;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  section{
+    .use-cases-new,  .use-cases-old{
+      .uc-similar-case {
+        background-position: 100% 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.use-cases-new {
+    .uc-similar-case {
+      padding: 60px 0 300px;
+      color: $white;
+      @include background($br: null, $bs: 75%, $bp: 70 100%);
+    }
+    .sc-text {
+      max-width: 50%;
+      @include centerBlock;
+      @include center;
+    }
+    .uc-content {
+      position: relative;
+      margin-left: 0;
+    }
+    .uc-description {
+      margin-bottom: 30px;
+    }
+    .uc-highlights {
+      float: none;
+      width: 100%;
+      padding: 0 0 15px;
+      @include bc;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 2px solid $white-4;
+    }
+    .uc-solution, .uc-results {
+      margin-left: 0;
+    }
+    .uc-results{
+      margin-top: 20px;
+      h2{
+        margin-bottom: 15px;
+      }
+    }
+    .uc-pdf {
+      max-width: 100%;
+      @include center;
+    }
+    .slider-panel {
+      box-shadow: none;
+    }
+    .results-slider li img {
+      display: block;
+      @include centerBlock;
+    }
+    .uc-results-video {
+      position: relative;
+      padding: 0 0 45px;
+    }
+    .uc-testimonial-author {
+      margin-bottom: 30px;
+    }
+    .uc-testimonial {
+      max-width: 100%;
+    }
+    .uc-results-video-left {
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    .uc-results-video-right {
+      float: none;
+      width: 100%;
+      padding-left: 0;
+      @include center;
+    }
+  }
+  section.use-cases-old{
+    .uc-top-banner-wrap h3 {
+      display: block;
+      margin-bottom: 25px;
+      @include font-light(30px, 60px);
+      color: $white;
+    }
+
+    .uc-top-banner-wrap p {
+      width: 100%;
+      @include centerBlock;
+      @include font-light(20px, 30px);
+      color: $white;
+    }
+    .uc-content {
+      position: relative;
+      margin-left: 0;
+    }
+    .uc-description {
+      margin-bottom: 30px;
+    }
+    .uc-highlights {
+      float: none;
+      width: 100%;
+      padding: 0 0 15px;
+      @include bc;
+      border: 0;
+      border-bottom: 2px solid $white-4;
+      border-radius: 0;
+    }
+    .uc-solution {
+      margin-left: 0;
+      padding: 40px 0;
+    }
+
+    .uc-results-slider {
+      position: relative;
+      padding: 30px 0 45px;
+    }
+    .uc-results-slider-left {
+      float: none;
+      position: relative;
+      width: 100%;
+      min-height: auto;
+      padding-bottom: 0;
+    }
+    .uc-pdf {
+      position: relative;
+      @include indents(30px 0, 30px);
+      @include center;
+      border-left: 0;
+    }
+
+    .uc-results-slider-right {
+      float: none;
+      position: relative;
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .slider-panel {
+      box-shadow: none;
+    }
+    .results-slider li img {
+      display: block;
+      @include centerBlock;
+    }
+
+    .uc-results-video {
+      position: relative;
+      padding: 0 0 45px;
+    }
+
+    .uc-testimonial-author {
+      margin-bottom: 30px;
+    }
+
+    .uc-testimonial {
+      max-width: 100%;
+    }
+    .uc-results-video-left {
+      float: none;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .uc-results-video-right {
+      float: none;
+      width: 100%;
+      padding-left: 0;
+      @include center;
+    }
+    .uc-similar-case {
+      padding: 60px 0 300px;
+      color: $white;
+      @include background($br:null, $bs:75%, $bp:70% 100%);
+    }
+    .sc-text {
+      max-width: 50%;
+      @include centerBlock;
+      @include center;
+    }
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section.use-cases-new {
+    .uc-similar-case {
+      padding: 60px 0 150px;
+      color: $white;
+      @include background($br: null, $bs: 100%, $bp: 0 100%);
+    }
+    .uc-solution{
+      padding: 40px 0 0;
+    }
+    .us-company-block{
+      @include indents(0 0 60px 0, 10% 8%);
+    }
+    .sc-text {
+      max-width: 100%;
+      @include centerBlock;
+      @include center;
+      h4 {
+        font-size: 22px;
+      }
+      p {
+        margin-bottom: 30px;
+      }
+    }
+    .uc-top-banner-wrap {
+      h3 {
+        @include font-light(30px, 40px);
+      }
+      p {
+        width: 100%;
+        @include centerBlock;
+        @include font-light(20px, 30px);
+        color: $white;
+        opacity: .7;
+      }
+      .header-text {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .video {
+        float: none;
+        width: 100%;
+        @include centerBlock;
+        clear: both;
+      }
+    }
+    .uc-pdf {
+      padding: 30px;
+      p {
+        font-size: 22px;
+      }
+      a.button {
+        margin-right: 0;
+      }
+    }
+    .us-company-block .b-photo img {
+      float: none;
+      margin: 0 auto;
+    }
+    .b-logo, .b-quote, .b-photo {
+      width: 100%;
+    }
+    .b-logo, .b-photo {
+      margin-bottom: 20px;
+    }
+    .uc-item {
+      p {
+        @include font-regular(15px, 30px);
+      }
+      h3 {
+        @include font-regular(22px, 30px);
+      }
+    }
+    .uc-description h3 {
+      @include font-regular(22px, 30px);
+    }
+  }
+  section.use-cases-old{
+    .uc-similar-case {
+      padding: 60px 0 150px;
+      color: $white;
+      @include background($br:null, $bs:100%, $bp:0 100%);
+    }
+    .sc-text {
+      max-width: 100%;
+      @include centerBlock;
+      @include center;
+    }
+
+    .sc-text h4 {
+      font-size: 22px;
+    }
+
+    .sc-text p {
+      margin-bottom: 30px;
+    }
+  }
+}

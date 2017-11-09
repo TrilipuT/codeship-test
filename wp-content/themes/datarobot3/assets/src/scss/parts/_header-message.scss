@@ -1,0 +1,82 @@
+#header-message {
+  display: none;
+  width: 100%;
+  line-height: 60px;
+}
+
+.m-button {
+  display: inline-block;
+}
+
+.mobile-m-button {
+  display: none;
+}
+
+.m-content {
+  display: block;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
+  @include flex(center);
+  height: 60px;
+}
+
+.m-close {
+  display: block;
+  @include dimensions(30px);
+  margin: 15px 0;
+  @include font-regular(24px, 30px);
+  @include center;
+  cursor: pointer;
+}
+
+.popup-mobile {
+  display: none;
+  @include absolute(0);
+  @include dimensions(100%);
+  background-color: rgba(6,29,59,0.90);
+  z-index: 999;
+  .message-wrap {
+    @include dimensions(100%, auto);
+    min-width: 300px;
+    max-width: 450px;
+    @include fixed($t: 50%, $l: 50%);
+    @include indents(0 auto, 30px 15px);
+    @include translate((-50%, -50%));
+    @include center;
+    @include bc;
+    @include radius(6px);
+    @include shadow((0 0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
+  }
+  .m-button {
+    display: none;
+  }
+  .m-content {
+    display: block;
+    height: auto;
+    @include centerBlock;
+  }
+  .mobile-m-button {
+    display: block;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) {
+  #header-message {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .popup-mobile {
+    .message-wrap {
+      max-width: 300px;
+    }
+  }
+}

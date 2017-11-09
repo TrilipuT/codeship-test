@@ -1,0 +1,513 @@
+header.fixed {
+  @include fixed($t: 0, $r: 0, $l: 0);
+  @include bc;
+  @include shadow(inset 0 -1px 0 0 $white-3);
+  z-index: 999;
+}
+
+#logo {
+  float: left;
+  a {
+    display: block;
+    img {
+      display: block;
+      padding: 29px 0;
+    }
+  }
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.menu-item-1704>a, .menu-item-2099>a {
+    color: #FF5600 !important;
+}
+
+#main-nav {
+  display: block;
+  margin-left: 150px;
+  nav {
+    float: left;
+    > ul > li {
+      display: inline-block;
+      position: relative;
+      float: left;
+      @include font-medium($fs: 13px);
+      color: $ghost;
+      text-transform: uppercase;
+      &:last-child {
+        margin-right: 0;
+      }
+      > a {
+        display: block;
+        position: relative;
+        padding: 28.5px 30px 25.5px;
+        color: $ghost;
+        border-bottom: 3px solid transparent;
+        @include linear-transition(.3s);
+      }
+      &.current-menu-ancestor > a {
+        color: $blue;
+      }
+      &:hover > a {
+        color: $electric;
+        border-bottom: 3px solid $blue;
+      }
+    }
+  }
+  li.menu-item-has-children {
+    > a:after {
+      content: "\6d";
+      display: inline-block;
+      @include absolute($t: 0, $r: 10px);
+      font-family: "dr3" !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      @include font-regular(20px, 76px);
+      color: $white-grey;
+      @include middle;
+      background-size: contain;
+      @include linear-transition(.3s);
+      text-transform: none !important;
+      speak: none;
+    }
+    &:hover > a:after {
+      color: $electric;
+      @include rotate(180deg);
+    }
+  }
+  nav > ul > li > ul.sub-menu {
+    display: none;
+    @include absolute($t: 76px, $l: 0);
+    min-width: 100%;
+    padding: 15px 0;
+    color: $white;
+    white-space: nowrap;
+    @include bc($deep-blue);
+  }
+  .sub-menu {
+    li {
+      margin: 0;
+      a {
+        display: block;
+        padding: 0 30px;
+        @include font-regular(15px, 45px);
+        color: $white;
+        text-transform: none;
+        white-space: nowrap;
+        &:hover {
+          @include bc($primary-color);
+        }
+      }
+      &.current-menu-item > a {
+        color: $blue;
+      }
+      &.menu-item-has-children {
+        display: inline-block;
+        @include top;
+        > a {
+          @include font-medium($fs: 13px);
+          color: $grey;
+          text-transform: uppercase;
+          cursor: default;
+          &:hover {
+            @include bc(transparent);
+          }
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+    .sub-menu li a {
+      line-height: 30px;
+    }
+  }
+  .header-menu-search{
+    display: none;
+  }
+}
+
+/* TODO: Leave one */
+.menu-item-1927>a, .menu-item-1704>a {
+    color: #FF5600 !important;
+}
+
+.menu-extra {
+  display: block;
+  float: right;
+  &.mobile {
+    display: none;
+  }
+  a {
+    margin: 15px 0;
+    float: left;
+  }
+  .search-button{
+    float: left;
+    @include relative($t:18px, $r: 36px);
+    cursor: pointer;
+    i{
+      font-size: 26px;
+      color:$white-4;
+      &:hover, &.active{
+        color: $blue;
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  height: 100%;
+  overflow: hidden;
+}
+
+.mobile-menu #main-nav {
+  overflow: scroll;
+}
+
+.c-hamburger-header {
+  display: block;
+  position: relative;
+  @include dimensions(18px, 12px);
+  @include indents(0);
+  font-size: 0;
+  text-indent: -9999px;
+  @include bg(0.3s);
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  appearance: none;
+  overflow: hidden;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+  span {
+    display: block;
+    @include absolute($t: 5px, $l: 0, $r: 0);
+    height: 2px;
+    @include bc;
+    &:after, &:before {
+      content: "";
+      display: block;
+      @include absolute($l: 0);
+      @include dimensions(100%, 2px);
+      @include bc($azure);
+    }
+    &:after {
+      bottom: -5px;
+    }
+    &:before {
+      top: -5px;
+    }
+  }
+}
+
+.header-search{
+  display: none;
+  @include absolute($b:-60px, $l:0);
+  @include dimensions(100%, auto);
+  border-radius: 0;
+  z-index: -1;
+  .search-form{
+    i{
+      display: none;
+    }
+  }
+  .text{
+    @include dimensions(100%, 60px);
+    @include bc($dark-blue-4);
+    @include font-light(20px, 50px);
+    color: $white;
+    @include center;
+    border: none;
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 1366px){
+  #main-nav nav > ul > li {
+    > a {
+      padding: 28.5px 20px 25.5px;
+    }
+    &.menu-item-has-children > a:after {
+      right: 0;
+    }
+  }
+  .menu-extra .search-button{
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  header.fixed {
+    display: block;
+    position: relative;
+  }
+  .nav-toggle {
+    display: block;
+    @include absolute($r: 30px, $t: 50%);
+    height: 12px;
+    margin-top: -6px;
+    @include font-regular(24px, 75px);
+    color: $blue-1;
+    cursor: pointer;
+  }
+  #main-nav {
+    display: none;
+    float: none;
+    @include absolute($t: 75px, $r: 0);
+    width: 100%;
+    padding: 25px 15px;
+    @include bc($deep-blue);
+    nav {
+      float: none;
+      > ul {
+        @include indents(0 -2.1%, 0 0 267px);
+        > li {
+          width: 29.1%;
+          margin: 0 2.1% 30px;
+          @include font-medium($fs: 15px);
+          color: $blue-grey-e;
+          text-transform: uppercase;
+          &:last-child {
+            margin-right: 2.1%;
+            left: 66.6%;
+          }
+          > a {
+            @include indents(0 0 15px, 0);
+            @include font-regular(30px, 1em);
+            color: $white;
+            text-transform: capitalize;
+            border-bottom: 0;
+          }
+          &.current-menu-ancestor > a {
+            color: $white;
+          }
+          &:hover > a {
+            color: $white;
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    li.menu-item-has-children > a:after {
+      content: "";
+      display: none;
+    }
+    > nav > ul > li > ul.sub-menu {
+      display: block;
+      @include relative($t: 0, $l: 0);
+      padding: 0;
+    }
+    .sub-menu li a {
+      display: block;
+      padding: 0;
+      line-height: 30px;
+      &:hover {
+        // color: $blue;
+        @include bc(transparent);
+      }
+    }
+    .header-menu-search {
+      display: block;
+      position: relative;
+      margin: 40px 0;
+      input {
+        @include dimensions(100%, 45px);
+        padding: 0 0 0 45px;
+        background: rgba(255, 255, 255, 0.07);
+        border: none;
+        @include font-regular(17px, 30px);
+        color: $blue-grey-e;
+        cursor: pointer;
+        &::-webkit-input-placeholder, &::-moz-placeholder, &:-moz-placeholder, &:-ms-input-placeholder {
+          @include font-regular(17px, 30px);
+          color: $text-color;
+        }
+        &.transition {
+          @include linear-transition(.2s);
+        }
+      }
+      label i {
+        @include absolute($t: 14px, $l: 15px);
+        @include font-regular(26px, 18px);
+        color: $blue-grey-e;
+      }
+      &:hover {
+        input {
+          background: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+  .menu-extra {
+    display: none;
+    a {
+      @include indents(15px 0, 15px 30px);
+    }
+    &.mobile {
+      display: block;
+      float: right;
+      margin-left: 0;
+      @include absolute($t:0, $r:80px);
+      a {
+        @include indents(15px 0, 15px 30px);
+      }
+    }
+    .menu-extra-link {
+      display: inline-block;
+      height: 45px;
+      font-size: 15px;
+      color: #ff5600;
+      font-weight: 500;
+      line-height: 1em;
+      text-transform: uppercase;
+    }
+  }
+  #main-nav nav > ul > li.detached {
+    @include absolute($t:250px, $l:0, $r:0);
+    width: auto;
+    > .sub-menu {
+      width: 100%;
+      margin: 0 -2.1%;
+      > li {
+        float: left;
+        width: 29.1%;
+        margin: 0 2.1%;
+        > a {
+          @include indents(0 0 7px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          &:hover {
+            color: $grey;
+          }
+        }
+      }
+    }
+  }
+  .nav-toggle .hamburger-header {
+    display: block;
+  }
+  /* TODO: Leave one */
+  .menu-item-1927, .menu-item-1704 {
+      left: 66.6%;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  #logo a img {
+    display: block;
+    height: 75px;
+    padding: 30px 0;
+  }
+  #main-nav {
+    width: 100%;
+    padding: 30px 15px;
+    nav > ul {
+      margin: 0;
+      padding-bottom: 0;
+      > li {
+        display: block;
+        float: none;
+        width: 100%;
+        margin: 0 0 30px;
+        font-size: 17px;
+        text-transform: capitalize;
+        color: $white;
+        &:last-child{
+          left: auto;
+        }
+        .active > ul.sub-menu > li > a{
+          font-size: 15px;
+          text-transform: capitalize;
+          &:after {
+            color: $blue-grey-e;
+            @include rotate(0deg);
+          }
+        }
+        .current-menu-item > a {
+          color: $electric;
+        }
+      }
+    }
+    > nav > ul > li > ul.sub-menu {
+      display: block;
+    }
+    .sub-menu li a {
+      display: block;
+      padding: 0;
+      line-height: 40px;
+      &:hover {
+        background: none;
+      }
+    }
+    li.menu-item-has-children > a:after {
+      content: "\6d";
+      display: none;
+      @include absolute($t: 0, $r: 15px);
+      font-family: "dr3" !important;
+      @include font-regular(20px, 60px);
+      color: $blue-grey-e;
+      @include middle;
+      @include rotate(-90deg);
+    }
+    li.menu-item-has-children:hover > a:after {
+      color: $blue-grey-e;
+      @include rotate(-90deg);
+    }
+    nav > ul > li.detached {
+      @include relative($t: 0);
+      width: 100%;
+      margin: 0 0 30px 0;
+      > .sub-menu {
+        width: 100%;
+        margin: 0;
+        > li {
+          display: block;
+          float: none;
+          width: 100%;
+          margin: 0 0 15px 0;
+          > a {
+            position: relative;
+            @include indents(0);
+            line-height: 1.5em;
+            border: 0;
+          }
+          .sub-menu {
+            display: block;
+          }
+          .sub-menu a {
+            line-height: 40px;
+          }
+        }
+      }
+    }
+    .header-menu-search {
+      margin: 0 0 40px;
+    }
+  }
+  .menu-extra {
+    a {
+      margin: 0;
+    }
+    &.mobile {
+      right: 55px;
+    }
+    .menu-extra-link {
+      padding: 15px 0 !important;
+    }
+    .contact-sales {
+      display: none;
+    }
+  }
+  .nav-toggle {
+      right: 15px;
+  }
+
+  /* TODO: Leave one */
+  .menu-item-1927, .menu-item-1704  {
+      left: auto;
+  }
+}

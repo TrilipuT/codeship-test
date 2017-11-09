@@ -1,0 +1,10 @@
+.block-info {
+  padding: 25px 30px;
+  border-radius: 6px;
+  background-color: #0A2D53;
+  font-weight: 500;
+  border: 1px solid #16487b;
+  @include max(768){
+    padding: 25px;
+  }
+}

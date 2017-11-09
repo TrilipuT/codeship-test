@@ -1,0 +1,60 @@
+section.text-page {
+  padding: 60px 0;
+  article {
+    width: 960px;
+    @include centerBlock;
+  }
+  .post-content {
+    float: none;
+    width: 100%;
+    @include justify;
+    p {
+      margin-bottom: 20px;
+      @include font-light($lh: 30px);
+    }
+  }
+  h1 {
+    margin-bottom: 60px;
+    font-size: 60px;
+  }
+  h2 {
+    margin-bottom: 30px;
+  }
+  .post-content {
+    strong {
+      font-weight: $font-weight-medium;
+    }
+    ul {
+      @include indents(0 0 15px, 0 0 0 30px);
+      line-height: 30px;
+      list-style: disc;
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  section.text-page .post-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  section.text-page article {
+    width: 100%;
+    @include centerBlock;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  section.text-page {
+    padding: 30px 0;
+    h1 {
+      margin-bottom: 15px;
+      font-size: 30px;
+    }
+  }
+  .text-page h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+}

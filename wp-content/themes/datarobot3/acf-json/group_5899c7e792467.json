@@ -1,0 +1,767 @@
+{
+    "key": "group_5899c7e792467",
+    "title": "Form",
+    "fields": [
+        {
+            "key": "field_589b189a44c24",
+            "label": "Main",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_59f735b759ec4",
+            "label": "Form title",
+            "name": "form_title",
+            "type": "text",
+            "instructions": "Form title (optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59e86487bd178",
+            "label": "Form type",
+            "name": "form_type",
+            "type": "select",
+            "instructions": "Full form will include phone, country and state",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "short": "Short",
+                "full": "Full",
+                "conference": "AI Conference",
+                "custom": "Custom"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5899c9c3373d3",
+            "label": "Form name",
+            "name": "form_name",
+            "type": "text",
+            "instructions": "Name of form created in Eloqua\/Salesforce",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "40",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Datarobot-main",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_589b174f5a4f4",
+            "label": "Submit button text",
+            "name": "submit_button_text",
+            "type": "text",
+            "instructions": "Text for form submit button",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Submit",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59ef2886cd44d",
+            "label": "Redirect",
+            "name": "redirect",
+            "type": "url",
+            "instructions": "Url you will be redirected to",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_59971273d9e45",
+            "label": "Form expired",
+            "name": "form_expired",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59971286d9e46",
+            "label": "\"Expired\" message",
+            "name": "expired_message",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_59971273d9e45",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "This event has been sold out and registration is now closed! Apologies for the inconvenience.",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": ""
+        },
+        {
+            "key": "field_589b173e5a4e6",
+            "label": "Form fields",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5971d42373ba0",
+            "label": "Webinar form fields",
+            "name": "form_fields_webinar",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<input type=\"text\" name=\"firstName\" id=\"firstName\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"First Name\">\r\n<input type=\"text\" name=\"lastName\" id=\"lastName\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Last Name\">\r\n<input type=\"text\" name=\"emailAddress\" id=\"emailAddress\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Business email\">\r\n<input type=\"text\" name=\"busPhone\" id=\"busPhone\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Phone\">\r\n<input type=\"text\" name=\"company\" id=\"company\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Company\">\r\n<label>\r\n    <select name=\"title\" id=\"title\" class=\"select\" placeholder=\"Role\">\r\n        <option value=\"\" selected>Role<\/option>\r\n        <option value=\"Actuary\">Actuary<\/option>\r\n        <option value=\"Business Analyst\">Business Analyst<\/option>\r\n        <option value=\"Executive\">Executive<\/option>\r\n        <option value=\"Data scientist - Beginner\">Data scientist - Beginner<\/option>\r\n        <option value=\"Data scientist - Expert\">Data scientist - Expert<\/option>\r\n        <option value=\"Data scientist - Management\">Data scientist - Management<\/option>\r\n        <option value=\"IT professional\">IT professional<\/option>\r\n        <option value=\"Software Engineer\">Software Engineer<\/option>\r\n        <option value=\"Other\">Other<\/option>\r\n    <\/select>\r\n<\/label>\r\n<label>\r\n    <select name=\"country\" id=\"country\" class=\"select\" placeholder=\"Country\">\r\n        <option value=\"\" selected>Country<\/option>\r\n        <option value=\"United States\">United States<\/option>\r\n        <option value=\"Canada\">Canada<\/option>\r\n        <option value=\"United Kingdom\">United Kingdom<\/option>\r\n        <option value=\"Singapore\">Singapore<\/option>\r\n        <option value=\"France\">France<\/option>\r\n        <option value=\"Japan\">Japan<\/option>\r\n        <option value=\"\">--------------<\/option>\r\n        <option value=\"Afghanistan\">Afghanistan<\/option>\r\n        <option value=\"Åland Islands\">Åland Islands<\/option>\r\n        <option value=\"Albania\">Albania<\/option>\r\n        <option value=\"Algeria\">Algeria<\/option>\r\n        <option value=\"American Samoa\">American Samoa<\/option>\r\n        <option value=\"Andorra\">Andorra<\/option>\r\n        <option value=\"Angola\">Angola<\/option>\r\n        <option value=\"Anguilla\">Anguilla<\/option>\r\n        <option value=\"Antarctica\">Antarctica<\/option>\r\n        <option value=\"Antigua and Barbuda\">Antigua and Barbuda<\/option>\r\n        <option value=\"Argentina\">Argentina<\/option>\r\n        <option value=\"Armenia\">Armenia<\/option>\r\n        <option value=\"Aruba\">Aruba<\/option>\r\n        <option value=\"Australia\">Australia<\/option>\r\n        <option value=\"Austria\">Austria<\/option>\r\n        <option value=\"Azerbaijan\">Azerbaijan<\/option>\r\n        <option value=\"Bahamas\">Bahamas<\/option>\r\n        <option value=\"Bahrain\">Bahrain<\/option>\r\n        <option value=\"Bangladesh\">Bangladesh<\/option>\r\n        <option value=\"Barbados\">Barbados<\/option>\r\n        <option value=\"Belarus\">Belarus<\/option>\r\n        <option value=\"Belgium\">Belgium<\/option>\r\n        <option value=\"Belize\">Belize<\/option>\r\n        <option value=\"Benin\">Benin<\/option>\r\n        <option value=\"Bermuda\">Bermuda<\/option>\r\n        <option value=\"Bhutan\">Bhutan<\/option>\r\n        <option value=\"Bolivia\">Bolivia<\/option>\r\n        <option value=\"Bosnia and Herzegovina\">Bosnia and Herzegovina<\/option>\r\n        <option value=\"Botswana\">Botswana<\/option>\r\n        <option value=\"Bouvet Island\">Bouvet Island<\/option>\r\n        <option value=\"Brazil\">Brazil<\/option>\r\n        <option value=\"British Indian Ocean Territory\">British Indian Ocean Territory\r\n        <\/option>\r\n        <option value=\"Brunei Darussalam\">Brunei Darussalam<\/option>\r\n        <option value=\"Bulgaria\">Bulgaria<\/option>\r\n        <option value=\"Burkina Faso\">Burkina Faso<\/option>\r\n        <option value=\"Burundi\">Burundi<\/option>\r\n        <option value=\"Cambodia\">Cambodia<\/option>\r\n        <option value=\"Cameroon\">Cameroon<\/option>\r\n        <option value=\"Canada\">Canada<\/option>\r\n        <option value=\"Cape Verde\">Cape Verde<\/option>\r\n        <option value=\"Cayman Islands\">Cayman Islands<\/option>\r\n        <option value=\"Central African Republic\">Central African Republic<\/option>\r\n        <option value=\"Chad\">Chad<\/option>\r\n        <option value=\"Chile\">Chile<\/option>\r\n        <option value=\"China\">China<\/option>\r\n        <option value=\"Christmas Island\">Christmas Island<\/option>\r\n        <option value=\"Cocos (Keeling) Islands\">Cocos (Keeling) Islands<\/option>\r\n        <option value=\"Colombia\">Colombia<\/option>\r\n        <option value=\"Comoros\">Comoros<\/option>\r\n        <option value=\"Congo\">Congo<\/option>\r\n        <option value=\"Congo, The Democratic Republic of the\">Congo, The Democratic Republic\r\n            of\r\n            the\r\n        <\/option>\r\n        <option value=\"Cook Islands\">Cook Islands<\/option>\r\n        <option value=\"Costa Rica\">Costa Rica<\/option>\r\n        <option value=\"Cote D'Ivoire\">Cote D'Ivoire<\/option>\r\n        <option value=\"Croatia\">Croatia<\/option>\r\n        <option value=\"Cuba\">Cuba<\/option>\r\n        <option value=\"Cyprus\">Cyprus<\/option>\r\n        <option value=\"Czech Republic\">Czech Republic<\/option>\r\n        <option value=\"Denmark\">Denmark<\/option>\r\n        <option value=\"Djibouti\">Djibouti<\/option>\r\n        <option value=\"Dominica\">Dominica<\/option>\r\n        <option value=\"Dominican Republic\">Dominican Republic<\/option>\r\n        <option value=\"Ecuador\">Ecuador<\/option>\r\n        <option value=\"Egypt\">Egypt<\/option>\r\n        <option value=\"El Salvador\">El Salvador<\/option>\r\n        <option value=\"Equatorial Guinea\">Equatorial Guinea<\/option>\r\n        <option value=\"Eritrea\">Eritrea<\/option>\r\n        <option value=\"Estonia\">Estonia<\/option>\r\n        <option value=\"Ethiopia\">Ethiopia<\/option>\r\n        <option value=\"Falkland Islands (Malvinas)\">Falkland Islands (Malvinas)<\/option>\r\n        <option value=\"Faroe Islands\">Faroe Islands<\/option>\r\n        <option value=\"Fiji\">Fiji<\/option>\r\n        <option value=\"Finland\">Finland<\/option>\r\n        <option value=\"France\">France<\/option>\r\n        <option value=\"French Guiana\">French Guiana<\/option>\r\n        <option value=\"French Polynesia\">French Polynesia<\/option>\r\n        <option value=\"French Southern Territories\">French Southern Territories<\/option>\r\n        <option value=\"Gabon\">Gabon<\/option>\r\n        <option value=\"Gambia\">Gambia<\/option>\r\n        <option value=\"Georgia\">Georgia<\/option>\r\n        <option value=\"Germany\">Germany<\/option>\r\n        <option value=\"Ghana\">Ghana<\/option>\r\n        <option value=\"Gibraltar\">Gibraltar<\/option>\r\n        <option value=\"Greece\">Greece<\/option>\r\n        <option value=\"Greenland\">Greenland<\/option>\r\n        <option value=\"Grenada\">Grenada<\/option>\r\n        <option value=\"Guadeloupe\">Guadeloupe<\/option>\r\n        <option value=\"Guam\">Guam<\/option>\r\n        <option value=\"Guatemala\">Guatemala<\/option>\r\n        <option value=\"Guernsey\">Guernsey<\/option>\r\n        <option value=\"Guinea\">Guinea<\/option>\r\n        <option value=\"Guinea-Bissau\">Guinea-Bissau<\/option>\r\n        <option value=\"Guyana\">Guyana<\/option>\r\n        <option value=\"Haiti\">Haiti<\/option>\r\n        <option value=\"Heard Island and Mcdonald Islands\">Heard Island and Mcdonald Islands\r\n        <\/option>\r\n        <option value=\"Holy See (Vatican City State)\">Holy See (Vatican City State)<\/option>\r\n        <option value=\"Honduras\">Honduras<\/option>\r\n        <option value=\"Hong Kong\">Hong Kong<\/option>\r\n        <option value=\"Hungary\">Hungary<\/option>\r\n        <option value=\"Iceland\">Iceland<\/option>\r\n        <option value=\"India\">India<\/option>\r\n        <option value=\"Indonesia\">Indonesia<\/option>\r\n        <option value=\"Iran, Islamic Republic Of\">Iran, Islamic Republic Of<\/option>\r\n        <option value=\"Iraq\">Iraq<\/option>\r\n        <option value=\"Ireland\">Ireland<\/option>\r\n        <option value=\"Isle of Man\">Isle of Man<\/option>\r\n        <option value=\"Israel\">Israel<\/option>\r\n        <option value=\"Italy\">Italy<\/option>\r\n        <option value=\"Jamaica\">Jamaica<\/option>\r\n        <option value=\"Japan\">Japan<\/option>\r\n        <option value=\"Jersey\">Jersey<\/option>\r\n        <option value=\"Jordan\">Jordan<\/option>\r\n        <option value=\"Kazakhstan\">Kazakhstan<\/option>\r\n        <option value=\"Kenya\">Kenya<\/option>\r\n        <option value=\"Kiribati\">Kiribati<\/option>\r\n        <option value=\"Korea, Democratic People's Republic of\">Korea, Democratic People's\r\n            Republic of\r\n        <\/option>\r\n        <option value=\"Korea, Republic of\">Korea, Republic of<\/option>\r\n        <option value=\"Kuwait\">Kuwait<\/option>\r\n        <option value=\"Kyrgyzstan\">Kyrgyzstan<\/option>\r\n        <option value=\"Lao People's Democratic Republic\">Lao People's Democratic Republic\r\n        <\/option>\r\n        <option value=\"Latvia\">Latvia<\/option>\r\n        <option value=\"Lebanon\">Lebanon<\/option>\r\n        <option value=\"Lesotho\">Lesotho<\/option>\r\n        <option value=\"Liberia\">Liberia<\/option>\r\n        <option value=\"Libyan Arab Jamahiriya\">Libyan Arab Jamahiriya<\/option>\r\n        <option value=\"Liechtenstein\">Liechtenstein<\/option>\r\n        <option value=\"Lithuania\">Lithuania<\/option>\r\n        <option value=\"Luxembourg\">Luxembourg<\/option>\r\n        <option value=\"Macao\">Macao<\/option>\r\n        <option value=\"Macedonia, The Former Yugoslav Republic of\">Macedonia, The Former\r\n            Yugoslav Republic of\r\n        <\/option>\r\n        <option value=\"Madagascar\">Madagascar<\/option>\r\n        <option value=\"Malawi\">Malawi<\/option>\r\n        <option value=\"Malaysia\">Malaysia<\/option>\r\n        <option value=\"Maldives\">Maldives<\/option>\r\n        <option value=\"Mali\">Mali<\/option>\r\n        <option value=\"Malta\">Malta<\/option>\r\n        <option value=\"Marshall Islands\">Marshall Islands<\/option>\r\n        <option value=\"Martinique\">Martinique<\/option>\r\n        <option value=\"Mauritania\">Mauritania<\/option>\r\n        <option value=\"Mauritius\">Mauritius<\/option>\r\n        <option value=\"Mayotte\">Mayotte<\/option>\r\n        <option value=\"Mexico\">Mexico<\/option>\r\n        <option value=\"Micronesia, Federated States of\">Micronesia, Federated States of\r\n        <\/option>\r\n        <option value=\"Moldova, Republic of\">Moldova, Republic of<\/option>\r\n        <option value=\"Monaco\">Monaco<\/option>\r\n        <option value=\"Mongolia\">Mongolia<\/option>\r\n        <option value=\"Montserrat\">Montserrat<\/option>\r\n        <option value=\"Morocco\">Morocco<\/option>\r\n        <option value=\"Mozambique\">Mozambique<\/option>\r\n        <option value=\"Myanmar\">Myanmar<\/option>\r\n        <option value=\"Namibia\">Namibia<\/option>\r\n        <option value=\"Nauru\">Nauru<\/option>\r\n        <option value=\"Nepal\">Nepal<\/option>\r\n        <option value=\"Netherlands\">Netherlands<\/option>\r\n        <option value=\"Netherlands Antilles\">Netherlands Antilles<\/option>\r\n        <option value=\"New Caledonia\">New Caledonia<\/option>\r\n        <option value=\"New Zealand\">New Zealand<\/option>\r\n        <option value=\"Nicaragua\">Nicaragua<\/option>\r\n        <option value=\"Niger\">Niger<\/option>\r\n        <option value=\"Nigeria\">Nigeria<\/option>\r\n        <option value=\"Niue\">Niue<\/option>\r\n        <option value=\"Norfolk Island\">Norfolk Island<\/option>\r\n        <option value=\"Northern Mariana Islands\">Northern Mariana Islands<\/option>\r\n        <option value=\"Norway\">Norway<\/option>\r\n        <option value=\"Oman\">Oman<\/option>\r\n        <option value=\"Pakistan\">Pakistan<\/option>\r\n        <option value=\"Palau\">Palau<\/option>\r\n        <option value=\"Palestinian Territory, Occupied\">Palestinian Territory, Occupied\r\n        <\/option>\r\n        <option value=\"Panama\">Panama<\/option>\r\n        <option value=\"Papua New Guinea\">Papua New Guinea<\/option>\r\n        <option value=\"Paraguay\">Paraguay<\/option>\r\n        <option value=\"Peru\">Peru<\/option>\r\n        <option value=\"Philippines\">Philippines<\/option>\r\n        <option value=\"Pitcairn\">Pitcairn<\/option>\r\n        <option value=\"Poland\">Poland<\/option>\r\n        <option value=\"Portugal\">Portugal<\/option>\r\n        <option value=\"Puerto Rico\">Puerto Rico<\/option>\r\n        <option value=\"Qatar\">Qatar<\/option>\r\n        <option value=\"Reunion\">Reunion<\/option>\r\n        <option value=\"Romania\">Romania<\/option>\r\n        <option value=\"Russian Federation\">Russian Federation<\/option>\r\n        <option value=\"RWANDA\">RWANDA<\/option>\r\n        <option value=\"Saint Helena\">Saint Helena<\/option>\r\n        <option value=\"Saint Kitts and Nevis\">Saint Kitts and Nevis<\/option>\r\n        <option value=\"Saint Lucia\">Saint Lucia<\/option>\r\n        <option value=\"Saint Pierre and Miquelon\">Saint Pierre and Miquelon<\/option>\r\n        <option value=\"Saint Vincent and the Grenadines\">Saint Vincent and the Grenadines\r\n        <\/option>\r\n        <option value=\"Samoa\">Samoa<\/option>\r\n        <option value=\"San Marino\">San Marino<\/option>\r\n        <option value=\"Sao Tome and Principe\">Sao Tome and Principe<\/option>\r\n        <option value=\"Saudi Arabia\">Saudi Arabia<\/option>\r\n        <option value=\"Senegal\">Senegal<\/option>\r\n        <option value=\"Serbia and Montenegro\">Serbia and Montenegro<\/option>\r\n        <option value=\"Seychelles\">Seychelles<\/option>\r\n        <option value=\"Sierra Leone\">Sierra Leone<\/option>\r\n        <option value=\"Singapore\">Singapore<\/option>\r\n        <option value=\"Slovakia\">Slovakia<\/option>\r\n        <option value=\"Slovenia\">Slovenia<\/option>\r\n        <option value=\"Solomon Islands\">Solomon Islands<\/option>\r\n        <option value=\"Somalia\">Somalia<\/option>\r\n        <option value=\"South Africa\">South Africa<\/option>\r\n        <option value=\"South Georgia and the South Sandwich Islands\">South Georgia and the\r\n            South\r\n            Sandwich Islands\r\n        <\/option>\r\n        <option value=\"Spain\">Spain<\/option>\r\n        <option value=\"Sri Lanka\">Sri Lanka<\/option>\r\n        <option value=\"Sudan\">Sudan<\/option>\r\n        <option value=\"Suriname\">Suriname<\/option>\r\n        <option value=\"Svalbard and Jan Mayen\">Svalbard and Jan Mayen<\/option>\r\n        <option value=\"Swaziland\">Swaziland<\/option>\r\n        <option value=\"Sweden\">Sweden<\/option>\r\n        <option value=\"Switzerland\">Switzerland<\/option>\r\n        <option value=\"Syrian Arab Republic\">Syrian Arab Republic<\/option>\r\n        <option value=\"Taiwan, Province of China\">Taiwan, Province of China<\/option>\r\n        <option value=\"Tajikistan\">Tajikistan<\/option>\r\n        <option value=\"Tanzania, United Republic of\">Tanzania, United Republic of<\/option>\r\n        <option value=\"Thailand\">Thailand<\/option>\r\n        <option value=\"Timor-Leste\">Timor-Leste<\/option>\r\n        <option value=\"Togo\">Togo<\/option>\r\n        <option value=\"Tokelau\">Tokelau<\/option>\r\n        <option value=\"Tonga\">Tonga<\/option>\r\n        <option value=\"Trinidad and Tobago\">Trinidad and Tobago<\/option>\r\n        <option value=\"Tunisia\">Tunisia<\/option>\r\n        <option value=\"Turkey\">Turkey<\/option>\r\n        <option value=\"Turkmenistan\">Turkmenistan<\/option>\r\n        <option value=\"Turks and Caicos Islands\">Turks and Caicos Islands<\/option>\r\n        <option value=\"Tuvalu\">Tuvalu<\/option>\r\n        <option value=\"Uganda\">Uganda<\/option>\r\n        <option value=\"Ukraine\">Ukraine<\/option>\r\n        <option value=\"United Arab Emirates\">United Arab Emirates<\/option>\r\n        <option value=\"United Kingdom\">United Kingdom<\/option>\r\n        <option value=\"United States\">United States<\/option>\r\n        <option value=\"United States Minor Outlying Islands\">United States Minor Outlying\r\n            Islands\r\n        <\/option>\r\n        <option value=\"Uruguay\">Uruguay<\/option>\r\n        <option value=\"Uzbekistan\">Uzbekistan<\/option>\r\n        <option value=\"Vanuatu\">Vanuatu<\/option>\r\n        <option value=\"Venezuela\">Venezuela<\/option>\r\n        <option value=\"Viet Nam\">Viet Nam<\/option>\r\n        <option value=\"Virgin Islands, British\">Virgin Islands, British<\/option>\r\n        <option value=\"Virgin Islands, U.S.\">Virgin Islands, U.S.<\/option>\r\n        <option value=\"Wallis and Futuna\">Wallis and Futuna<\/option>\r\n        <option value=\"Western Sahara\">Western Sahara<\/option>\r\n        <option value=\"Yemen\">Yemen<\/option>\r\n        <option value=\"Zambia\">Zambia<\/option>\r\n        <option value=\"Zimbabwe\">Zimbabwe<\/option>\r\n    <\/select>\r\n<\/label>\r\n<label>\r\n    <select name=\"stateProv\" id=\"stateProv\" class=\"select\" disabled>\r\n        <option value=\"\" selected>State\/Province<\/option>\r\n        <option value=\"Alabama\">Alabama<\/option>\r\n        <option value=\"Alaska\">Alaska<\/option>\r\n        <option value=\"American Samoa\">American Samoa<\/option>\r\n        <option value=\"Arizona\">Arizona<\/option>\r\n        <option value=\"Arkansas\">Arkansas<\/option>\r\n        <option value=\"California\">California<\/option>\r\n        <option value=\"Colorado\">Colorado<\/option>\r\n        <option value=\"Connecticut\">Connecticut<\/option>\r\n        <option value=\"Delaware\">Delaware<\/option>\r\n        <option value=\"District Of Columbia\">District Of Columbia<\/option>\r\n        <option value=\"Federated States Of Micronesia\">Federated States Of Micronesia\r\n        <\/option>\r\n        <option value=\"Florida\">Florida<\/option>\r\n        <option value=\"Georgia\">Georgia<\/option>\r\n        <option value=\"Guam\">Guam<\/option>\r\n        <option value=\"Hawaii\">Hawaii<\/option>\r\n        <option value=\"Idaho\">Idaho<\/option>\r\n        <option value=\"Illinois\">Illinois<\/option>\r\n        <option value=\"Indiana\">Indiana<\/option>\r\n        <option value=\"Iowa\">Iowa<\/option>\r\n        <option value=\"Kansas\">Kansas<\/option>\r\n        <option value=\"Kentucky\">Kentucky<\/option>\r\n        <option value=\"Louisiana\">Louisiana<\/option>\r\n        <option value=\"Maine\">Maine<\/option>\r\n        <option value=\"Marshall Islands\">Marshall Islands<\/option>\r\n        <option value=\"Maryland\">Maryland<\/option>\r\n        <option value=\"Massachusetts\">Massachusetts<\/option>\r\n        <option value=\"Michigan\">Michigan<\/option>\r\n        <option value=\"Minnesota\">Minnesota<\/option>\r\n        <option value=\"Mississippi\">Mississippi<\/option>\r\n        <option value=\"Missouri\">Missouri<\/option>\r\n        <option value=\"Montana\">Montana<\/option>\r\n        <option value=\"Nebraska\">Nebraska<\/option>\r\n        <option value=\"Nevada\">Nevada<\/option>\r\n        <option value=\"New Hampshire\">New Hampshire<\/option>\r\n        <option value=\"New Jersey\">New Jersey<\/option>\r\n        <option value=\"New Mexico\">New Mexico<\/option>\r\n        <option value=\"New York\">New York<\/option>\r\n        <option value=\"North Carolina\">North Carolina<\/option>\r\n        <option value=\"North Dakota\">North Dakota<\/option>\r\n        <option value=\"Northern Mariana Islands\">Northern Mariana Islands<\/option>\r\n        <option value=\"Ohio\">Ohio<\/option>\r\n        <option value=\"Oklahoma\">Oklahoma<\/option>\r\n        <option value=\"Oregon\">Oregon<\/option>\r\n        <option value=\"Palau\">Palau<\/option>\r\n        <option value=\"Pennsylvania\">Pennsylvania<\/option>\r\n        <option value=\"Puerto Rico\">Puerto Rico<\/option>\r\n        <option value=\"Rhode Island\">Rhode Island<\/option>\r\n        <option value=\"South Carolina\">South Carolina<\/option>\r\n        <option value=\"South Dakota\">South Dakota<\/option>\r\n        <option value=\"Tennessee\">Tennessee<\/option>\r\n        <option value=\"Texas\">Texas<\/option>\r\n        <option value=\"Utah\">Utah<\/option>\r\n        <option value=\"Vermont\">Vermont<\/option>\r\n        <option value=\"Virgin Islands\">Virgin Islands<\/option>\r\n        <option value=\"Virginia\">Virginia<\/option>\r\n        <option value=\"Washington\">Washington<\/option>\r\n        <option value=\"West Virginia\">West Virginia<\/option>\r\n        <option value=\"Wisconsin\">Wisconsin<\/option>\r\n        <option value=\"Wyoming\">Wyoming<\/option>\r\n        <option value=\"Alberta\">Alberta<\/option>\r\n        <option value=\"British Columbia\">British Columbia<\/option>\r\n        <option value=\"Manitoba\">Manitoba<\/option>\r\n        <option value=\"New Brunswick\">New Brunswick<\/option>\r\n        <option value=\"Newfoundland and Labrador\">Newfoundland and Labrador<\/option>\r\n        <option value=\"Nova Scotia\">Nova Scotia<\/option>\r\n        <option value=\"Nunavut\">Nunavut<\/option>\r\n        <option value=\"Northwest Territories\">Northwest Territories<\/option>\r\n        <option value=\"Ontario\">Ontario<\/option>\r\n        <option value=\"Prince Edward Island\">Prince Edward Island<\/option>\r\n        <option value=\"Quebec\">Quebec<\/option>\r\n        <option value=\"Saskatchewan\">Saskatchewan<\/option>\r\n        <option value=\"Yukon\">Yukon<\/option>\r\n    <\/select>\r\n<\/label>",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5971da1738b5b",
+            "label": "DRU Event form fields",
+            "name": "form_fields_dru",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<input type=\"text\" name=\"firstName\" id=\"firstName\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"First Name\">\r\n<input type=\"text\" name=\"lastName\" id=\"lastName\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Last Name\">\r\n<input type=\"text\" name=\"emailAddress\" id=\"emailAddress\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Business email\">\r\n<input type=\"text\" name=\"busPhone\" id=\"busPhone\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Phone\">\r\n<input type=\"text\" name=\"company\" id=\"company\" value=\"\" class=\"text\" maxlength=\"40\" placeholder=\"Company\">\r\n<label>\r\n    <select name=\"title\" id=\"title\" class=\"select\" placeholder=\"Role\">\r\n        <option value=\"\" selected>Role<\/option>\r\n        <option value=\"Actuary\">Actuary<\/option>\r\n        <option value=\"Business Analyst\">Business Analyst<\/option>\r\n        <option value=\"Executive\">Executive<\/option>\r\n        <option value=\"Data scientist - Beginner\">Data scientist - Beginner<\/option>\r\n        <option value=\"Data scientist - Expert\">Data scientist - Expert<\/option>\r\n        <option value=\"Data scientist - Management\">Data scientist - Management<\/option>\r\n        <option value=\"IT professional\">IT professional<\/option>\r\n        <option value=\"Software Engineer\">Software Engineer<\/option>\r\n        <option value=\"Other\">Other<\/option>\r\n    <\/select>\r\n<\/label>",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 10,
+            "new_lines": ""
+        },
+        {
+            "key": "field_5899cbb2373d4",
+            "label": "Custom form fields",
+            "name": "form_fields_custom",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5971d1c773b9e",
+                        "operator": "==",
+                        "value": "custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add field",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "5899cbc10f13b",
+                    "name": "text_field",
+                    "label": "Text field",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_5899cbf7373d5",
+                            "label": "Field name",
+                            "name": "f_name",
+                            "type": "text",
+                            "instructions": "*Not the same as field placeholder*\r\nThis should be taken from the respective form field in Eloqua",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5899cf0a373da",
+                            "label": "Class",
+                            "name": "f_class",
+                            "type": "select",
+                            "instructions": "\"first\" - first half of the row<br>\r\n\"last\" - second half of the row<br>\r\n\"fullrow\" - full row",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "first": "First half of the row",
+                                "last": "Second half of the row",
+                                "fullrow": "Full row"
+                            },
+                            "default_value": [
+                                "fullrow"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5899cc69373d6",
+                            "label": "Placeholder text",
+                            "name": "placeholder_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5899ce1a373d7",
+                    "name": "textarea_field",
+                    "label": "Textarea field",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_5899ce1a373d8",
+                            "label": "Field name",
+                            "name": "f_name",
+                            "type": "text",
+                            "instructions": "*Not the same as field placeholder*\r\nThis should be taken from the respective form field in Eloqua",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5899ce1a373d9",
+                            "label": "Placeholder text",
+                            "name": "placeholder_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5899d41e4548b",
+                    "name": "select_field",
+                    "label": "Select field",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5899d41e4548c",
+                            "label": "Field name",
+                            "name": "f_name",
+                            "type": "text",
+                            "instructions": "*Not the same as field placeholder*\r\nThis should be taken from the respective form field in Eloqua",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5899d4544548e",
+                            "label": "Field id",
+                            "name": "f_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": "",
+                            "conditional_logic": "",
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_589b109ae927c",
+                            "label": "Placeholder text",
+                            "name": "placeholder_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_5899d5b445493",
+                            "label": "Class",
+                            "name": "f_class",
+                            "type": "select",
+                            "instructions": "\"first\" - first half of the row<br>\r\n\"last\" - second half of the row<br>\r\n\"fullrow\" - full row",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "first": "First half of the row",
+                                "last": "Second half of the row",
+                                "fullrow": "Full row"
+                            },
+                            "default_value": [
+                                "fullrow"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_5899d7e96ecc9",
+                            "label": "Options",
+                            "name": "options",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Add item",
+                            "sub_fields": [
+                                {
+                                    "key": "field_589a07146ecca",
+                                    "label": "Option name",
+                                    "name": "option_name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5899d57d4548f",
+                    "name": "country_select",
+                    "label": "Country select",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5899d63645494",
+                            "label": "Class",
+                            "name": "f_class",
+                            "type": "select",
+                            "instructions": "\"first\" - first half of the row<br>\r\n\"last\" - second half of the row<br>\r\n\"fullrow\" - full row",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "first": "First half of the row",
+                                "last": "Second half of the row",
+                                "fullrow": "Full row"
+                            },
+                            "default_value": [
+                                "fullrow"
+                            ],
+                            "allow_null": 1,
+                            "multiple": 1,
+                            "ui": 1,
+                            "ajax": 1,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "5899d68345495",
+                    "name": "sp_select",
+                    "label": "State\/Province select",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5899d68345496",
+                            "label": "Class",
+                            "name": "f_class",
+                            "type": "select",
+                            "instructions": "\"first\" - first half of the row<br>\r\n\"last\" - second half of the row<br>\r\n\"fullrow\" - full row",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "first": "First half of the row",
+                                "last": "Second half of the row",
+                                "fullrow": "Full row"
+                            },
+                            "default_value": [
+                                "fullrow"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 0,
+                            "ajax": 0,
+                            "placeholder": "",
+                            "disabled": 0,
+                            "readonly": 0,
+                            "return_format": "value"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        },
+        {
+            "key": "field_589b186244c23",
+            "label": "Extra",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_589b176a5a4f5",
+            "label": "Extra hidden fields",
+            "name": "extra_hidden_fields",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_589b1822fb031",
+            "label": "Eloqua Campaign Id",
+            "name": "eloqua_campaign_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_59d4c07f021ac",
+            "label": "Campaign name id",
+            "name": "campaign_name_id",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5976401798fdd",
+            "label": "isSalesForm",
+            "name": "is_sales",
+            "type": "true_false",
+            "instructions": "Adds a hidden \"isSalesForm\" field with value set to \"1\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_59ddb6473b0d5",
+            "label": "isWebinarForm",
+            "name": "is_webinar",
+            "type": "true_false",
+            "instructions": "Adds a hidden \"isWebinarForm\" field with value set to \"1\"",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-landing.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-dru-lp.php"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "webinar"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-cloud.php"
+            }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "templates\/industry-manufacturing.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1509717944
+}

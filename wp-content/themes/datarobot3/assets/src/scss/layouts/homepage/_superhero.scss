@@ -1,0 +1,62 @@
+.superhero-banner {
+  @include linear-gradient(315deg, 315deg, (rgba(45,143,226,0) 0%, rgba(45,143,226,0.2) 100%));
+
+  .container {
+    text-align: center;
+    @include max(500){
+      text-align: left;
+    }
+  }
+  .superhero-img {
+    position: absolute;
+    bottom: -1px;
+    margin-left: -150px;
+    max-width: 150px;
+    @include max(768){
+      left: 35px;
+      margin-left: 0;
+    }
+    @include max(500){
+      max-width: 98px;
+      left: 20px;
+    }
+  }
+  a {
+    font-family: "komika", Helvetica, arial, sans-serif;
+    color: #061D3B;
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 20px;
+    padding: 18px 0;
+    display: inline-block;
+    @include max(768) {
+      padding: 21px 0;
+      span {
+        display: inline-block;
+        max-width: 275px;
+      }
+    }
+    @include max(500){
+      font-size: 12px;
+      margin-left: 115px;
+      float: right;
+      text-align: left;
+    }
+    &:hover svg {
+      transform: translateX(10px);
+    }
+    svg {
+      transition: transform .5s;
+      margin-left: 60px;
+      @include max(768) {
+        position: absolute;
+        right: 35px;
+        top: 50%;
+      }
+      @include max(500){
+        position: static;
+        margin-left: 0;
+      }
+    }
+  }
+}

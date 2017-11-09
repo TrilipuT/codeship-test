@@ -42,6 +42,7 @@
     "jquery": "^3.2.1",
     "js-cookie": "^2.1.4",
     "stickybits": "^2.0.8",
-    "validate-js": "^2.0.1"
+    "validate-js": "^2.0.1",
+    "webpack-fail-plugin": "^2.0.0"
   }
 }

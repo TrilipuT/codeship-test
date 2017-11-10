@@ -13,7 +13,7 @@
 		<?php the_excerpt(); ?>
 	</div>
 	<div class="post-bottom">
-		<a href="<?php the_permalink(); ?>" class="sm-filled-blue button clearfix"><span>READ MORE</span><i class="icon-angle-right" aria-hidden="true"></i></a>
+		<a href="<?php the_permalink(); ?>" class="sm-filled-blue button clearfix"><span><?php _e( 'READ MORE' , 'datarobot3' ) ?></span><i class="icon-angle-right" aria-hidden="true"></i></a>
 		<div class="social-share"></div>
 	</div>
 </article>

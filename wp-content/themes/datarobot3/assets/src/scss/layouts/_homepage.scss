@@ -6,6 +6,7 @@
   width: 100%;
   padding-bottom: 60px;
   @include linear-gradient(to top left, bottom right, ($text-color 0%, $dark-blue-2 32%, $black-blue 100%));
+  background-color: $black-blue;
 }
 
 .home .top-block {

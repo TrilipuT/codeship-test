@@ -350,9 +350,9 @@
 
             $('#country').change(function () {
                 if ($(this).val() === "United States" || $(this).val() === "Canada") {
-                    $('#stateProv').prop('disabled', false);
+                    $('#stateprov').prop('disabled', false);
                 } else {
-                    $('#stateProv').val('').prop('disabled', true);
+                    $('#stateprov').val('').prop('disabled', true);
                 }
             });
 
@@ -374,9 +374,9 @@
             $('.dr-form form').submit(function (event) {
                 event.preventDefault();
 
-                if ($('.dr-form #stateProv').prop('disabled') === false && $('.dr-form #stateProv').val() == "") {
+                if ($('.dr-form #stateprov').prop('disabled') === false && $('.dr-form #stateprov').val() == "") {
                     event.preventDefault();
-                    $('.dr-form #stateProv').addClass('validation_error').focus(function () {
+                    $('.dr-form #stateprov').addClass('validation_error').focus(function () {
                         $(this).removeClass('validation_error');
                     });
                 }

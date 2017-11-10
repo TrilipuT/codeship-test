@@ -16,8 +16,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Want to see DataRobot in action?",
-            "placeholder": "",
+            "default_value": "",
+            "placeholder": "Want to see DataRobot in action?",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -36,8 +36,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Contact us",
-            "placeholder": "",
+            "default_value": "",
+            "placeholder": "Contact us",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -46,27 +46,13 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "page-enterprise.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-persona.php"
-            }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "templates\/industry-manufacturing.php"
+                "value": "page"
             }
         ]
     ],
-    "menu_order": 10,
+    "menu_order": 12,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -74,5 +60,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1509543238
+    "modified": 1509981146
 }

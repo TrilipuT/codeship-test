@@ -70,7 +70,7 @@ function get_suffix(){
 add_action('after_setup_theme', 'dr3_setup');
 
 function scripts_method() {
-	wp_enqueue_script( 'main', get_template_directory_uri() . "/assets/built/javascripts/common".get_suffix().".js", [ 'jquery' ], filemtime( get_template_directory() . '/assets/built/javascripts/common' . get_suffix() . '.js' ), true );
+	wp_register_script( 'main', get_template_directory_uri() . "/assets/built/javascripts/common" . get_suffix() . ".js", [ 'jquery' ], filemtime( get_template_directory() . '/assets/built/javascripts/common' . get_suffix() . '.js' ), true );
 	wp_enqueue_script( 'gasalesforce', get_template_directory_uri() . "/assets/src/javascripts/gasalesforce.js" );
 //	wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/built/stylesheets/screen.css' );
 
@@ -78,6 +78,21 @@ function scripts_method() {
 		wp_enqueue_script( 'draw-js', get_template_directory_uri() . '/js/jquery.drawsvg.js', array( 'jquery' ) );
 		wp_enqueue_script( 'flipclock', get_template_directory_uri() . '/js/flipclock.min.js', array( 'jquery' ) );
 	}
+
+	$dr = [
+		'js_data' => [
+			'url'       => admin_url( 'admin-ajax.php' ),
+			'nonce'     => wp_create_nonce( 'dr-nonce' ),
+			'sc_nonce'  => wp_create_nonce( 'dr_sc_nonce' ),
+			'is_mobile' => wp_is_mobile(),
+		],
+	];
+	if ( is_page_template( 'page-test-drive.php' ) ) {
+		$dr['freeEmailAddresses'] = get_email_domains();
+	}
+	wp_localize_script( 'main', 'dr', $dr );
+
+	wp_enqueue_script( 'main' );
 }
 
 add_action('wp_enqueue_scripts', 'scripts_method');
@@ -265,13 +280,15 @@ function datarobot_total_models($atts)
 add_shortcode("datarobot_total_models", "datarobot_total_models");
 
 // Load a list of free email domains
-function get_email_domains()
-{
-  $data = file_get_contents("freeEmailAddresses.txt", true);
-  $data = explode("\n", $data);
-  $data = json_encode($data, true);
+function get_email_domains() {
+	if ( ! $data = get_transient( 'freeEmailAddresses' ) ) {
+		$data = file_get_contents( "freeEmailAddresses.txt", true );
+		$data = explode( "\n", $data );
+		$data = json_encode( $data, true );
+		set_transient( 'freeEmailAddresses', $data, DAY_IN_SECONDS );
+	}
 
-  return $data;
+	return $data;
 }
 
 // Get page ID by slug
@@ -332,20 +349,6 @@ function disable_emojicons_tinymce($plugins)
     }
 }
 
-function js_data()
-{
-    wp_localize_script('jquery', 'dr_js_data',
-        array(
-            'url' => admin_url('admin-ajax.php'),
-            'nonce' => wp_create_nonce('dr-nonce'),
-            'sc_nonce' => wp_create_nonce('dr_sc_nonce'),
-            'is_mobile' => wp_is_mobile()
-        )
-    );
-}
-
-add_action('wp_enqueue_scripts', 'js_data', 99);
-
 function cc_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
@@ -398,6 +401,7 @@ get_template_part('includes/dr-widgets');
 get_template_part('includes/dr-taxonomy-cf');
 get_template_part('includes/dr-usecases-filter');
 get_template_part('includes/dr-course-classes');
+get_template_part('includes/dr-form-proxy');
 get_template_part('includes/dr-sentry');
 get_template_part('includes/dr-stripe');
 get_template_part('includes/dr-strings');

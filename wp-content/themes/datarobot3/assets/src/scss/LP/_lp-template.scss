@@ -293,19 +293,19 @@ section.landing {
 }
 
 .form-orange {
+  .first {
+    display: inline-block;
+    float: left;
+    width: 48.5%;
+  }
+  .last {
+    display: inline-block;
+    width: 48.5%;
+    margin-left: 3%;
+  }
   input {
     &.text {
       color: $graphite;
-    }
-    &.first {
-      display: inline-block;
-      float: left;
-      width: 48.5%;
-    }
-    &.last {
-      display: inline-block;
-      width: 48.5%;
-      margin-left: 3%;
     }
   }
   select {
@@ -318,7 +318,7 @@ section.landing {
     display: block;
     position: relative;
     width: 100%;
-    &:after {
+    &.dropdown-parent:after {
       content: '';
       display: block;
       @include absolute($t:20px, $r:15px);
@@ -462,6 +462,13 @@ section article {
     box-shadow: none;
     outline: none;
     -webkit-appearance: none;
+  }
+  select{
+    box-shadow: none;
+    height: 30px;
+  }
+  label.dropdown-parent:after{
+    top: 12px;
   }
 }
 

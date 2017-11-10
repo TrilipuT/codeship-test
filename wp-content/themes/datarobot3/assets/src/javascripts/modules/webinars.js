@@ -60,7 +60,7 @@ export default function () {
 
     sticky('.fixed-holder', {verticalPosition: 'bottom', customVerticalPosition: true});
 
-    popup('.popup-open', '.form-holder');
+    popup('.open-popup');
 
     if ($('.form-wrap').height() > $('.form-holder').height()) {
         $quotesSlider.remove();

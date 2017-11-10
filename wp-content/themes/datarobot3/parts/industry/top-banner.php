@@ -16,7 +16,7 @@
             </div>
             <div class="b-bottom">
                 <a href="#"
-                   class="contact-popup bg-filled-blue button"><?php _e( 'Request a demo', 'datarobot3' ); ?></a>
+                   class="open-popup open-popup bg-filled-blue button"><?php _e( 'Request a demo', 'datarobot3' ); ?></a>
                 <div class="watch-v transition">
                     <i class="icon-play-circle-outline"></i><?php the_field( 'video' ); ?>
                 </div>

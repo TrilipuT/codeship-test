@@ -44,7 +44,7 @@
 				<?php endwhile; ?>
             </div>
 		<?php endif; ?>
-        <a href="#" class="contact-popup bg-filled-blue button" data-type="<?php _e( 'AI Services', 'datarobot3' ) ?>">
+        <a href="#" class="open-popup bg-filled-blue button" data-type="<?php _e( 'AI Services', 'datarobot3' ) ?>">
 		    <?php _e( 'Request more information', 'datarobot3' ); ?>
         </a>
     </div>

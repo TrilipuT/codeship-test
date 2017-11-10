@@ -102,5 +102,5 @@ $post_id = get_field( 'page_id' ) ?: $post->post_name;
     </script>
 </section>
 <?php get_footer(); ?>
-<?php get_template_part( 'parts/forms/contact-us' ); ?>
+<?php get_template_part( 'parts/forms/popup' ); ?>
 <?php get_template_part( 'end' ); ?>

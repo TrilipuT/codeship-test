@@ -9,7 +9,7 @@
         </footer>
     </div>
     <?php if ( ! get_query_var( 'type' ) ): ?>
-        <div class="form-holder">
+        <div class="form-holder" id="form-holder">
             <div class="form-wrap">
                 <div class="popup-close transition">
                     <i class="icon-close"></i>

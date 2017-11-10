@@ -41,5 +41,5 @@ get_header(); ?>
 	<?php get_template_part( 'parts/get-in-touch' ) ?>
 </section>
 <?php get_footer(); ?>
-<?php get_template_part( 'parts/forms/contact-us' ); ?>
+<?php get_template_part( 'parts/forms/popup' ); ?>
 <?php get_template_part( 'end' ) ?>

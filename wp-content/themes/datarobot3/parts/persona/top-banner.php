@@ -14,7 +14,7 @@
 <div class="b-left">
     <h1><?php the_title(); ?></h1>
     <p><?php the_field('banner_title'); ?></p>
-    <a href="#" class="contact-popup bg-filled-blue button">Contact us to learn more</a>
+    <a href="#" class="open-popup bg-filled-blue button"><?php _e('Contact us to learn more', 'datarobot3'); ?></a>
     <?php if ($video = get_field('banner_video')) : ?>
         <div class="watch-v transition">
             <i class="icon-play-circle-outline"></i><?= $video ?>

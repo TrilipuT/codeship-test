@@ -88,7 +88,7 @@
 					<ul class="language-switcher clear"><?php pll_the_languages(array('show_flags'=>1,'show_names'=>0));?></ul>
 				</div>
 				<div class="bottom">
-					<a href="/privacy/">Privacy</a> and <a href="/terms-of-service/">Terms of Service</a>
+					<a href="<?= home_url('/privacy') ?>">Privacy</a> and <a href="<?= home_url('/terms-of-service') ?>">Terms of Service</a>
 				</div>
 			</div>
 		</div>

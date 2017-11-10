@@ -42,7 +42,7 @@
             </div>
 		<?php endif; ?>
             <div class="fixed-holder">
-                <button class="button bg-filled-orange popup-open"><?php _e( 'Sign up now for Free', 'datarobot3' ) ?></button>
+                <button class="button bg-filled-orange open-popup" data-target="form-holder"><?php _e( 'Sign up now for Free', 'datarobot3' ) ?></button>
             </div>
 		<?php else: ?>
             <div class="content">

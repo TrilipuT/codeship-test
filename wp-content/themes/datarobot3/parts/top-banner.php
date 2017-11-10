@@ -10,7 +10,7 @@
         <div class="b-left">
             <h1><?php the_field('banner_title') ?></h1>
             <p><?php the_field('banner_text') ?></p>
-            <a href="#" class="contact-popup bg-filled-blue button"><?php _e('Learn more', 'datarobot3'); ?></a>
+            <a href="#" class="open-popup bg-filled-blue button"><?php _e('Learn more', 'datarobot3'); ?></a>
         </div>
         <div class="b-right">
             <?php if (get_field('banner_image_mobile')) {

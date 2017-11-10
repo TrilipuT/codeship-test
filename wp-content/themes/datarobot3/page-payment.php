@@ -249,14 +249,14 @@
 				formdata['cardholder-name'] = jQuery('#cardholder-name').val();
 				formdata['cardholder-email'] = jQuery('#cardholder-email').val();
 				formdata['cardholder-phone'] = jQuery('#cardholder-phone').val();
-				formdata['nonce'] = dr_js_data.sc_nonce;
+				formdata['nonce'] = dr.js_data.sc_nonce;
 				formdata['pid'] = jQuery('input[name="pid"]').val();
 				formdata['action'] = jQuery('input[name="action"]').val();
 				formdata['stripeToken'] = token.id;
 
 				// Submit the form
 				var scReq = jQuery.ajax({
-					url:dr_js_data.url,
+					url:dr.js_data.url,
 					type:"POST",
 					data:formdata,
 					beforeSend: transmission_start(),

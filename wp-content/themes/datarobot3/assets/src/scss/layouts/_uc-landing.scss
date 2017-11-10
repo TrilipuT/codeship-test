@@ -28,11 +28,15 @@ section {
       }
     }
   }
+  &.uc-landing .top-wrapper .quote-wrap{
+    background-color: #E1E8F0;
+  }
   &.uc-landing, &.uc-landing-public-sector, &.uc-landing-fintech {
     min-width: 320px;
     .top-wrapper, .quote-wrap {
       position: relative;
       @include background($bs: cover, $bp: center);
+      background-color: $black-blue;
     }
     .quote-wrap {
       display: block;

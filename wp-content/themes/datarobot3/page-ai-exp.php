@@ -394,7 +394,7 @@ if (get_field('redirect_url')) {
 														</div>
 													</div>
 												<?php } else { ?>
-													<form method="post" name="<?php echo $form_name; ?>" id="ai-form">
+                                <form method="post" name="<?php echo $form_name; ?>" id="ai-form" data-redirect="<?= esc_attr( $redirect ) ?>">
 	                            <label>
 	                                <input type="text" name="lastName" id="lastName" value="" class="field text is-empty" maxlength="40">
 	                                <span><span><?php _e('Last Name', 'datarobot3'); ?></span></span>
@@ -883,9 +883,9 @@ if (get_field('redirect_url')) {
 
             $('#country').change(function () {
                 if ($(this).val() === "United States" || $(this).val() === "Canada") {
-                    $('#stateProv').prop('disabled', false);
+                    $('#stateprov').prop('disabled', false);
                 } else {
-                    $('#stateProv').val('').prop('disabled', true);
+                    $('#stateprov').val('').prop('disabled', true);
                 }
             });
 

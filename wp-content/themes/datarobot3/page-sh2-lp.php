@@ -261,7 +261,7 @@
 								<img src="<?= get_template_directory_uri(); ?>/assets/built/images/shlp/item3.png" alt="Find out how DataRobot can help meet your unique requirements">
 							</div>
 							<h3>Find out how DataRobot can help meet your unique requirements</h3>
-							<a href="<?php the_field('button_3'); ?>" class="button bg-filled-blue" onClick="fbq('track', 'Lead');">Request a demo</a>
+							<a href="<?php the_field('button_3'); ?>" class="button bg-filled-blue" onClick="fbq('track', 'Lead');"><?php _e( 'Request a demo' , 'datarobot3' ) ?></a>
 						</div>
 					</div>
 				</div>

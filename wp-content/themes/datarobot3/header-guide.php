@@ -65,6 +65,10 @@
             a.appendChild(r);
         })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+		<!-- <script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			Raven.config('https://50c9f8b9669345fe800b7d249476b1da@sentry.io/204669').install()
+		</script> -->
 </head>
 <body <?php body_class(); if( get_field( 'page_styling_id' )) { echo 'id="'.get_field('page_styling_id').'"'; } ?>>
 	<!-- Google Tag Manager (noscript) -->

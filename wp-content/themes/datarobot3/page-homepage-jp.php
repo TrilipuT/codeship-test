@@ -86,7 +86,7 @@
 									<?php } ?>
 									<div class="button-wrap">
 										<a href="<?php the_permalink(); ?>" class="sm-filled-blue button clearfix">
-											<span>READ MORE</span><i class="icon-angle-right" aria-hidden="true"></i>
+											<span><?php _e( 'READ MORE' , 'datarobot3' ) ?></span><i class="icon-angle-right" aria-hidden="true"></i>
 										</a>
 									</div>
 								</div>

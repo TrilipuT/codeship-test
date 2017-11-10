@@ -15,7 +15,7 @@
     <?php if ($image = get_field('banner_image')): ?>
         <img src="<?= $image ?>" alt="<?= esc_attr(get_field('banner_title')); ?>">
     <?php endif; ?>
-    <a href="#" class="contact-popup bg-filled-blue button"><?php _e('Contact us to learn more', 'datarobot3'); ?></a>
+    <a href="#" class="open-popup bg-filled-blue button"><?php _e('Contact us to learn more', 'datarobot3'); ?></a>
     <?php if ($video = get_field('banner_video')) : ?>
         <div class="watch-v block transition">
             <i class="icon-play-circle-outline"></i><?= $video ?>

@@ -1,0 +1,2 @@
+<input type="text" name="firstName" id="firstname" class="field text is-empty" maxlength="40" required data-validate="min_length[2]"
+       placeholder="<?php _e( 'First Name', 'datarobot3' ); ?>" title="<?php _e( 'First Name', 'datarobot3' ); ?>">

@@ -8,9 +8,9 @@
 <div class="get-in-touch">
     <div class="container">
         <div class="button-wrap">
-            <p><?php the_field('git_text') ?></p>
-            <a href="#" class="contact-popup bg-filled-white button">
-                <?php get_field('git_button_text') ? the_field('git_button_text') : _e('Contact us', 'datarobot3'); ?>
+            <p><?= get_field('git_text') ?: __('Have a question about learning data science with DataRobot?', 'datarobot3'); ?></p>
+            <a href="#" class="open-popup bg-filled-white button">
+                <?= get_field('git_button_text') ?: __('Contact us', 'datarobot3'); ?>
             </a>
         </div>
     </div>

@@ -1,8 +1,4 @@
 {
-  "name": "DataRobot theme",
-  "version": "3",
-  "private": true,
-  "author": "",
   "license": "UNLICENSED",
   "engines": {
     "node": ">=5.5 <9.0"

@@ -5,7 +5,6 @@ var plugins = [];
 if (!isExitOnError) {
     plugins.push(failPlugin);
 }
-console.log(isExitOnError);
 
 module.exports = {
     output: {

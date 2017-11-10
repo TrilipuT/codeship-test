@@ -6,6 +6,10 @@
   @include radius(6px);
   @include shadow((0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
   @include translate((-50%, -50%));
+  @include min(720){
+    max-height: 90%;
+    overflow-x: auto;
+  }
 }
 
 .form-title h3 {
@@ -22,6 +26,7 @@
 
 .dr-form {
   input.text, select, textarea {
+    width: 100%;
     height: 45px;
     margin-bottom: 15px;
     padding: 0 20px;
@@ -40,24 +45,6 @@
   input.text:focus, select:focus, textarea:focus {
     border-left-color: $blue;
   }
-  .validation_error {
-    border-left-color: $coral !important;
-  }
-}
-
-.validation_error_message {
-  display: none;
-}
-
-.expired-message {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    color: #465268;
-    text-align: center;
-}
-
-.dr-form {
   select {
     @include dimensions(100%, 45px);
     padding: 0 20px;
@@ -72,14 +59,19 @@
   }
   label {
     position: relative;
-    &:after {
-      content: '';
-      display: block;
-      @include absolute($t: 20px, $r: 15px);
-      @include dimensions(12px, 8px);
-      background-image: url("../images/select-tick.png");
-      @include background($bs: cover);
-      pointer-events: none;
+    &.dropdown-parent {
+      select{
+        padding-right: 40px;
+      }
+      &:after {
+        content: '';
+        display: block;
+        @include absolute($t: 20px, $r: 15px);
+        @include dimensions(12px, 8px);
+        background-image: url("../images/select-tick.png");
+        @include background($bs: cover);
+        pointer-events: none;
+      }
     }
     &.field-wrap:after {
       display: none;
@@ -93,7 +85,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
   }
-  input.submit {
+  .submit {
     display: block;
     width: 100%;
     padding: 15px 25px;
@@ -120,7 +112,30 @@
     display: none;
     text-align: center;
   }
+  .validation_error {
+    border-left-color: $coral !important;
+  }
 }
+
+.validation_error_message {
+  display: none;
+}
+
+.expired-message {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  color: #465268;
+  text-align: center;
+}
+
+#stateprov {
+  &.usa .only-canada,
+  &.canada .only-usa {
+    display: none;
+  }
+}
+
 
 .form-extra-button {
   display: none;
@@ -222,6 +237,7 @@ section.contacts {
 #error-wrap {
   margin-bottom: 15px;
 }
+
 #form-errors {
   color: #E55653;
   text-align: center;
@@ -229,19 +245,29 @@ section.contacts {
 }
 
 .shake {
-  animation-name:shake;
-  animation-duration:4s;
-  animation-fill-mode:both;
+  animation-name: shake;
+  animation-duration: 4s;
+  animation-fill-mode: both;
   animation-delay: 1s;
-  animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
 }
 
-@keyframes shake{
-  0%{transform:translateZ(0)}
-  2.5%,7.5%,12.5%,17.5%{transform:translate3d(-5px,0,0)}
-  5%,10%,15%,20%{transform:translate3d(5px,0,0)}
-  25%{transform:translateZ(0)}
-  100%{transform:translateZ(0)}
+@keyframes shake {
+  0% {
+    transform: translateZ(0)
+  }
+  2.5%, 7.5%, 12.5%, 17.5% {
+    transform: translate3d(-5px, 0, 0)
+  }
+  5%, 10%, 15%, 20% {
+    transform: translate3d(5px, 0, 0)
+  }
+  25% {
+    transform: translateZ(0)
+  }
+  100% {
+    transform: translateZ(0)
+  }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1366px) {
@@ -260,14 +286,6 @@ section.contacts {
     .first, .last {
       max-width: 265px;
       width: 265px;
-    }
-    label:after {
-      content: '';
-      display: block;
-      @include absolute($t: 14px, $r: 15px);
-      @include dimensions(12px, 8px);
-      background-image: url("../images/select-tick.png");
-      @include background($bs: cover);
     }
   }
 }

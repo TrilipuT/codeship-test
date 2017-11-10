@@ -58,6 +58,8 @@ table {
   @extend %clearBoth;
 }
 
+@import './../base/adminbar';
+
 //WP CORE
 .alignnone {
   margin: 5px 20px 20px 0;

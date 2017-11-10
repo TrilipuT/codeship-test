@@ -11,7 +11,7 @@
                 <div class="b-left">
                     <h1><?php the_field('banner_title'); ?></h1>
                     <p><?php the_field('banner_text'); ?></p>
-                    <a href="#" class="contact-popup bg-filled-blue button"><?php _e('Learn more', 'datarobot3'); ?></a>
+                    <a href="#" class="open-popup bg-filled-blue button"><?php _e('Learn more', 'datarobot3'); ?></a>
                 </div>
             </div>
         </div>
@@ -46,6 +46,6 @@
 </section>
 <?php
 get_footer();
-get_template_part('parts/forms/contact-us');
+get_template_part('parts/forms/popup');
 get_template_part('end');
 ?>

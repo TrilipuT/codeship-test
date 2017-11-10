@@ -23,7 +23,7 @@ if (get_field('ev_banner_bg')) {
 						<a href="<?php the_field('ev_address') ?>" target="_blank">Show on Google Maps</a>
 					</span>
                     </p>
-                    <!-- <a href="#" class="contact-popup bg-filled-white button">Book time to talk</a> -->
+                    <!-- <a href="#" class="open-popup bg-filled-white button">Book time to talk</a> -->
                     <a href="<?php the_field('of_page_url') ?>" class="of-page button"><i class="icon-launch"></i><span>Official page</span></a>
                 </div>
                 <div class="b-right bottom">

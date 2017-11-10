@@ -28,7 +28,7 @@
                     <img src="<?= get_template_directory_uri(); ?>/assets/built/images/cloud/top-icon.svg" alt="<?php the_field('banner_title'); ?>">
                     <h1><?php the_field('banner_title'); ?></h1>
                     <p><?php the_field('banner_text'); ?></p>
-                    <a href="#" class="contact-popup bg-filled-blue button"><?php _e('See DataRobot in Action!', 'datarobot3'); ?></a>
+                    <a href="#" class="open-popup bg-filled-blue button"><?php _e('See DataRobot in Action!', 'datarobot3'); ?></a>
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
             <div class="sign-up">
                 <div class="row-wrap">
                     <div class="text"><?php _e('Sign up and start seeing real bottom-line business value from machine learning projects immediately', 'datarobot3'); ?></div>
-                    <a href="#" class="contact-popup bg-filled-blue button"><span><?php _e('Sign up', 'datarobot3'); ?></span><i class="icon-long-arrow-down"></i></a>
+                    <a href="#" class="open-popup bg-filled-blue button"><span><?php _e('Sign up', 'datarobot3'); ?></span><i class="icon-long-arrow-down"></i></a>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
 
 <?php
 get_footer();
-get_template_part('parts/forms/contact-us');
+get_template_part('parts/forms/popup');
 ?>
 
 <script>

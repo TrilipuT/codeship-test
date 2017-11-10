@@ -58,9 +58,6 @@
 		fbq('init', '257592791258402');
 		fbq('track', "PageView");
 	</script>
-	<noscript>
-		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=257592791258402&ev=PageView&noscript=1"/>
-	</noscript>
 	<!-- End Facebook Pixel Code -->
     <script>
         (function(h,o,t,j,a,r){
@@ -74,6 +71,11 @@
     </script>
 </head>
 <body <?php body_class(); ?>>
+    <!-- Facebook Pixel Code (noscript) -->
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=257592791258402&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code (noscript) -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3WW4HZ"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

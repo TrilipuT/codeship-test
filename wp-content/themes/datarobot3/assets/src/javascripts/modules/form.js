@@ -1,7 +1,9 @@
 import $ from 'jquery';
+import popupOpen from './popup';
 
 export default function () {
     if ($('.new-form-handler').length) {
+        popupOpen('.open-popup');
 
         let endpoints = {
             eloqua: "https://s2142644770.t.eloqua.com/e/f2",
@@ -10,15 +12,16 @@ export default function () {
         };
         let $drForm = $('.dr-form');
         let $form = $drForm.find('form');
-        let $company = $form.find('input[name="company"]');
-        let $select = $form.find('select');
+        let $company = $form.find('input[name="company"]:not(.school-field)');
+        let $selects = $form.find('select');
         let $country = $form.find('#country');
-        let $input = $form.find('input');
-        let $acceptedAgreement = $form.find('#agreementAccepted');
+        let $inputs = $form.find('input');
         let $submit = $drForm.find('button[type="submit"]');
-        let $stateProv = $form.find('#stateProv');
+        let $stateProv = $form.find('#stateprov');
         let $required = $form.find('[required]');
         let $preloader = $drForm.find('.preloader');
+        let $errors = $('#form-errors');
+        let $errorsWrap = $('#error-wrap');
 
 
         /**
@@ -41,8 +44,8 @@ export default function () {
         }
 
         function transmission_start() {
-            $('#error-wrap').hide();
-            $('#form-errors').text('');
+            $errorsWrap.hide();
+            $errors.text('');
             $submit.prop("disabled", true);
             $preloader.fadeIn(150);
         }
@@ -57,87 +60,42 @@ export default function () {
             window.location.href = $form.data('redirect');
         }
 
-        function submitToSF() {
-            return $.post({
-                url: endpoints.sf,
-                headers: {
-                    "Accept": "application/json; charset=utf-8",
-                    "Content-Type": "application/json; charset=utf-8"
-                },
-                data: objectifyForm($form.serializeArray()),
+        function prepareData(action) {
+            // Prepare form data
+            var formdata = {};
+            formdata['nonce'] = dr.js_data.nonce;
+            formdata['action'] = action;
+            formdata['data'] = $form.serialize();
+
+            return formdata;
+        }
+
+        function submitData() {
+            var formdata = prepareData($form.data('action'));
+
+            return jQuery.ajax({
+                url: dr.js_data.url,
+                type: "POST",
+                data: formdata,
                 dataType: "json",
                 beforeSend: transmission_start(),
                 error: function (jqXHR) {
-                    console.log("Response status code: " + jqXHR.status);
-                    if (jqXHR.status === 422) {
-                        $.each(jqXHR.responseJSON.message, function (i, val) {
-                            $('#' + i).addClass('validation_error');
-                            $('#form-errors').text(val);
-                            $('#error-wrap').fadeIn(150);
+                    console.log("Transmission error, code: " + jqXHR.status);
+                    Raven.captureMessage("Transmission error, code: " + jqXHR.status);
+                    transmission_stop();
+                    $errors.text("Connection error. Please try again later.");
+                },
+                success: function (response, textStatus, jqXHR) {
+                    if (response.data.code === 422) {
+                        jQuery.each(response.data.body.message, function (i, val) {
+                            jQuery('#' + i).addClass('validation_error');
+                            $errors.text(val);
                         });
                         transmission_stop();
-                    } else if (jqXHR.status === 500) {
-                        if (typeof Raven !== 'undefined') {
-                            Raven.captureMessage("SF error. Code: " + jqXHR.status);
-                        }
-                        transmission_done();
                     } else {
-                        if (typeof Raven !== 'undefined') {
-                            Raven.captureMessage("Submission error. Code: " + jqXHR.status + ". Switching to backup endpoint.");
-                        }
-                        submitToSF_backup();
+                        console.log(response.data.body.message);
+                        transmission_done();
                     }
-                },
-                success: function (data) {
-                    console.log(data.message);
-                    transmission_done();
-                }
-            });
-        }
-
-        function submitToSF_backup() {
-            return $.post({
-                url: endpoints.sfBackup,
-                headers: {
-                    "Accept": "application/json; charset=utf-8",
-                    "Content-Type": "application/json; charset=utf-8"
-                },
-                data: objectifyForm($form.serializeArray()),
-                dataType: "json",
-                error: function (jqXHR) {
-                    console.log("SF backup Raven error");
-                    if (typeof Raven !== 'undefined') {
-                        Raven.captureMessage("SF backup error. Code: " + jqXHR.status);
-                    }
-                    transmission_done();
-                },
-                success: function (jqXHR) {
-                    console.log("Success. Data stored at SF backup endpoint.");
-                    transmission_done();
-                },
-            });
-        }
-
-        function submitToEloqua() {
-            return $.post({
-                url: endpoints.eloqua,
-                data: $form.serialize(),
-                beforeSend: transmission_start(),
-                error: function (jqXHR) {
-                    console.log("Error. Submission to Eloqua failed.");
-                    if (typeof Raven !== 'undefined') {
-                        Raven.setUserContext({
-                            email: document.getElementById('emailAddress').value
-                        });
-                        Raven.captureMessage("Error. Submission to Eloqua failed.");
-                    }
-                    transmission_stop();
-                },
-                success: function (jqXHR) {
-                    console.log("Success. Elq submission saved.");
-                },
-                complete: function () {
-                    submitToSF();
                 }
             });
         }
@@ -152,11 +110,27 @@ export default function () {
          *
          *
          */
-
+        // Populate field with current URL
         $form.find('#submittedOnUrl').val(window.location.href);
+        // Add custom params from button
+        $(document).on('popup-opened', function (e, button) {
+            let $button = $(button);
+            let data = $button.data();
+            $.each(data, function (index, value) {
+                if (index === 'title') {
+                    $('.form-title-target').text(value);
+                }
+                if (index.indexOf('predefined') === 0) {
+                    $form.find('#' + index.substring(10)).val(value).change();
+                }
+            });
+        });
 
+
+        // Company field autocomplete. Not applied for school-field
         $company.autoComplete({
             minChars: 1,
+            delay: 100,
             source: function (term, response) {
                 $.getJSON('https://autocomplete.clearbit.com/v1/companies/suggest', {query: term}, function (data) {
                     response(data);
@@ -164,37 +138,44 @@ export default function () {
             },
             renderItem: function (item, search) {
                 let default_logo = 'https://s3.amazonaws.com/clearbit-blog/images/company_autocomplete_api/unknown.gif';
-                let logo;
-                if (item.logo == null) {
-                    logo = default_logo
-                } else {
+                let logo = default_logo;
+                if (item.hasOwnProperty('logo') && item.logo !== null) {
                     logo = item.logo + '?size=30x30'
                 }
 
-                let container = '<div class="autocomplete-suggestion" data-name="' + item.name + '" data-domain="' + item.domain + '"data-val="' + search + '">';
-                container += '<span class="icon"><img align="center" src="' + logo + '" onerror="this.src=\'' + default_logo + '\'"></span> ';
-                container += item.name + '<span class="domain">' + item.domain + '</span></div>';
-                return container
+                return '<div class="autocomplete-suggestion" data-name="' + item.name + '" ' +
+                    'data-domain="' + item.domain + '" ' +
+                    'data-val="' + search + '"><span class="icon"><img align="center" src="' + logo + '" ' +
+                    'onerror="this.src=\'' + default_logo + '\'"></span>' + item.name +
+                    '<span class="domain">' + item.domain + '</span></div>';
             },
             onSelect: function (e, term, item) {
                 $company.val(item.data('name'));
-                $('input[name="website"]').val(item.data('domain'));
+                $form.find('input[name="website"]').val(item.data('domain'));
             },
         });
 
-        $select.change(function () {
+        // Move this to styles?
+        $selects.change(function () {
             $(this).css('color', '#465275');
         });
 
+        // Enable states select if Canada or US selected
         $country.change(function () {
-            if ($(this).val() === "United States" || $(this).val() === "Canada") {
-                $('#stateProv').prop('disabled', false);
+            let $this = $(this);
+            if ($this.val() === "United States" || $this.val() === "Canada") {
+                $stateProv.prop('disabled', false).removeClass('canada usa');
+                if ($this.val() === "Canada") {
+                    $stateProv.addClass('canada');
+                } else if ($this.val() === "United States") {
+                    $stateProv.addClass('usa');
+                }
             } else {
-                $('#stateProv').val('').prop('disabled', true);
+                $stateProv.val('').prop('disabled', true).removeClass('canada usa');
             }
         });
 
-        $input.on('focus', function () {
+        $inputs.on('focus', function () {
             $(this).addClass('is-focused');
         }).on('blur', function () {
             $(this).removeClass('is-focused');
@@ -204,19 +185,125 @@ export default function () {
             } else {
                 $(this).addClass('is-empty');
             }
+            let $acceptedAgreement = $form.find('#agreementAccepted');
             if ($acceptedAgreement.length) {
                 $submit.prop("disabled", !$acceptedAgreement.prop("checked"));
             }
         });
 
+        let rules = [];
+        $required.each(function (i, input) {
+            let $input = $(input);
+            let validate = $input.data('validate');
+            rules.push({
+                name: $input.prop('name'),
+                rules: 'required|' + validate
+            });
+        });
+
+        if (rules.length) {
+            var validator = new FormValidator($form.prop('name'), rules, __event_performValidation);
+
+            validator.registerCallback('valid_business_email', function (value) {
+                let dogIndex = value.lastIndexOf("@");
+                if (dogIndex > 0) {
+                    var domain = value.substring(dogIndex + 1).trim();
+                    if (dr.hasOwnProperty('freeEmailAddresses')) {
+                        var domainStack = dr.freeEmailAddresses;
+                        if (domain !== '') {
+                            let isValid = domainStack.indexOf(domain);
+                            if (isValid > -1) {
+                                jQuery('#form-errors').text('Please provide a correct business email address');
+                                jQuery('#error-wrap').fadeIn(150);
+                            } else {
+                                jQuery('#form-errors').text('');
+                            }
+                            return (isValid < 0);
+                        }
+                    }
+                    return true;
+                }
+                return false;
+            });
+
+            validator.registerCallback('valid_c_name', function (value) {
+                var re = /([A-Za-z0-9\-\_]+)/g;
+                return re.test(value);
+            });
+
+            validator.registerCallback('valid_edu', function (value) {
+                var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/g;
+                return re.test(value);
+            });
+
+            var event = window.event;
+            var classNameCheckOnlyThis = 'checkOnlyThis';
+
+            function __event_performValidation(errors, evt) {
+                $('.validation_error').removeClass('validation_error');
+
+                // detect if it's an onSubmit event
+                var weAreInASubmitEvent = (typeof evt !== 'undefined');
+
+                function checkIfIDIsInElementsToProcess(id) {
+                    return $('#' + id + '.' + classNameCheckOnlyThis).length !== 0;
+                }
+
+                if (errors.length > 0) {
+                    for (var i = 0; i < errors.length; i++) {
+                        if (weAreInASubmitEvent || checkIfIDIsInElementsToProcess(errors[i].id)) {
+                            $('#' + errors[i].id).addClass('validation_error');
+                        }
+                    }
+                    if (evt && evt.preventDefault) {
+                        evt.preventDefault();
+                    } else if (event) {
+                        event.returnValue = false;
+                    }
+                } else {
+                    $errors.text('');
+                    $errorsWrap.fadeOut(150);
+                    if (event) {
+                        event.returnValue = true;
+                    }
+                }
+            }
+
+            var $allInputsOnPage = $inputs.add($selects);
+
+            $allInputsOnPage.on('focus', function (_event) {
+                _event.target.classList.add(classNameCheckOnlyThis);
+            });
+
+            $allInputsOnPage.on('blur', function (_event) {
+                if (_event.target.classList.contains('validation_error')) {
+                    return;
+                }
+                _event.target.classList.remove(classNameCheckOnlyThis);
+            });
+
+            $allInputsOnPage.on('keyup blur change', function () {
+                validator._validateForm();
+            });
+        }
+
+        /**
+         *
+         *
+         * Submit handler
+         *
+         *
+         */
+
         $form.submit(function (event) {
             event.preventDefault();
+            // Check if state selected if fields is enabled
             if ($stateProv.prop('disabled') === false && $stateProv.val() === "") {
                 $stateProv.addClass('validation_error').focus(function () {
                     $(this).removeClass('validation_error');
                 });
             }
-
+            // Check all required fields
             $required.each(function () {
                 let $this = $(this);
                 if ($this.prop('disabled') === false && $this.val() === "") {
@@ -232,8 +319,8 @@ export default function () {
             if (error_fields.length > 0) {
                 event.preventDefault();
 
-                $('#form-errors').text('Please fill in all required fields');
-                $('#error-wrap').fadeIn(150);
+                $errors.text('Please fill in all required fields');
+                $errorsWrap.fadeIn(150);
 
                 return;
             }
@@ -246,89 +333,38 @@ export default function () {
 
             //todo: import this function here
             identifyForm();
-            submitToEloqua();
-        });
-
-
-        var validator = new FormValidator($form.prop('name'), [{
-            name: 'firstName',
-            rules: 'required|min_length[2]'
-        }, {
-            name: 'lastName',
-            rules: 'required|min_length[2]'
-        }, {
-            name: 'emailAddress',
-            rules: 'required|valid_email' //callback_valid_be
-        }, {
-            name: 'busPhone',
-            rules: 'required|min_length[5]'
-        }, {
-            name: 'company',
-            rules: 'required|callback_valid_c_name'
-        }, {
-            name: 'title',
-            rules: 'required'
-        }, {
-            name: 'country',
-            rules: 'required'
-        }], ___event_performValidation);
-
-        validator.registerCallback('valid_be', function (value) {
-            let re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$/g;
-            return re.test(value);
-        });
-        validator.registerCallback('valid_c_name', function (value) {
-            var re = /([A-Za-z0-9\-\_]+)/g;
-            return re.test(value);
-        });
-
-        var event = window.event;
-        var classNameCheckOnlyThis = 'checkOnlyThis';
-
-        function ___event_performValidation(errors, evt) {
-            $('.validation_error:not(#stateProv)').removeClass('validation_error');
-
-
-            // detect if it's an onSubmit event
-            var weAreInASubmitEvent = (typeof evt !== 'undefined');
-
-            function checkIfIDIsInElementsToProcess(id) {
-                return $('#' + id + '.' + classNameCheckOnlyThis).length != 0;
-            }
-
-            if (errors.length > 0) {
-                for (var i = 0; i < errors.length; i++) {
-                    if (weAreInASubmitEvent || checkIfIDIsInElementsToProcess(errors[i].id)) {
-                        $('#' + errors[i].id).addClass('validation_error');
-                    }
-                }
-                if (evt && evt.preventDefault) {
-                    evt.preventDefault();
-                } else if (event) {
-                    event.returnValue = false;
-                }
+            let handler = $form.data('handler');
+            if (handler && typeof handler !== 'undefined') {
+                window[handler]();
             } else {
-                $('#form-errors').text('');
-                $('#error-wrap').fadeOut(150);
-                if (event) event.returnValue = true;
+                submitData();
             }
+        });
+
+
+        /**
+         * Some eloqua stuff
+         */
+        let timerId = null, timeout = 5;
+
+        function WaitUntilCustomerGUIDIsRetrieved() {
+            if (!!(timerId)) {
+                if (timeout === 0) {
+                    return;
+                }
+                if (typeof GetElqCustomerGUID === 'function') {
+                    $form[0].elements["elqCustomerGUID"].value = GetElqCustomerGUID();
+                    return;
+                }
+                timeout -= 1;
+            }
+            timerId = setTimeout(WaitUntilCustomerGUIDIsRetrieved, 500);
+            return;
         }
 
-        var allInputsOnPage = $('.dr-form input, .dr-form select');
-
-        allInputsOnPage.on('focus', function (_event) {
-            _event.target.classList.add(classNameCheckOnlyThis);
-        });
-
-        allInputsOnPage.on('blur', function (_event) {
-            if (_event.target.classList.contains('validation_error')) {
-                return;
-            }
-            _event.target.classList.remove(classNameCheckOnlyThis);
-        });
-
-        allInputsOnPage.on('keyup blur change', function (_e) {
-            validator._validateForm();
-        });
+        WaitUntilCustomerGUIDIsRetrieved();
+        if (typeof _elqQ !== 'undefined') {
+            _elqQ.push(['elqGetCustomerGUID']);
+        }
     }
 }

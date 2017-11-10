@@ -6,28 +6,20 @@ add_action( 'wp_ajax_dr_ajax_dru', 'dru_classes' );
 function dru_classes() {
 	$nonce = $_POST['nonce'];
 
-	if ( ! wp_verify_nonce( $nonce, 'dr-nonce' ) )
-		die ( 'Stop!');
-
-	$prog_id = intval($_POST['prid']);
-
-	$classes = get_field('class', $prog_id);
-
-	ob_start(); 
-
-	echo '<option value="" selected>Select class</option>';
-
-	foreach($classes as $class){
-		echo '<option value="'.$class['month'].' '.$class['days'].' '.$class['venue'].'">'.$class['month'].' '.$class['days'].', '.$class['venue'].'</option>';
+	if ( ! wp_verify_nonce( $nonce, 'dr-nonce' ) ) {
+		die ( 'Stop!' );
 	}
+	$prog_id = intval( $_POST['prid'] );
 
-	$output = ob_get_contents();
+	$classes = get_field( 'class', $prog_id );
+	if ( $classes ) {
+		$options = '<option value="" selected>' . __( 'Select class', 'datarobot3' ) . '</option>';
 
-	ob_end_clean();
-
-	echo $output;
-
-	wp_die();
+		foreach ( $classes as $class ) {
+			$options .= '<option value="' . $class['month'] . ' ' . $class['days'] . ' ' . $class['venue'] . '">' . $class['month'] . ' ' . $class['days'] . ', ' . $class['venue'] . '</option>';
+		}
+	} else {
+		$options = '<option value="" selected>' . __( 'No classes available', 'datarobot3' ) . '</option>';
+	}
+	wp_send_json_success( $options );
 }
-
-?>

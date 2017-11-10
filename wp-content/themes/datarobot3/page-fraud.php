@@ -1,5 +1,6 @@
 <?php
-/* Template Name: Fraud LP */
+/*
+Deprecated Template Name: Fraud LP */
 ?>
 <?php get_header('guide'); ?>
 <section class="fd-lp">

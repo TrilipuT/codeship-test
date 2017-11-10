@@ -1,0 +1,6 @@
+{
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=5.5 <9.0"
+  }
+}

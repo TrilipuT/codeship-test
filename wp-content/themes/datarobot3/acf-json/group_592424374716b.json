@@ -23,6 +23,7 @@
             "label": "Image",
             "name": "mla_img",
             "type": "image",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -47,6 +48,7 @@
             "label": "Title",
             "name": "mla_title",
             "type": "text",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -68,6 +70,7 @@
             "label": "Text",
             "name": "mla_text",
             "type": "textarea",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -105,6 +108,7 @@
             "label": "Title",
             "name": "ec_title",
             "type": "text",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -126,6 +130,7 @@
             "label": "Chart",
             "name": "chart",
             "type": "image",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -150,6 +155,7 @@
             "label": "Legend",
             "name": "legend",
             "type": "image",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -174,6 +180,7 @@
             "label": "Text",
             "name": "ec_text",
             "type": "textarea",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -193,7 +200,7 @@
         {
             "key": "field_592424fb2bcb7",
             "label": "Enterprise AI features",
-            "name": "enterprise_ai_features",
+            "name": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -211,6 +218,7 @@
             "label": "Title",
             "name": "ef_title",
             "type": "text",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -232,6 +240,7 @@
             "label": "Features",
             "name": "features",
             "type": "repeater",
+            "value": null,
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -241,8 +250,8 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": "",
-            "max": "",
+            "min": 0,
+            "max": 0,
             "layout": "table",
             "button_label": "Add Row",
             "sub_fields": [
@@ -251,6 +260,7 @@
                     "label": "Title",
                     "name": "title",
                     "type": "text",
+                    "value": null,
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -272,6 +282,7 @@
                     "label": "Text",
                     "name": "text",
                     "type": "textarea",
+                    "value": null,
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -293,7 +304,7 @@
         {
             "key": "field_592425032bcb8",
             "label": "AI Acceleration Packages",
-            "name": "ai_acceleration_packages",
+            "name": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -311,6 +322,7 @@
             "label": "Block title",
             "name": "p_title",
             "type": "text",
+            "value": null,
             "instructions": "",
             "required": "",
             "conditional_logic": "",
@@ -332,6 +344,7 @@
             "label": "Block subtitle",
             "name": "p_subtitle",
             "type": "text",
+            "value": null,
             "instructions": "",
             "required": "",
             "conditional_logic": "",
@@ -353,6 +366,7 @@
             "label": "Packages",
             "name": "packages",
             "type": "repeater",
+            "value": null,
             "instructions": "",
             "required": "",
             "conditional_logic": "",
@@ -362,8 +376,8 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": "",
-            "max": "",
+            "min": 0,
+            "max": 0,
             "layout": "table",
             "button_label": "Add Row",
             "sub_fields": [
@@ -372,6 +386,7 @@
                     "label": "Package title",
                     "name": "title",
                     "type": "text",
+                    "value": null,
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -393,6 +408,7 @@
                     "label": "Description",
                     "name": "description",
                     "type": "checkbox",
+                    "value": null,
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -412,7 +428,10 @@
                     },
                     "default_value": [],
                     "layout": "vertical",
-                    "toggle": 0
+                    "toggle": 0,
+                    "allow_custom": 0,
+                    "save_custom": 0,
+                    "return_format": "value"
                 }
             ]
         }
@@ -420,9 +439,9 @@
     "location": [
         [
             {
-                "param": "page",
+                "param": "page_template",
                 "operator": "==",
-                "value": "3117"
+                "value": "page-enterprise-ai.php"
             }
         ]
     ],
@@ -436,5 +455,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1506522590
+    "modified": 1510561869
 }

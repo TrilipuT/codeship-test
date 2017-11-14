@@ -39,7 +39,6 @@ export default function () {
                 rArray[formArray[i]['name']] = formArray[i]['value'];
             }
             var rJSON = JSON.stringify(rArray);
-            console.log(rJSON);
             return rJSON;
         }
 
@@ -80,8 +79,12 @@ export default function () {
                 dataType: "json",
                 beforeSend: transmission_start(),
                 error: function (jqXHR) {
-                    console.log("Transmission error, code: " + jqXHR.status);
-                    Raven.captureMessage("Transmission error, code: " + jqXHR.status);
+                    if (jqXHR.hasOwnProperty('status')) {
+                        console.log("Transmission error, code: " + jqXHR.status);
+                        if (typeof Raven !== 'undefined' && Raven.hasOwnProperty('captureMessage')) {
+                            Raven.captureMessage("Transmission error, code: " + jqXHR.status);
+                        }
+                    }
                     transmission_stop();
                     $errors.text("Connection error. Please try again later.");
                 },
@@ -93,7 +96,9 @@ export default function () {
                         });
                         transmission_stop();
                     } else {
-                        console.log(response.data.body.message);
+                        if (response.data.hasOwnProperty('body') && response.data.body.hasOwnProperty('message')) {
+                            console.log(response.data.body.message);
+                        }
                         transmission_done();
                     }
                 }

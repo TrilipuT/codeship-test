@@ -1,6 +1,7 @@
 .contact-us {
   .top-block {
     padding: 60px 0 90px;
+    background: #061D3B;
   }
   h1 {
     margin: 0 auto 10px;
@@ -72,9 +73,12 @@ section.contact-us .page-content {
     @include font-light(42px, 60px);
   }
   p {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     @include font-light(20px, 30px);
     color: $blue-grey-e;
+    span {
+      display: block;
+    }
   }
   a {
     @include font-regular(15px, 30px);

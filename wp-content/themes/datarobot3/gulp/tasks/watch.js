@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const config = require('../config.js');
 
 module.exports = function() {
-    process.env.BUILD_NOEXIT = "1";
 
     gulp.watch(config.watch.fonts, gulp.series('font'));
 

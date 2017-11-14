@@ -28,10 +28,10 @@
 					<img src="<?= get_template_directory_uri(); ?>/assets/built/images/form_image.png" alt="Sign up for the June 21st event">
 					<div class="b-form">
                         <div class="dr-form form-blue new-form-handler">
-                            <?php $form_name    = get_field( 'form_name' ) ?: 'Datarobot-main';
-                            $redirect           = get_field( 'redirect_url' ) ?: home_url( '/thank-you' );
-                            $submit_button_text = get_field( 'submit_button_text' ) ?: __( 'Submit', 'datarobot3' );
-                            $form_action        = get_field( 'form_action' ) ?: "submit_all";
+                            <?php $form_name    = Form::get_form_name();
+                            $redirect           = Form::get_redirect_url();
+                            $submit_button_text = Form::get_button_text();
+                            $form_action        = Form::get_form_action();
                             ?>
                             <iframe name="hiddenframe" id="hiddenframe" frameborder="0"
                                     style="width:0;height:0;border:0;display:none;"></iframe>

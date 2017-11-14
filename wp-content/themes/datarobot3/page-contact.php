@@ -41,10 +41,14 @@
             <div class="container">
                 <div class="headquarters">
                     <h2><?php _e( 'Want to reach a local office?', 'datarobot3' ); ?></h2>
+                    <p>
+                        <span>One International Place, Boston, MA</span>
+                        <span>+1 (617) 765 - 4311</span>
+                    </p>
                     <a href="#Boston" class="open-popup" data-title="Boston Office"
                        data-predefinedCountry="United States"
                        data-predefinedStateProv="Massachusetts">
-                        <span class="bg-filled-blue button"><?php _e( 'Contact the headquarters (Boston, MA)', 'datarobot3' ); ?></span>
+                        <span class="bg-filled-blue button"><?php _e( 'Contact the headquarters', 'datarobot3' ); ?></span>
                     </a>
                 </div>
 

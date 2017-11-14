@@ -82,6 +82,8 @@
       position: fixed;
       right: 0;
       height: 100%;
+      align-items: center;
+      display: flex;
       /*&:after {
         content: '';
         background-color: #ffffff;
@@ -100,7 +102,7 @@
         position: static;
         transition: none;
         top: auto;
-        width: auto;
+        width: 100%;
         transform: none;
         background: #fff;
         padding: 0;

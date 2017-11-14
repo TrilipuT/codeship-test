@@ -393,6 +393,13 @@ function comp_arrays( $arrayA , $arrayB ) {
     return $arrayA == $arrayB;
 }
 
+add_filter( 'pre_get_posts', function ( $wp_query ) {
+	if ( $wp_query->is_main_query() && is_admin() && !isset($_GET['orderby']) && $wp_query->get('post_type') == 'page') {
+		$wp_query->set( 'orderby', 'date' );
+		$wp_query->set( 'order', 'DESC' );
+	}
+}, 99 );
+
 // DO NOT ADD YOUR CODE AFTER THIS LINE //
 
 get_template_part('includes/dr-posttypes');
@@ -409,3 +416,4 @@ get_template_part('includes/dr-strings');
 
 include_once __DIR__ . '/includes/webinar/Initialization.php';
 include_once __DIR__ . '/includes/webinar/Functions.php';
+include_once __DIR__ . '/includes/forms/Functions.php';

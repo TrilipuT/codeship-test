@@ -1,15 +1,21 @@
 .quotes-slider {
-  margin-top: 75px;
-  position: relative;
+  margin: 45px -60px 0;
   background-color: #EEF7FF;
-  padding: 40px 30px 20px;
+  padding: 40px 60px 20px;
   font-size: 15px;
   line-height: 25px;
   color: $black-blue;
-  &.hidden{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  &.hidden {
     visibility: hidden;
   }
-  @include max(1024){
+  @include max(1280) {
+    margin: 45px -30px 0;
+    padding: 40px 30px 20px;
+  }
+  @include max(1024) {
     display: none;
   }
   .controls--dots .bx-pager-link {
@@ -59,6 +65,43 @@
       color: $blue-grey-e;
       font-size: 13px;
       line-height: 20px;
+    }
+  }
+  .content & {
+    margin: 45px 0 0;
+    padding: 40px 60px;
+    position: relative;
+    background-color: rgba(0, 0, 0, .2);
+    color: #FFFFFF;
+    @include breakpoint-max(1280){
+      padding: 30px;
+    }
+    @include max(1024) {
+      display: block;
+    }
+    //&.hidden{
+    //  display: none;
+    //}
+    .quote-content {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 32px;
+    }
+    .quote-name {
+      font-size: 20px;
+    }
+    .quote-title {
+      font-size: 16px;
+      margin-top: 5px;
+      br {
+        display: none;
+      }
+    }
+    .quote-info img{
+      margin-right: 25px;
+    }
+    .bx-controls{
+      text-align: right;
     }
   }
 }

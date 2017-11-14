@@ -131,7 +131,7 @@ body {
     }
   }
 
-  #td-form {
+  .td-form-wrap form {
     position: relative;
     padding: 30px 45px 75px;
     background: #ffffff;
@@ -486,10 +486,10 @@ body {
       width: 100%;
       max-width: 390px;
       padding: 0 10px;
-    }
-    #td-form {
-      position: relative;
-      padding: 30px 20px 75px;
+      form {
+        position: relative;
+        padding: 30px 20px 75px;
+      }
     }
     .b-conditions .item {
       width: 100%;

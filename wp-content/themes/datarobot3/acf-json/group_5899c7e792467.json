@@ -19,21 +19,21 @@
             "endpoint": 0
         },
         {
-            "key": "field_59f735b759ec4",
-            "label": "Form title",
-            "name": "form_title",
+            "key": "field_5899c9c3373d3",
+            "label": "Form name",
+            "name": "form_name",
             "type": "text",
             "value": null,
-            "instructions": "Form title (optional)",
+            "instructions": "Name of form created in Eloqua\/Salesforce",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
+            "placeholder": "Datarobot-main",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -69,24 +69,33 @@
             "placeholder": ""
         },
         {
-            "key": "field_5899c9c3373d3",
-            "label": "Form name",
-            "name": "form_name",
-            "type": "text",
+            "key": "field_5a05a2bacf189",
+            "label": "Form action",
+            "name": "form_action",
+            "type": "select",
             "value": null,
-            "instructions": "Name of form created in Eloqua\/Salesforce",
+            "instructions": "Select where form should send data",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "40",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
-            "default_value": "Datarobot-main",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "choices": {
+                "submit_all": "Submit to all endpoints",
+                "submitToSF": "Submit only to SalesForce",
+                "submitToEloqua": "Submit to Eloqua"
+            },
+            "default_value": [
+                "submit_all"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_589b174f5a4f4",
@@ -94,7 +103,7 @@
             "name": "submit_button_text",
             "type": "text",
             "value": null,
-            "instructions": "Text for form submit button. If no value \"Submit\" will be used",
+            "instructions": "Text for form submit button.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -109,24 +118,41 @@
             "maxlength": ""
         },
         {
+            "key": "field_59f735b759ec4",
+            "label": "Form title",
+            "name": "form_title",
+            "type": "text",
+            "value": null,
+            "instructions": "Form title (optional)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_59ef2886cd44d",
             "label": "Redirect",
             "name": "redirect_url",
-            "type": "text",
+            "type": "url",
             "value": null,
             "instructions": "Url you will be redirected to",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "70",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "\/thank-you",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "placeholder": "https:\/\/www.datarobot.com\/thank-you"
         },
         {
             "key": "field_59971273d9e45",
@@ -365,5 +391,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1510314565
+    "modified": 1510320520
 }

@@ -6,11 +6,11 @@
  * Time: 09:50
  */
 $form_title         = get_field( 'form_title' );
-$form_name          = get_field( 'form_name' ) ?: 'Datarobot-main';
+$form_name          = Form::get_form_name();
 $form_type          = get_field( 'form_type' );
-$submit_button_text = get_field( 'submit_button_text' ) ?: __( 'Submit', 'datarobot3' );
-$redirect           = get_field( 'redirect_url' ) ?: home_url( '/thank-you' );
-$form_action        = get_field( 'form_action' ) ?: "submit_all";
+$submit_button_text = Form::get_button_text();
+$redirect           = Form::get_redirect_url();
+$form_action        = Form::get_form_action();
 if ( Webinar::is_recording() ) {
 	$redirect = get_permalink() . 'watch/';
 }

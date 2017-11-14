@@ -483,6 +483,12 @@ body .popup {
   &.show {
     display: block;
   }
+  .form-wrap {
+    @include min(720) {
+      max-height: 90%;
+      overflow-x: auto;
+    }
+  }
 }
 
 //GET IN TOUCH

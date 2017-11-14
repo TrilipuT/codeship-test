@@ -21,7 +21,7 @@ export default function (button) {
 
     function closePopup(e) {
         e.preventDefault();
-        $(this).removeClass('show');
+        $(e.delegateTarget).removeClass('show');
         $body.css('overflow', '');
         $(document).trigger('popup-closed', e.currentTarget);
     }

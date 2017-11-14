@@ -1,8 +1,7 @@
 <?php
 /* Template Name: Courses */
-?>
-
-<?php get_header(); ?>
+get_header();
+the_post(); ?>
 <section class="courses">
     <div class="top-block">
         <div class="container">
@@ -14,9 +13,7 @@
         <div class="container">
             <div class="trainings">
 				<?php $posts = get_field( 'courses' );
-
 				if ( $posts ):
-
 					foreach ( $posts as $key => $post ):
 						setup_postdata( $post ); ?>
                         <div class="item clearfix" id="item_<?php echo $key; ?>">
@@ -127,9 +124,6 @@
                             </div>
                         </div>
 					<?php endforeach; ?>
-
-					<?php wp_reset_postdata(); ?>
-
 				<?php endif; ?>
             </div>
         </div>
@@ -219,7 +213,8 @@
             });
         </script>
     </div>
-	<?php get_template_part( 'parts/get-in-touch' ) ?>
+	<?php wp_reset_postdata();
+	get_template_part( 'parts/get-in-touch' ) ?>
 </section>
 <?php get_footer();
 add_filter( 'dr/forms/form_type', function () {

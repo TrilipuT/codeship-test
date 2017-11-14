@@ -17,7 +17,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "Want to see DataRobot in action?",
+            "placeholder": "Have a question about learning data science with DataRobot?",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -60,5 +60,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1509981146
+    "modified": 1509981147
 }

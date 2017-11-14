@@ -6,8 +6,7 @@ import sticky from 'stickybits';
 export default function () {
     // slider
     let $slides = $('.slides');
-    let $quotesSlider = $('.quotes-slider');
-    $slides.bxSlider({
+    let sliderConfig = {
         mode: 'fade',
         prevSelector: '#prev',
         nextSelector: '#next',
@@ -15,7 +14,8 @@ export default function () {
         nextText: '<i class="icon-slider-next"></i>',
         infiniteLoop: false,
         hideControlOnEnd: true,
-    });
+    };
+    $slides.bxSlider(sliderConfig);
 
 
     // Time convert
@@ -60,12 +60,30 @@ export default function () {
 
     sticky('.fixed-holder', {verticalPosition: 'bottom', customVerticalPosition: true});
 
+
+    // Popup
+    let $formHolder = $('.form-holder');
+
     popup('.open-popup');
 
-    if ($('.form-wrap').height() > $('.form-holder').height()) {
+    $(document)
+        .on('popup-opened', function () {
+            $formHolder.addClass('popup');
+        })
+        .on('popup-closed', function () {
+            $formHolder.removeClass('popup');
+        });
+
+    let $quotesSlider = $formHolder.find('.quotes-slider');
+
+    if ($('.form-wrap').height() + $quotesSlider.outerHeight() > $formHolder.height()) {
         $quotesSlider.remove();
+        $('.content .quotes-slider').removeClass('hidden');
+        $('.slides').bxSlider(sliderConfig);
     } else {
         $quotesSlider.removeClass('hidden');
+        $('.content .quotes-slider').remove();
+        $('.form-wrap').css('margin-bottom', $quotesSlider.outerHeight());
     }
 
     // Time convert

@@ -15,8 +15,8 @@
                     <i class="icon-close"></i>
                 </div>
                 <?php get_template_part('parts/forms/webinar-material') ?>
-                <?php get_template_part('parts/webinar/quotes') ?>
             </div>
+	        <?php get_template_part('parts/webinar/quotes') ?>
         </div>
     <?php endif; ?>
 </section>

@@ -22,13 +22,13 @@ module.exports = function() {
         message: err.message
       }))
     }))
-    .pipe(gulpif(isDevelopment, sourcemaps.init()))
+    .pipe(gulpif(isDevelopment, sourcemaps.init({loadMaps: true})))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([ 
       autoprefixer({ browsers: ['> 1%', 'last 5 versions', 'Firefox ESR'], remove: false })
     ]))
     .pipe(gulpif(!isDevelopment, cssmin()))
-    .pipe(gulpif(isDevelopment, sourcemaps.write()))
+    .pipe(gulpif(isDevelopment, sourcemaps.write('./')))
     .pipe(debug({title: 'sass:'}))
     .pipe(gulpif(!isDevelopment, rename(path => {
         path.extname = `.min${path.extname}`;

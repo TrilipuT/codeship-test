@@ -6,10 +6,6 @@
   @include radius(6px);
   @include shadow((0 20px 0 rgba(28, 39, 57, 0.33), 0 20px 50px 0 rgba(0, 0, 0, 0.19)));
   @include translate((-50%, -50%));
-  @include min(720){
-    max-height: 90%;
-    overflow-x: auto;
-  }
 }
 
 .form-title h3 {

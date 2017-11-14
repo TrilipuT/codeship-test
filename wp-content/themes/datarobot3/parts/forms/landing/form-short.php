@@ -9,7 +9,21 @@ $form_action        = Form::get_form_action();
       data-redirect="<?= esc_attr( $redirect ) ?>" data-action="<?= esc_attr( $form_action ) ?>">
     <div class="form-section">
         <div class="form-main">
-			<?php the_field( 'form_custom' ) ?>
+            <label for="firstName" class="fullrow">
+				<?php get_template_part( 'parts/forms/fields/input', 'firstname' ) ?>
+            </label>
+            <label for="lastName" class="fullrow">
+				<?php get_template_part( 'parts/forms/fields/input', 'lastname' ) ?>
+            </label>
+            <label for="emailAddress" class="fullrow">
+				<?php get_template_part( 'parts/forms/fields/input', 'email' ) ?>
+            </label>
+            <label for="company" class="fullrow">
+				<?php get_template_part( 'parts/forms/fields/input', 'company' ) ?>
+            </label>
+            <label class="fullrow dropdown-parent">
+	            <?php get_template_part( 'parts/forms/fields/select', 'title' ) ?>
+            </label>
         </div>
     </div>
 
@@ -21,6 +35,6 @@ $form_action        = Form::get_form_action();
         <div id="error-wrap">
             <div id="form-errors" class="shake" role="alert"></div>
         </div>
-        <button type="submit" class="submit bg-filled-blue button"><?= $submit_button_text ?></button>
+        <button type="submit" class="submit bg-filled-orange button"><?= $submit_button_text ?></button>
     </div>
 </form>

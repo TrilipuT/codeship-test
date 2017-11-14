@@ -9,21 +9,29 @@ export default function (button) {
     }
     let $popup = $('#' + target);
 
-    $body.on('click', button, function (e) {
+    function openPopup(e) {
+        e.preventDefault();
         $body.css('overflow', 'hidden');
+        if ($body.hasClass('ios')) {
+            $("html, body").animate({scrollTop: 0}, "fast");
+        }
         $popup.addClass('show');
         $(document).trigger('popup-opened', e.currentTarget);
+    }
+
+    function closePopup(e) {
         e.preventDefault();
-    });
+        $(this).removeClass('show');
+        $body.css('overflow', '');
+        $(document).trigger('popup-closed', e.currentTarget);
+    }
+
+    $body.on('click', button, openPopup);
     $popup
         .on('click', function (e) {
             if (e.target !== this)
                 return;
-            $(this).removeClass('show');
-            $body.css('overflow', '');
+            closePopup(e);
         })
-        .on('click', '.popup-close', function () {
-            $popup.removeClass('show');
-            $body.css('overflow', '');
-        });
+        .on('click', '.popup-close', closePopup);
 }

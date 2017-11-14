@@ -1,7 +1,7 @@
-<?php $form_name    = get_field( 'form_name' ) ?: 'Datarobot-main';
-$redirect           = get_field( 'redirect_url' ) ?: home_url( '/thank-you' );
-$submit_button_text = get_field( 'submit_button_text' ) ?: __( 'Submit', 'datarobot3' );
-$form_action        = get_field( 'form_action' ) ?: "submit_all";
+<?php $form_name    = Form::get_form_name();
+$redirect           = Form::get_redirect_url();
+$submit_button_text = Form::get_button_text();
+$form_action        = Form::get_form_action();
 ?>
 <iframe name="hiddenframe" id="hiddenframe" frameborder="0"
         style="width:0;height:0;border:0;display:none;"></iframe>
@@ -9,20 +9,29 @@ $form_action        = get_field( 'form_action' ) ?: "submit_all";
       data-redirect="<?= esc_attr( $redirect ) ?>" data-action="<?= esc_attr( $form_action ) ?>">
     <div class="form-section">
         <div class="form-main">
-            <label for="firstName" class="fullrow">
+            <label for="firstName" class="first">
 				<?php get_template_part( 'parts/forms/fields/input', 'firstname' ) ?>
             </label>
-            <label for="lastName" class="fullrow">
+            <label for="lastName" class="last">
 				<?php get_template_part( 'parts/forms/fields/input', 'lastname' ) ?>
             </label>
             <label for="emailAddress" class="fullrow">
 				<?php get_template_part( 'parts/forms/fields/input', 'email' ) ?>
             </label>
+            <label for="busPhone" class="fullrow">
+				<?php get_template_part( 'parts/forms/fields/input', 'busphone' ) ?>
+            </label>
             <label for="company" class="fullrow">
 				<?php get_template_part( 'parts/forms/fields/input', 'company' ) ?>
             </label>
             <label class="fullrow dropdown-parent">
-				<?php get_template_part( 'parts/forms/fields/select', 'inquiry' ) ?>
+				<?php get_template_part( 'parts/forms/fields/select', 'title' ) ?>
+            </label>
+            <label class="fullrow dropdown-parent">
+				<?php get_template_part( 'parts/forms/fields/select', 'country' ) ?>
+            </label>
+            <label class="fullrow dropdown-parent">
+				<?php get_template_part( 'parts/forms/fields/select', 'stateprov' ) ?>
             </label>
         </div>
     </div>

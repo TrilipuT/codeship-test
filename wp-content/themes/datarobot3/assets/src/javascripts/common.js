@@ -21,7 +21,6 @@ import banner_bg from './modules/banner_bg';
 import new_form from './modules/form';
 import 'featherlight';
 
-
 jQuery = $;
 
 $(function ($) {

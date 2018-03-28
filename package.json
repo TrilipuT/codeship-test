@@ -3,5 +3,5 @@
   "engines": {
     "node": ">=5.5 <9.0"
   },
-  'some changes in dev': ''
+  "new line in dev": ""
 }

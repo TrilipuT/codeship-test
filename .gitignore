@@ -7,6 +7,8 @@
 .idea
 Thumbs.db
 
+# and this is from master hotfix change
+
 wp-content/themes/datarobot3/.sass-cache/
 wp-content/themes/datarobot3/languages/ja_JP.po
 wp-content/themes/datarobot3/languages/ja_JP.mo
